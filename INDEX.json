@@ -4,7 +4,7 @@
   "pinned_version": "1.108.207",
   "distribution_string_in_csvs": "1.108.199",
   "note_on_version": "CSVs carry the ambient installed distribution string 1.108.199 while jcodemunch_source_sha is c2201a55 (v1.108.207). The source SHA is the authoritative code identity; the distribution string is stale metadata.",
-  "verify": "python verify.py  (recomputes every figure quoted in #398; exit 0 means all reproduce)",
+  "verify": "python verify.py  (recomputes the checks it lists, covering the 38-case code-loading headline, the four-repo control, and the Arc 2 medians; exit 0 means all reproduce. It does not cover the Arc 4 or Arc 5 semantic figures, whose CSVs are not in this bundle.)",
   "corpora": {
     "django/django": "274a1d494d11d87a1b767340d1f398f197810f93",
     "fastapi/fastapi": "95f8322ee1dcda7ceace7b1c4f6c9915b36d748f",
@@ -14,7 +14,8 @@
   "caveats": [
     "The unified archive at jcodemunch_selective_hydration_all_measurements.csv retains exploratory rows at 6996cc08 alongside c2201a55 rows. Filter on jcodemunch_source_sha before aggregating. No 6996cc08 row backs a quoted figure.",
     "The Arc 2 classification screen is one pair per case. 58 of its 144 cases (40.3%) are Express and Gin calls with sub-50ms baselines, which a single pair cannot separate from timing variance. Django 5.17x and FastAPI 2.59x are the load-bearing part.",
-    "generation_boundary_architecture_probe_v1.csv predates the pin (6996cc08). It is exploratory and backs no quoted figure; kept rather than dropped."
+    "Two Arc 1 boundary files carry pre-pin rows. generation_boundary_architecture_probe_v1.csv is entirely at 6996cc08. generation_boundary_followups_v1.csv is mixed, holding both 6996cc08 and c2201a55 rows, and records provenance in a `source_sha` column rather than `jcodemunch_source_sha`. Neither backs a quoted figure; both are kept rather than dropped. See provenance_class on each entry below.",
+    "The source-run CSVs use several experiment-specific schemas (18, 23, 33 and 34 columns; see the columns field per entry). The unified master CSV normalizes them into one fixed 57-column schema."
   ],
   "data_files": [
     {
@@ -32,6 +33,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -52,6 +57,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -71,6 +80,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -90,6 +103,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -111,6 +128,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "older_only",
       "source_sha": [
         "6996cc08"
       ],
@@ -130,7 +151,14 @@
         "candidate"
       ],
       "repos": [],
-      "source_sha": [],
+      "provenance_column": [
+        "source_sha"
+      ],
+      "provenance_class": "mixed",
+      "source_sha": [
+        "6996cc08",
+        "c2201a55"
+      ],
       "sha256": "d165f68c200728bf185c7a4c111f024b91057ccb9a51fff9e1f7a68011b27dc2"
     },
     {
@@ -147,6 +175,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -166,6 +198,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -185,6 +221,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -207,6 +247,10 @@
         "fastapi-c1d6b9c4",
         "gin-87ab3d33"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -229,6 +273,10 @@
         "fastapi-c1d6b9c4",
         "gin-87ab3d33"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -248,6 +296,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -267,6 +319,10 @@
       "repos": [
         "django-3eb2e228"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],
@@ -289,6 +345,10 @@
         "fastapi-c1d6b9c4",
         "gin-87ab3d33"
       ],
+      "provenance_column": [
+        "jcodemunch_source_sha"
+      ],
+      "provenance_class": "current_only",
       "source_sha": [
         "c2201a55"
       ],

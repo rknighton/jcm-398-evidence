@@ -1,8 +1,10 @@
 # Column reference
 
-Every CSV in `supporting-data/source-runs/` shares one fixed schema. `INDEX.json`
-carries the per-file row counts, modes, repos, and hashes. This file explains what the
-columns mean.
+The source-run CSVs use several experiment-specific schemas, at 18, 23, 33 and 34
+columns. The unified master CSV normalizes them into one fixed 57-column schema. Do not
+assume a single header when writing an importer: `INDEX.json` carries the exact column
+count, provenance column, row grain, modes, repos, and hashes for every file, and the
+columns below are the union rather than a guaranteed-present set.
 
 ## Identity: which run is this row
 
@@ -53,7 +55,7 @@ columns mean.
 
 | Column | Meaning |
 | --- | --- |
-| `jcodemunch_source_sha` | **Authoritative code identity.** Filter on this before aggregating. |
+| `jcodemunch_source_sha` | **Authoritative code identity.** Filter on this before aggregating. The 18-column boundary run carries the same value under `source_sha` instead, so an importer must accept both names. `INDEX.json` records which column each file uses. |
 | `jcodemunch_version` | Ambient installed distribution string. `1.108.199` here even though the source is `c2201a55` (v1.108.207); stale metadata, not a revision mismatch. |
 | `benchmark_sha256` | Hash of the harness file that produced the row. |
 | `source_diff_sha256` | Hash of the working-tree diff. `e3b0c442...` is the SHA-256 of the empty string, meaning a clean tree. Baseline rows carry it; a dirty baseline is therefore detectable rather than assumed. |

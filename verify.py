@@ -37,27 +37,57 @@ def close(a: float, b: float, tol: float = 0.01) -> bool:
 
 
 # ---------------------------------------------------------------- provenance
-# One Arc 1 file predates the pin. It is an exploratory architecture probe that
-# backs no figure quoted in #398, and it is kept rather than dropped so the
-# bundle is not curated to look tidier than the research was.
-PRE_PIN = {"generation_boundary_architecture_probe_v1.csv": "6996cc08"}
+# Provenance lives under different column names depending on the run's schema.
+# The 34/33-column runs use `jcodemunch_source_sha`; the 18-column boundary run
+# uses `source_sha`. An earlier version of this checker knew only the first name
+# and treated a file without it as nothing to check, so a mixed-revision file
+# passed silently. A verifier that skips is worse than no verifier, so an
+# unrecognized provenance schema is now a failure rather than a skip.
+PROVENANCE_COLUMNS = ("jcodemunch_source_sha", "source_sha")
+
+# Declared classification per file. Anything not listed must be current-only.
+# Two Arc 1 boundary files carry pre-pin rows. Neither backs a figure quoted in
+# #398, and both are kept rather than dropped so the bundle is not curated to
+# look tidier than the research was.
+DECLARED = {
+    "generation_boundary_architecture_probe_v1.csv": "older_only",
+    "generation_boundary_followups_v1.csv": "mixed",
+}
+
+
+def _classify(name: str) -> tuple[str, list[str]]:
+    """Return (classification, short_shas). Raises if no provenance column."""
+    data = rows(name)
+    present = [c for c in PROVENANCE_COLUMNS if data and c in data[0]]
+    if not present:
+        return "no_provenance_column", []
+    shas = sorted({(r.get(c) or "")[:8] for c in present for r in data} - {""})
+    if not shas:
+        return "empty_provenance", []
+    pinned = PINNED_SHA[:8]
+    if shas == [pinned]:
+        return "current_only", shas
+    if pinned in shas:
+        return "mixed", shas
+    return "older_only", shas
 
 
 def provenance() -> None:
-    bad = []
+    counts: dict[str, int] = {}
+    bad: list[str] = []
     for f in sorted(RUNS.glob("*.csv")):
-        shas = {r.get("jcodemunch_source_sha", "") for r in rows(f.name)}
-        shas.discard("")
-        if not shas:
-            continue
-        expected = {PRE_PIN[f.name]} if f.name in PRE_PIN else {PINNED_SHA}
-        if {s[:8] for s in shas} != {e[:8] for e in expected}:
-            bad.append(f"{f.name}: {sorted(s[:8] for s in shas)}")
+        actual, shas = _classify(f.name)
+        counts[actual] = counts.get(actual, 0) + 1
+        expected = DECLARED.get(f.name, "current_only")
+        if actual != expected:
+            bad.append(f"{f.name}: declared {expected}, found {actual} {shas}")
+    summary = ", ".join(f"{n} {k}" for k, n in sorted(counts.items()))
     check(
         not bad,
         "CSV provenance matches declaration",
-        f"{len(list(RUNS.glob('*.csv'))) - len(PRE_PIN)} at c2201a55, {len(PRE_PIN)} declared pre-pin",
-        "as declared" if not bad else "; ".join(bad),
+        f"{sum(1 for f in RUNS.glob('*.csv') if f.name not in DECLARED)} current_only, "
+        f"1 older_only, 1 mixed",
+        summary if not bad else "; ".join(bad),
     )
 
 

@@ -7,7 +7,10 @@ so any figure can be recomputed instead of taken from prose.
 
 Produced against source revision
 [`c2201a55`](https://github.com/jgravelle/jcodemunch-mcp/tree/c2201a55b6e1b0ea38043c514ab7bc3a372bad13)
-(v1.108.207). One exploratory file predates that pin and is labeled where it appears.
+(v1.108.207). Twelve of the fourteen source-run CSVs are entirely at that revision. Two
+Arc 1 boundary files carry earlier `6996cc08` rows, one of them mixed with current rows;
+neither backs a quoted figure. `verify.py` classifies all fourteen and `INDEX.json`
+records the class per file.
 
 ## Start here
 
@@ -15,9 +18,15 @@ Produced against source revision
 python verify.py
 ```
 
-No arguments, no dependencies, no checkout needed. It recomputes every figure quoted in
-#398 from the shipped CSVs and prints claimed against recomputed, so a disagreement shows
-up as a line rather than an argument. Exit code 0 means all 26 checks reproduce.
+No arguments, no dependencies, no checkout needed. It recomputes the checks it lists from
+the shipped CSVs and prints claimed against recomputed, so a disagreement shows up as a
+line rather than an argument. Exit code 0 means all 26 checks reproduce.
+
+**What it covers:** the 38-case Django code-loading headline and its distribution, the
+four-repo per-case control, the Arc 2 Django and FastAPI medians, file integrity, and
+provenance classification. **What it does not cover:** the Arc 4 and Arc 5 semantic
+figures, and the pooled Arc 2 and Arc 3 case-group numbers. Those rest on CSVs outside
+this bundle's Arc 1 and Arc 2 scope.
 
 ```
 CHECK                                        CLAIMED        RECOMPUTED
@@ -89,8 +98,9 @@ python supporting-data/tools/analyze_generation_safe_hybrid_screen.py
 ## Three things worth knowing before you aggregate
 
 **The unified archive is broader than the issue.** It retains exploratory rows at
-`6996cc08` next to the `c2201a55` rows. No `6996cc08` row backs any figure quoted in
-#398. Filter on `jcodemunch_source_sha` first.
+`6996cc08` next to the `c2201a55` rows. No `6996cc08` row backs any figure quoted
+in #398. Filter on `jcodemunch_source_sha` first, and note that the 18-column
+boundary run spells that column `source_sha`.
 
 **The Arc 2 classification screen is one pair per case.** 58 of its 144 cases (40.3%) are
 Express and Gin calls with sub-50ms baselines, which a single pair cannot separate from
