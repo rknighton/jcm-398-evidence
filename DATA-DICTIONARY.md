@@ -13,7 +13,7 @@ columns mean.
 | `repo_git_head` | Commit of the indexed corpus. Pinned values are in `INDEX.json` under `corpora`. |
 | `case` | Named scenario within a run. |
 | `tool` | The jcodemunch tool being called. |
-| `target_value` | The exact arguments passed, as JSON. |
+| `target_value` | The exact arguments passed, as JSON. Recorded verbatim, so for the handful of tools that take a `project_path` this includes the absolute corpus path on the machine that ran the benchmark. Left as measured rather than rewritten, because these rows are content-addressed and editing an input after the fact would make the hashes in `INDEX.json` attest to something that was never executed. |
 | `repetition` | 1-based repeat counter. **Check this before treating rows as independent cases.** |
 | `order_position` | Position within the A/B pair, for order balancing. |
 
