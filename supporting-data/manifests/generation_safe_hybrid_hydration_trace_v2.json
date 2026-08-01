@@ -1,0 +1,5819 @@
+{
+  "schema": "jcodemunch.hydration_trace/v2",
+  "method": "One cold measured call per case and repository after an unmeasured warm-up. The worker traced load_index hydration requests plus LazySymbolList full and sparse access methods. Classification describes the exercised argument path, not every possible argument path in the tool.",
+  "source_files": [
+    {
+      "name": "generation_safe_hybrid_hydration_trace_screen_v2.csv",
+      "sha256": "8ad8a3070bb7b21f3c42250f8e5cea1dbeeaaaae06d5c1c65f94411db01870ab"
+    },
+    {
+      "name": "generation_safe_hybrid_hydration_trace_expanded_v2.csv",
+      "sha256": "f2ed5b13d4c0de90e857af16f18ad4b8e1d477418c4f3365286de87728345152"
+    }
+  ],
+  "analysis_script_sha256": "0955721a36b07c8d8f84f05a17173aa77649e4e1afebc03da5b81fcf062fcb8f",
+  "counts": {
+    "rows": 364,
+    "candidate_observations": 182,
+    "tools": 60,
+    "cases": 182,
+    "canonical_mismatches": 0,
+    "unstable_tool_classifications": 1
+  },
+  "timing_summary_by_classification": {
+    "explicit_full": {
+      "pairs": 1,
+      "median_saved_ms": 74.49379999999974,
+      "median_speedup_x": 1.0327300226774225,
+      "total_baseline_ms": 2350.502,
+      "total_candidate_ms": 2276.0082
+    },
+    "lazy_full": {
+      "pairs": 27,
+      "median_saved_ms": 30.774800000000027,
+      "median_speedup_x": 1.047074380651228,
+      "total_baseline_ms": 167878.7836,
+      "total_candidate_ms": 50317.9609
+    },
+    "lazy_full_plus_sparse": {
+      "pairs": 6,
+      "median_saved_ms": 10.095449999999971,
+      "median_speedup_x": 1.0125771121536093,
+      "total_baseline_ms": 4211.6694,
+      "total_candidate_ms": 4149.2552
+    },
+    "metadata_or_file_state_only": {
+      "pairs": 69,
+      "median_saved_ms": 87.4571,
+      "median_speedup_x": 2.3548334304737675,
+      "total_baseline_ms": 19024.317900000002,
+      "total_candidate_ms": 7291.0952
+    },
+    "sparse_only": {
+      "pairs": 79,
+      "median_saved_ms": 50.9584,
+      "median_speedup_x": 2.244913650673156,
+      "total_baseline_ms": 17729.9118,
+      "total_candidate_ms": 6489.6719
+    }
+  },
+  "tools": {
+    "assemble_task_context": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_assemble_task_context",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "audit_agent_config": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_audit_agent_config",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "check_delete_safe": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_check_delete_safe",
+          "classification": "lazy_full",
+          "load_calls": 99,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "check_edit_safe": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_check_edit_safe",
+          "classification": "lazy_full",
+          "load_calls": 98,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "check_references": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "check_refs_single_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "check_refs_batch_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "check_refs_single_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "check_refs_batch_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "check_refs_single_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "check_refs_batch_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "check_refs_single_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "check_refs_batch_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "check_refs_single_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "check_refs_batch_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "check_refs_single_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "check_refs_batch_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "check_refs_single_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "check_refs_batch_imports",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "check_refs_single_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 1,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "check_refs_batch_content",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 3,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "check_rename_safe": {
+      "classifications": [
+        "lazy_full_plus_sparse"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_check_rename_safe",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "digest": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_digest",
+          "classification": "lazy_full",
+          "load_calls": 3,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "find_dead_code": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_find_dead_code",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "find_implementations": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_find_implementations",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "find_importers": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "importers_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "importers_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "importers_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "importers_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "importers_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "importers_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "importers_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "importers_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "find_references": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "references_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "references_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "references_call_chain",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "references_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "references_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "references_call_chain",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "references_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "references_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "references_call_chain",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "references_single",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "references_batch",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "references_call_chain",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "find_similar_symbols": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_find_similar_symbols",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_architecture_metrics": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_architecture_metrics",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_blast_radius": {
+      "classifications": [
+        "lazy_full_plus_sparse",
+        "sparse_only"
+      ],
+      "stable_across_observations": false,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "blast_radius_default",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "blast_radius_source",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "blast_radius_default",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "blast_radius_source",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "blast_radius_default",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "blast_radius_source",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "blast_radius_default",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "blast_radius_source",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_call_hierarchy": {
+      "classifications": [
+        "lazy_full_plus_sparse"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_call_hierarchy",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_changed_symbols": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "changed_symbols",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "changed_symbols_blast",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "changed_symbols",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "changed_symbols_blast",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "changed_symbols",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "changed_symbols_blast",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "changed_symbols",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "changed_symbols_blast",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_churn_rate": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "churn_symbol",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "churn_file",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "churn_symbol",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "churn_file",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "churn_symbol",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "churn_file",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "churn_symbol",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "churn_file",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_class_hierarchy": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_class_hierarchy",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_context_bundle": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "context_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "context_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "context_single_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "context_batch_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "context_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "context_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "context_single_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "context_batch_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "context_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "context_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "context_single_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "context_batch_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "context_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "context_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "context_single_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "context_batch_callers",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_coupling_metrics": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "coupling_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "coupling_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "coupling_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "coupling_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_cross_repo_map": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "cross_repo_map_filtered",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "cross_repo_map_filtered",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "cross_repo_map_filtered",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "cross_repo_map_filtered",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_dead_code_v2": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_dead_code_v2",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_decorator_census": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_decorator_census",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_delivery_metrics": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "delivery_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "delivery_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "delivery_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "delivery_metrics",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_dependency_cycles": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "dependency_cycles",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "dependency_cycles",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "dependency_cycles",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "dependency_cycles",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_dependency_graph": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "dependency_graph",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "dependency_graph",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "dependency_graph",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "dependency_graph",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_endpoint_impact": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_endpoint_impact",
+          "classification": "lazy_full",
+          "load_calls": 2,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_extraction_candidates": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_extraction_candidates",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_file_content": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "file_content",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "file_content",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "file_content",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "file_content",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_file_outline": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "file_outline_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "file_outline_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 3,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "file_outline_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "file_outline_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 3,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "file_outline_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "file_outline_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 3,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "file_outline_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "file_outline_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 3,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_file_risk": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "file_risk",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "file_risk",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "file_risk",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "file_risk",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 1,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_file_tree": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "file_tree_prefix",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 1
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "file_tree_prefix",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 1
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "file_tree_prefix",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 1
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "file_tree_prefix",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 1
+          }
+        }
+      ]
+    },
+    "get_group_contracts": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_group_contracts",
+          "classification": "lazy_full",
+          "load_calls": 2,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 2,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_hotspots": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_hotspots",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_impact_preview": {
+      "classifications": [
+        "lazy_full_plus_sparse"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_impact_preview",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_layer_violations": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "layer_violations",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "layer_violations",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "layer_violations",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "layer_violations",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_parity_map": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_parity_map",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 0,
+          "requested_hydration": [],
+          "symbol_collection_types": [],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_pr_risk_profile": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_pr_risk_profile",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 2,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_project_intel": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_project_intel",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_ranked_context": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_ranked_context",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_related_symbols": {
+      "classifications": [
+        "lazy_full_plus_sparse"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_related_symbols",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_repo_health": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_repo_health",
+          "classification": "lazy_full",
+          "load_calls": 5,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_repo_map": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_repo_map",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_signal_chains": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_signal_chains",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_symbol_complexity": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "symbol_complexity",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "symbol_complexity",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "symbol_complexity",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "symbol_complexity",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_symbol_diff": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_symbol_diff",
+          "classification": "lazy_full",
+          "load_calls": 2,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_symbol_importance": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_symbol_importance",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_symbol_provenance": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "symbol_provenance",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "symbol_provenance",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "symbol_provenance",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "symbol_provenance",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_symbol_source": {
+      "classifications": [
+        "sparse_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "symbol_source_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "django/django",
+          "case": "symbol_source_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "symbol_source_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "symbol_source_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "symbol_source_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "symbol_source_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "symbol_source_single",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 2,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "symbol_source_batch",
+          "classification": "sparse_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 6,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_tectonic_map": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_tectonic_map",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "get_untested_symbols": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_get_untested_symbols",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "list_workspaces": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "list_workspaces",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "list_workspaces",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "list_workspaces",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "list_workspaces",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "plan_refactoring": {
+      "classifications": [
+        "lazy_full_plus_sparse"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_plan_refactoring",
+          "classification": "lazy_full_plus_sparse",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 1,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "search_ast": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_search_ast",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "search_columns": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_search_columns",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "search_symbols": {
+      "classifications": [
+        "explicit_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_search_symbols",
+          "classification": "explicit_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "full"
+          ],
+          "symbol_collection_types": [
+            "list"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "search_text": {
+      "classifications": [
+        "metadata_or_file_state_only"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "search_text",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "expressjs/express",
+          "case": "search_text",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "fastapi/fastapi",
+          "case": "search_text",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        },
+        {
+          "repo": "gin-gonic/gin",
+          "case": "search_text",
+          "classification": "metadata_or_file_state_only",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 0,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "suggest_corrections": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_suggest_corrections",
+          "classification": "lazy_full",
+          "load_calls": 2,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "suggest_queries": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_suggest_queries",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    },
+    "winnow_symbols": {
+      "classifications": [
+        "lazy_full"
+      ],
+      "stable_across_observations": true,
+      "observations": [
+        {
+          "repo": "django/django",
+          "case": "expanded_winnow_symbols",
+          "classification": "lazy_full",
+          "load_calls": 1,
+          "requested_hydration": [
+            "auto"
+          ],
+          "symbol_collection_types": [
+            "LazySymbolList"
+          ],
+          "lazy_full_materializations": 1,
+          "sparse_calls": {
+            "sparse_by_id_calls": 0,
+            "sparse_by_file_calls": 0,
+            "sparse_by_name_calls": 0,
+            "sparse_by_files_calls": 0
+          }
+        }
+      ]
+    }
+  },
+  "paired_timings": [
+    {
+      "repo": "django/django",
+      "case": "symbol_source_single",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 457.3417,
+      "candidate_wall_ms": 20.9016,
+      "saved_ms": 436.44010000000003,
+      "speedup_x": 21.880702912695682
+    },
+    {
+      "repo": "django/django",
+      "case": "symbol_source_batch",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 461.2963,
+      "candidate_wall_ms": 29.3458,
+      "saved_ms": 431.9505,
+      "speedup_x": 15.71932951223003
+    },
+    {
+      "repo": "django/django",
+      "case": "context_single",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 464.7002,
+      "candidate_wall_ms": 18.4415,
+      "saved_ms": 446.2587,
+      "speedup_x": 25.198611826586774
+    },
+    {
+      "repo": "django/django",
+      "case": "context_batch",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 476.5284,
+      "candidate_wall_ms": 17.1677,
+      "saved_ms": 459.36069999999995,
+      "speedup_x": 27.75726509666408
+    },
+    {
+      "repo": "django/django",
+      "case": "context_single_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 709.9153,
+      "candidate_wall_ms": 267.0579,
+      "saved_ms": 442.8574,
+      "speedup_x": 2.6582823425182327
+    },
+    {
+      "repo": "django/django",
+      "case": "context_batch_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 1260.4093,
+      "candidate_wall_ms": 755.7844,
+      "saved_ms": 504.6249,
+      "speedup_x": 1.6676836674586033
+    },
+    {
+      "repo": "django/django",
+      "case": "file_content",
+      "tool": "get_file_content",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 477.5867,
+      "candidate_wall_ms": 16.3323,
+      "saved_ms": 461.25440000000003,
+      "speedup_x": 29.241852035536944
+    },
+    {
+      "repo": "django/django",
+      "case": "file_outline_single",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 513.0279,
+      "candidate_wall_ms": 17.2769,
+      "saved_ms": 495.75100000000003,
+      "speedup_x": 29.694441711186613
+    },
+    {
+      "repo": "django/django",
+      "case": "file_outline_batch",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 485.5394,
+      "candidate_wall_ms": 18.6511,
+      "saved_ms": 466.8883,
+      "speedup_x": 26.032748738680294
+    },
+    {
+      "repo": "django/django",
+      "case": "symbol_complexity",
+      "tool": "get_symbol_complexity",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 488.3136,
+      "candidate_wall_ms": 15.0181,
+      "saved_ms": 473.2955,
+      "speedup_x": 32.51500522702605
+    },
+    {
+      "repo": "django/django",
+      "case": "churn_symbol",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 540.6753,
+      "candidate_wall_ms": 125.218,
+      "saved_ms": 415.4573,
+      "speedup_x": 4.317872031177626
+    },
+    {
+      "repo": "django/django",
+      "case": "churn_file",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 544.2127,
+      "candidate_wall_ms": 78.4931,
+      "saved_ms": 465.7196,
+      "speedup_x": 6.933255279763445
+    },
+    {
+      "repo": "django/django",
+      "case": "symbol_provenance",
+      "tool": "get_symbol_provenance",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 573.6063,
+      "candidate_wall_ms": 54.4855,
+      "saved_ms": 519.1208,
+      "speedup_x": 10.527687182828458
+    },
+    {
+      "repo": "django/django",
+      "case": "references_single",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 487.0815,
+      "candidate_wall_ms": 22.9123,
+      "saved_ms": 464.1692,
+      "speedup_x": 21.25851616817168
+    },
+    {
+      "repo": "django/django",
+      "case": "references_batch",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 484.7712,
+      "candidate_wall_ms": 22.8494,
+      "saved_ms": 461.9218,
+      "speedup_x": 21.215926895235764
+    },
+    {
+      "repo": "django/django",
+      "case": "references_call_chain",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 485.6329,
+      "candidate_wall_ms": 22.7315,
+      "saved_ms": 462.9014,
+      "speedup_x": 21.36387391945098
+    },
+    {
+      "repo": "django/django",
+      "case": "importers_single",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 984.3813,
+      "candidate_wall_ms": 516.682,
+      "saved_ms": 467.6993,
+      "speedup_x": 1.9051975876844944
+    },
+    {
+      "repo": "django/django",
+      "case": "importers_batch",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 1003.1201,
+      "candidate_wall_ms": 518.4624,
+      "saved_ms": 484.6577,
+      "speedup_x": 1.9347981647270853
+    },
+    {
+      "repo": "django/django",
+      "case": "check_refs_single_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 490.9708,
+      "candidate_wall_ms": 36.7256,
+      "saved_ms": 454.2452,
+      "speedup_x": 13.368625699784346
+    },
+    {
+      "repo": "django/django",
+      "case": "check_refs_batch_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 516.8381,
+      "candidate_wall_ms": 56.0426,
+      "saved_ms": 460.79550000000006,
+      "speedup_x": 9.222236298815545
+    },
+    {
+      "repo": "django/django",
+      "case": "check_refs_single_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 904.5532,
+      "candidate_wall_ms": 432.5727,
+      "saved_ms": 471.98049999999995,
+      "speedup_x": 2.0911009871866626
+    },
+    {
+      "repo": "django/django",
+      "case": "check_refs_batch_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 1826.4383,
+      "candidate_wall_ms": 1349.7918,
+      "saved_ms": 476.64650000000006,
+      "speedup_x": 1.3531259413488808
+    },
+    {
+      "repo": "django/django",
+      "case": "file_risk",
+      "tool": "get_file_risk",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 907.1594,
+      "candidate_wall_ms": 473.352,
+      "saved_ms": 433.80740000000003,
+      "speedup_x": 1.9164583650222247
+    },
+    {
+      "repo": "django/django",
+      "case": "changed_symbols",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 594.3607,
+      "candidate_wall_ms": 147.5007,
+      "saved_ms": 446.85999999999996,
+      "speedup_x": 4.029544944532466
+    },
+    {
+      "repo": "django/django",
+      "case": "changed_symbols_blast",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 884.4039,
+      "candidate_wall_ms": 401.7422,
+      "saved_ms": 482.6617,
+      "speedup_x": 2.2014214588360397
+    },
+    {
+      "repo": "django/django",
+      "case": "blast_radius_default",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 733.2459,
+      "candidate_wall_ms": 264.713,
+      "saved_ms": 468.5329,
+      "speedup_x": 2.7699655853698153
+    },
+    {
+      "repo": "django/django",
+      "case": "blast_radius_source",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 724.0567,
+      "candidate_wall_ms": 260.7904,
+      "saved_ms": 463.2663,
+      "speedup_x": 2.7763932261310234
+    },
+    {
+      "repo": "django/django",
+      "case": "delivery_metrics",
+      "tool": "get_delivery_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 524.8596,
+      "candidate_wall_ms": 58.5197,
+      "saved_ms": 466.3399,
+      "speedup_x": 8.968938665099103
+    },
+    {
+      "repo": "django/django",
+      "case": "list_workspaces",
+      "tool": "list_workspaces",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 473.5428,
+      "candidate_wall_ms": 14.8401,
+      "saved_ms": 458.7027,
+      "speedup_x": 31.909677158509716
+    },
+    {
+      "repo": "django/django",
+      "case": "search_text",
+      "tool": "search_text",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 676.4927,
+      "candidate_wall_ms": 208.6426,
+      "saved_ms": 467.8501,
+      "speedup_x": 3.2423517536687143
+    },
+    {
+      "repo": "django/django",
+      "case": "coupling_metrics",
+      "tool": "get_coupling_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 735.1731,
+      "candidate_wall_ms": 267.6336,
+      "saved_ms": 467.5395,
+      "speedup_x": 2.7469387251824884
+    },
+    {
+      "repo": "django/django",
+      "case": "dependency_cycles",
+      "tool": "get_dependency_cycles",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 743.5376,
+      "candidate_wall_ms": 270.2342,
+      "saved_ms": 473.3034,
+      "speedup_x": 2.7514563293617167
+    },
+    {
+      "repo": "django/django",
+      "case": "dependency_graph",
+      "tool": "get_dependency_graph",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 739.5161,
+      "candidate_wall_ms": 270.2977,
+      "saved_ms": 469.21840000000003,
+      "speedup_x": 2.7359319002714413
+    },
+    {
+      "repo": "django/django",
+      "case": "cross_repo_map_filtered",
+      "tool": "get_cross_repo_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 643.8933,
+      "candidate_wall_ms": 186.1222,
+      "saved_ms": 457.77109999999993,
+      "speedup_x": 3.4595190686548944
+    },
+    {
+      "repo": "django/django",
+      "case": "layer_violations",
+      "tool": "get_layer_violations",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 740.6054,
+      "candidate_wall_ms": 272.6282,
+      "saved_ms": 467.97720000000004,
+      "speedup_x": 2.7165399617501054
+    },
+    {
+      "repo": "django/django",
+      "case": "file_tree_prefix",
+      "tool": "get_file_tree",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 503.145,
+      "candidate_wall_ms": 83.4952,
+      "saved_ms": 419.64979999999997,
+      "speedup_x": 6.026035029558585
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "symbol_source_single",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 8.1597,
+      "candidate_wall_ms": 5.1741,
+      "saved_ms": 2.9856000000000007,
+      "speedup_x": 1.577027888908216
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "symbol_source_batch",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 9.2436,
+      "candidate_wall_ms": 5.2195,
+      "saved_ms": 4.024100000000001,
+      "speedup_x": 1.770974231248204
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "context_single",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 7.2976,
+      "candidate_wall_ms": 4.6636,
+      "saved_ms": 2.6340000000000003,
+      "speedup_x": 1.5647997255339223
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "context_batch",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 7.2465,
+      "candidate_wall_ms": 4.7242,
+      "saved_ms": 2.5223000000000004,
+      "speedup_x": 1.5339105033656493
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "context_single_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 8.9132,
+      "candidate_wall_ms": 6.7783,
+      "saved_ms": 2.1349,
+      "speedup_x": 1.3149609784164171
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "context_batch_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 15.07,
+      "candidate_wall_ms": 12.5884,
+      "saved_ms": 2.4816000000000003,
+      "speedup_x": 1.1971338692764768
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "file_content",
+      "tool": "get_file_content",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 5.676,
+      "candidate_wall_ms": 3.268,
+      "saved_ms": 2.4080000000000004,
+      "speedup_x": 1.736842105263158
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "file_outline_single",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 6.2479,
+      "candidate_wall_ms": 3.0228,
+      "saved_ms": 3.2250999999999994,
+      "speedup_x": 2.0669247055709934
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "file_outline_batch",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 7.0758,
+      "candidate_wall_ms": 4.5586,
+      "saved_ms": 2.5172,
+      "speedup_x": 1.5521870749791602
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "symbol_complexity",
+      "tool": "get_symbol_complexity",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 5.4089,
+      "candidate_wall_ms": 3.5607,
+      "saved_ms": 1.8481999999999998,
+      "speedup_x": 1.5190552419468082
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "churn_symbol",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 64.1695,
+      "candidate_wall_ms": 55.1587,
+      "saved_ms": 9.010799999999996,
+      "speedup_x": 1.1633613555069282
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "churn_file",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 104.2428,
+      "candidate_wall_ms": 55.9035,
+      "saved_ms": 48.3393,
+      "speedup_x": 1.8646918350371622
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "symbol_provenance",
+      "tool": "get_symbol_provenance",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 58.7758,
+      "candidate_wall_ms": 54.854,
+      "saved_ms": 3.9217999999999975,
+      "speedup_x": 1.0714952419149013
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "references_single",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 6.3403,
+      "candidate_wall_ms": 3.5448,
+      "saved_ms": 2.7955,
+      "speedup_x": 1.7886199503498081
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "references_batch",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 6.5653,
+      "candidate_wall_ms": 3.4596,
+      "saved_ms": 3.1056999999999997,
+      "speedup_x": 1.8977049369869348
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "references_call_chain",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 6.2946,
+      "candidate_wall_ms": 3.628,
+      "saved_ms": 2.6666,
+      "speedup_x": 1.735005512679162
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "importers_single",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 11.0749,
+      "candidate_wall_ms": 8.5494,
+      "saved_ms": 2.525499999999999,
+      "speedup_x": 1.2954008468430531
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "importers_batch",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 11.4584,
+      "candidate_wall_ms": 8.2373,
+      "saved_ms": 3.2211,
+      "speedup_x": 1.391038325664963
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "check_refs_single_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 5.8835,
+      "candidate_wall_ms": 3.5434,
+      "saved_ms": 2.3400999999999996,
+      "speedup_x": 1.660410904780719
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "check_refs_batch_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 6.3194,
+      "candidate_wall_ms": 4.1394,
+      "saved_ms": 2.1799999999999997,
+      "speedup_x": 1.526646373870609
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "check_refs_single_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 11.3131,
+      "candidate_wall_ms": 8.6765,
+      "saved_ms": 2.6365999999999996,
+      "speedup_x": 1.3038782919379934
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "check_refs_batch_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 62.7722,
+      "candidate_wall_ms": 60.5922,
+      "saved_ms": 2.1799999999999997,
+      "speedup_x": 1.035978228220794
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "file_risk",
+      "tool": "get_file_risk",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 27.5543,
+      "candidate_wall_ms": 24.2172,
+      "saved_ms": 3.337100000000003,
+      "speedup_x": 1.1377987546041657
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "changed_symbols",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 137.0926,
+      "candidate_wall_ms": 135.6811,
+      "saved_ms": 1.411500000000018,
+      "speedup_x": 1.0104030701402038
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "changed_symbols_blast",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 93.6191,
+      "candidate_wall_ms": 89.1846,
+      "saved_ms": 4.4345,
+      "speedup_x": 1.049722709974592
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "blast_radius_default",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 9.7078,
+      "candidate_wall_ms": 7.2884,
+      "saved_ms": 2.4194000000000004,
+      "speedup_x": 1.3319521431315515
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "blast_radius_source",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 9.8904,
+      "candidate_wall_ms": 7.0946,
+      "saved_ms": 2.7958,
+      "speedup_x": 1.3940743664195303
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "delivery_metrics",
+      "tool": "get_delivery_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 40.3274,
+      "candidate_wall_ms": 84.8988,
+      "saved_ms": -44.5714,
+      "speedup_x": 0.4750055360028646
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "list_workspaces",
+      "tool": "list_workspaces",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 5.2029,
+      "candidate_wall_ms": 2.6711,
+      "saved_ms": 2.5317999999999996,
+      "speedup_x": 1.9478492007038297
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "search_text",
+      "tool": "search_text",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 6.7511,
+      "candidate_wall_ms": 4.4485,
+      "saved_ms": 2.3026,
+      "speedup_x": 1.5176126784309318
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "coupling_metrics",
+      "tool": "get_coupling_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 7.5687,
+      "candidate_wall_ms": 5.0684,
+      "saved_ms": 2.5003,
+      "speedup_x": 1.493311498697814
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "dependency_cycles",
+      "tool": "get_dependency_cycles",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 7.5808,
+      "candidate_wall_ms": 5.4049,
+      "saved_ms": 2.1759000000000004,
+      "speedup_x": 1.4025791411496975
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "dependency_graph",
+      "tool": "get_dependency_graph",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 8.3251,
+      "candidate_wall_ms": 5.5646,
+      "saved_ms": 2.7605000000000004,
+      "speedup_x": 1.496082377888797
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "cross_repo_map_filtered",
+      "tool": "get_cross_repo_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 162.201,
+      "candidate_wall_ms": 167.5635,
+      "saved_ms": -5.362500000000011,
+      "speedup_x": 0.967997207028977
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "layer_violations",
+      "tool": "get_layer_violations",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 7.563,
+      "candidate_wall_ms": 5.1817,
+      "saved_ms": 2.3812999999999995,
+      "speedup_x": 1.4595596039909682
+    },
+    {
+      "repo": "expressjs/express",
+      "case": "file_tree_prefix",
+      "tool": "get_file_tree",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 7.2279,
+      "candidate_wall_ms": 5.4154,
+      "saved_ms": 1.8125,
+      "speedup_x": 1.3346936514384902
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "symbol_source_single",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 101.5628,
+      "candidate_wall_ms": 10.8357,
+      "saved_ms": 90.7271,
+      "speedup_x": 9.372980056664545
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "symbol_source_batch",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 101.9507,
+      "candidate_wall_ms": 9.5969,
+      "saved_ms": 92.35379999999999,
+      "speedup_x": 10.623295022350968
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "context_single",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 97.8238,
+      "candidate_wall_ms": 9.9183,
+      "saved_ms": 87.9055,
+      "speedup_x": 9.862960386356534
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "context_batch",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 100.5736,
+      "candidate_wall_ms": 9.1602,
+      "saved_ms": 91.4134,
+      "speedup_x": 10.97941092989236
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "context_single_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 157.4524,
+      "candidate_wall_ms": 70.614,
+      "saved_ms": 86.83840000000001,
+      "speedup_x": 2.2297618036083495
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "context_batch_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 296.6372,
+      "candidate_wall_ms": 190.1977,
+      "saved_ms": 106.43950000000001,
+      "speedup_x": 1.5596255895838909
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "file_content",
+      "tool": "get_file_content",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 99.9001,
+      "candidate_wall_ms": 7.9155,
+      "saved_ms": 91.9846,
+      "speedup_x": 12.62081991030257
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "file_outline_single",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 112.9944,
+      "candidate_wall_ms": 8.284,
+      "saved_ms": 104.71039999999999,
+      "speedup_x": 13.640077257363592
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "file_outline_batch",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 101.0091,
+      "candidate_wall_ms": 10.6376,
+      "saved_ms": 90.3715,
+      "speedup_x": 9.495478303376702
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "symbol_complexity",
+      "tool": "get_symbol_complexity",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 100.8231,
+      "candidate_wall_ms": 6.9646,
+      "saved_ms": 93.85849999999999,
+      "speedup_x": 14.476509778020274
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "churn_symbol",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 160.3943,
+      "candidate_wall_ms": 62.1053,
+      "saved_ms": 98.28899999999999,
+      "speedup_x": 2.5826185526839094
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "churn_file",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 163.9637,
+      "candidate_wall_ms": 108.7479,
+      "saved_ms": 55.21579999999999,
+      "speedup_x": 1.5077412989124386
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "symbol_provenance",
+      "tool": "get_symbol_provenance",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 157.6651,
+      "candidate_wall_ms": 106.7067,
+      "saved_ms": 50.9584,
+      "speedup_x": 1.477555767351066
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "references_single",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 99.3403,
+      "candidate_wall_ms": 11.8832,
+      "saved_ms": 87.4571,
+      "speedup_x": 8.35972633634038
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "references_batch",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 99.4598,
+      "candidate_wall_ms": 12.4997,
+      "saved_ms": 86.9601,
+      "speedup_x": 7.956974967399217
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "references_call_chain",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 105.1538,
+      "candidate_wall_ms": 12.0429,
+      "saved_ms": 93.1109,
+      "speedup_x": 8.731601192403824
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "importers_single",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 220.7755,
+      "candidate_wall_ms": 130.1504,
+      "saved_ms": 90.6251,
+      "speedup_x": 1.6963105760719905
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "importers_batch",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 224.34,
+      "candidate_wall_ms": 132.6788,
+      "saved_ms": 91.66120000000001,
+      "speedup_x": 1.6908503845376956
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "check_refs_single_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 101.9471,
+      "candidate_wall_ms": 13.932,
+      "saved_ms": 88.0151,
+      "speedup_x": 7.317477749066897
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "check_refs_batch_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 107.3708,
+      "candidate_wall_ms": 20.1959,
+      "saved_ms": 87.17490000000001,
+      "speedup_x": 5.31646522313935
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "check_refs_single_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 156.2816,
+      "candidate_wall_ms": 68.1446,
+      "saved_ms": 88.137,
+      "speedup_x": 2.2933820141287793
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "check_refs_batch_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 502.5818,
+      "candidate_wall_ms": 408.9869,
+      "saved_ms": 93.5949,
+      "speedup_x": 1.2288457160852828
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "file_risk",
+      "tool": "get_file_risk",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 217.5338,
+      "candidate_wall_ms": 126.0338,
+      "saved_ms": 91.50000000000001,
+      "speedup_x": 1.7259957249563214
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "changed_symbols",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 241.733,
+      "candidate_wall_ms": 93.1863,
+      "saved_ms": 148.5467,
+      "speedup_x": 2.594083035811058
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "changed_symbols_blast",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 299.9752,
+      "candidate_wall_ms": 200.6609,
+      "saved_ms": 99.31429999999997,
+      "speedup_x": 1.4949359840407372
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "blast_radius_default",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 161.7918,
+      "candidate_wall_ms": 70.2915,
+      "saved_ms": 91.5003,
+      "speedup_x": 2.3017263822795075
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "blast_radius_source",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 160.8759,
+      "candidate_wall_ms": 71.6624,
+      "saved_ms": 89.2135,
+      "speedup_x": 2.244913650673156
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "delivery_metrics",
+      "tool": "get_delivery_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 189.2758,
+      "candidate_wall_ms": 46.5016,
+      "saved_ms": 142.7742,
+      "speedup_x": 4.070307258244878
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "list_workspaces",
+      "tool": "list_workspaces",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 96.8644,
+      "candidate_wall_ms": 8.2837,
+      "saved_ms": 88.58070000000001,
+      "speedup_x": 11.693373733959463
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "search_text",
+      "tool": "search_text",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 122.0047,
+      "candidate_wall_ms": 29.576,
+      "saved_ms": 92.42869999999999,
+      "speedup_x": 4.125125101433595
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "coupling_metrics",
+      "tool": "get_coupling_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 158.241,
+      "candidate_wall_ms": 69.1899,
+      "saved_ms": 89.05110000000002,
+      "speedup_x": 2.2870534572242485
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "dependency_cycles",
+      "tool": "get_dependency_cycles",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 162.5675,
+      "candidate_wall_ms": 69.4779,
+      "saved_ms": 93.08959999999999,
+      "speedup_x": 2.3398447563901614
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "dependency_graph",
+      "tool": "get_dependency_graph",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 160.8486,
+      "candidate_wall_ms": 69.93,
+      "saved_ms": 90.9186,
+      "speedup_x": 2.30013728013728
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "cross_repo_map_filtered",
+      "tool": "get_cross_repo_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 270.6561,
+      "candidate_wall_ms": 174.934,
+      "saved_ms": 95.72209999999998,
+      "speedup_x": 1.5471897972949797
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "layer_violations",
+      "tool": "get_layer_violations",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 164.0344,
+      "candidate_wall_ms": 69.6586,
+      "saved_ms": 94.3758,
+      "speedup_x": 2.3548334304737675
+    },
+    {
+      "repo": "fastapi/fastapi",
+      "case": "file_tree_prefix",
+      "tool": "get_file_tree",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 100.8355,
+      "candidate_wall_ms": 10.1999,
+      "saved_ms": 90.6356,
+      "speedup_x": 9.885930254218179
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "symbol_source_single",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 17.3152,
+      "candidate_wall_ms": 4.9229,
+      "saved_ms": 12.3923,
+      "speedup_x": 3.517276402120701
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "symbol_source_batch",
+      "tool": "get_symbol_source",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 16.6559,
+      "candidate_wall_ms": 5.8785,
+      "saved_ms": 10.7774,
+      "speedup_x": 2.8333588500467806
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "context_single",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 16.5187,
+      "candidate_wall_ms": 4.787,
+      "saved_ms": 11.7317,
+      "speedup_x": 3.450741591811155
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "context_batch",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 15.792,
+      "candidate_wall_ms": 4.8952,
+      "saved_ms": 10.896799999999999,
+      "speedup_x": 3.2260173230920084
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "context_single_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 19.1138,
+      "candidate_wall_ms": 7.3107,
+      "saved_ms": 11.8031,
+      "speedup_x": 2.6144965598369514
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "context_batch_callers",
+      "tool": "get_context_bundle",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 23.0677,
+      "candidate_wall_ms": 11.8385,
+      "saved_ms": 11.229199999999999,
+      "speedup_x": 1.9485323309540903
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "file_content",
+      "tool": "get_file_content",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 14.6168,
+      "candidate_wall_ms": 3.102,
+      "saved_ms": 11.5148,
+      "speedup_x": 4.712056737588653
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "file_outline_single",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 14.6883,
+      "candidate_wall_ms": 3.2603,
+      "saved_ms": 11.428,
+      "speedup_x": 4.505198908075944
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "file_outline_batch",
+      "tool": "get_file_outline",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 15.4508,
+      "candidate_wall_ms": 4.1939,
+      "saved_ms": 11.256899999999998,
+      "speedup_x": 3.684112639786356
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "symbol_complexity",
+      "tool": "get_symbol_complexity",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 14.0026,
+      "candidate_wall_ms": 2.4977,
+      "saved_ms": 11.5049,
+      "speedup_x": 5.606197701885734
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "churn_symbol",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 66.8171,
+      "candidate_wall_ms": 100.802,
+      "saved_ms": -33.98490000000001,
+      "speedup_x": 0.6628549036725461
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "churn_file",
+      "tool": "get_churn_rate",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 66.6138,
+      "candidate_wall_ms": 54.0393,
+      "saved_ms": 12.5745,
+      "speedup_x": 1.23269176321677
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "symbol_provenance",
+      "tool": "get_symbol_provenance",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 49.4883,
+      "candidate_wall_ms": 37.9266,
+      "saved_ms": 11.561700000000002,
+      "speedup_x": 1.3048440935913053
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "references_single",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 15.0005,
+      "candidate_wall_ms": 4.2212,
+      "saved_ms": 10.779300000000001,
+      "speedup_x": 3.5536103477684073
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "references_batch",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 14.9656,
+      "candidate_wall_ms": 3.8313,
+      "saved_ms": 11.1343,
+      "speedup_x": 3.906141518544619
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "references_call_chain",
+      "tool": "find_references",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 15.6937,
+      "candidate_wall_ms": 3.4886,
+      "saved_ms": 12.2051,
+      "speedup_x": 4.4985667603049935
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "importers_single",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 19.2712,
+      "candidate_wall_ms": 8.344,
+      "saved_ms": 10.927200000000001,
+      "speedup_x": 2.3095877277085335
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "importers_batch",
+      "tool": "find_importers",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 19.4828,
+      "candidate_wall_ms": 7.9896,
+      "saved_ms": 11.493200000000002,
+      "speedup_x": 2.4385200760989285
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "check_refs_single_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 14.504,
+      "candidate_wall_ms": 3.9591,
+      "saved_ms": 10.5449,
+      "speedup_x": 3.6634588669141976
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "check_refs_batch_imports",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 15.3992,
+      "candidate_wall_ms": 4.9147,
+      "saved_ms": 10.4845,
+      "speedup_x": 3.1332939955643275
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "check_refs_single_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 32.6562,
+      "candidate_wall_ms": 22.8467,
+      "saved_ms": 9.8095,
+      "speedup_x": 1.4293617896676545
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "check_refs_batch_content",
+      "tool": "check_references",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 69.3147,
+      "candidate_wall_ms": 57.6111,
+      "saved_ms": 11.703600000000002,
+      "speedup_x": 1.2031483516197399
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "file_risk",
+      "tool": "get_file_risk",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 36.8396,
+      "candidate_wall_ms": 25.0536,
+      "saved_ms": 11.785999999999998,
+      "speedup_x": 1.4704313950889292
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "changed_symbols",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 100.3022,
+      "candidate_wall_ms": 86.6808,
+      "saved_ms": 13.621399999999994,
+      "speedup_x": 1.1571443733791105
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "changed_symbols_blast",
+      "tool": "get_changed_symbols",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 146.2146,
+      "candidate_wall_ms": 139.2319,
+      "saved_ms": 6.982699999999994,
+      "speedup_x": 1.0501515816418507
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "blast_radius_default",
+      "tool": "get_blast_radius",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 21.5484,
+      "candidate_wall_ms": 9.8513,
+      "saved_ms": 11.6971,
+      "speedup_x": 2.1873661344188076
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "blast_radius_source",
+      "tool": "get_blast_radius",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 22.9953,
+      "candidate_wall_ms": 24.6864,
+      "saved_ms": -1.6910999999999987,
+      "speedup_x": 0.9314966945362629
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "delivery_metrics",
+      "tool": "get_delivery_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 97.4177,
+      "candidate_wall_ms": 37.9013,
+      "saved_ms": 59.5164,
+      "speedup_x": 2.5702996994826033
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "list_workspaces",
+      "tool": "list_workspaces",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 13.6695,
+      "candidate_wall_ms": 2.5001,
+      "saved_ms": 11.1694,
+      "speedup_x": 5.467581296748129
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "search_text",
+      "tool": "search_text",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 31.5927,
+      "candidate_wall_ms": 19.3867,
+      "saved_ms": 12.206,
+      "speedup_x": 1.6296068954489418
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "coupling_metrics",
+      "tool": "get_coupling_metrics",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 16.3111,
+      "candidate_wall_ms": 4.8533,
+      "saved_ms": 11.457799999999999,
+      "speedup_x": 3.3608266540292173
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "dependency_cycles",
+      "tool": "get_dependency_cycles",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 15.9873,
+      "candidate_wall_ms": 4.6536,
+      "saved_ms": 11.3337,
+      "speedup_x": 3.4354693140794224
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "dependency_graph",
+      "tool": "get_dependency_graph",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 16.4877,
+      "candidate_wall_ms": 5.2236,
+      "saved_ms": 11.2641,
+      "speedup_x": 3.156386400183781
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "cross_repo_map_filtered",
+      "tool": "get_cross_repo_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 172.4076,
+      "candidate_wall_ms": 168.7316,
+      "saved_ms": 3.676000000000016,
+      "speedup_x": 1.0217860791932276
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "layer_violations",
+      "tool": "get_layer_violations",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 16.2605,
+      "candidate_wall_ms": 4.9684,
+      "saved_ms": 11.292100000000001,
+      "speedup_x": 3.272783994847436
+    },
+    {
+      "repo": "gin-gonic/gin",
+      "case": "file_tree_prefix",
+      "tool": "get_file_tree",
+      "classification": "sparse_only",
+      "baseline_wall_ms": 17.5633,
+      "candidate_wall_ms": 17.3685,
+      "saved_ms": 0.19480000000000075,
+      "speedup_x": 1.0112157065952732
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_assemble_task_context",
+      "tool": "assemble_task_context",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 428.5069,
+      "candidate_wall_ms": 409.0636,
+      "saved_ms": 19.443299999999965,
+      "speedup_x": 1.047531239640975
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_audit_agent_config",
+      "tool": "audit_agent_config",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 635.4327,
+      "candidate_wall_ms": 634.7014,
+      "saved_ms": 0.7312999999999192,
+      "speedup_x": 1.0011521953472924
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_check_delete_safe",
+      "tool": "check_delete_safe",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 57834.209,
+      "candidate_wall_ms": 3678.3554,
+      "saved_ms": 54155.8536,
+      "speedup_x": 15.722844236312783
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_check_edit_safe",
+      "tool": "check_edit_safe",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 54874.5191,
+      "candidate_wall_ms": 2518.0354,
+      "saved_ms": 52356.4837,
+      "speedup_x": 21.792592391671693
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_check_rename_safe",
+      "tool": "check_rename_safe",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 709.2021,
+      "candidate_wall_ms": 722.0377,
+      "saved_ms": -12.8356,
+      "speedup_x": 0.9822230889051915
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_digest",
+      "tool": "digest",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 2482.5031,
+      "candidate_wall_ms": 1739.8418,
+      "saved_ms": 742.6613,
+      "speedup_x": 1.426855648599775
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_find_dead_code",
+      "tool": "find_dead_code",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 2370.9524,
+      "candidate_wall_ms": 1200.1175,
+      "saved_ms": 1170.8349,
+      "speedup_x": 1.9756002224782157
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_find_implementations",
+      "tool": "find_implementations",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 811.8361,
+      "candidate_wall_ms": 736.8546,
+      "saved_ms": 74.98149999999998,
+      "speedup_x": 1.1017588816029649
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_find_similar_symbols",
+      "tool": "find_similar_symbols",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 511.6272,
+      "candidate_wall_ms": 488.647,
+      "saved_ms": 22.980200000000025,
+      "speedup_x": 1.0470282228275218
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_architecture_metrics",
+      "tool": "get_architecture_metrics",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 771.3284,
+      "candidate_wall_ms": 740.5536,
+      "saved_ms": 30.774800000000027,
+      "speedup_x": 1.0415564788288114
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_call_hierarchy",
+      "tool": "get_call_hierarchy",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 817.2092,
+      "candidate_wall_ms": 809.8637,
+      "saved_ms": 7.3455000000000155,
+      "speedup_x": 1.0090700447495053
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_class_hierarchy",
+      "tool": "get_class_hierarchy",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 511.2773,
+      "candidate_wall_ms": 492.9765,
+      "saved_ms": 18.300800000000038,
+      "speedup_x": 1.0371230677324377
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_dead_code_v2",
+      "tool": "get_dead_code_v2",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 1687.0987,
+      "candidate_wall_ms": 1424.2878,
+      "saved_ms": 262.81089999999995,
+      "speedup_x": 1.1845209233695606
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_decorator_census",
+      "tool": "get_decorator_census",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 493.3931,
+      "candidate_wall_ms": 487.8501,
+      "saved_ms": 5.543000000000006,
+      "speedup_x": 1.0113620966768275
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_endpoint_impact",
+      "tool": "get_endpoint_impact",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 7765.6817,
+      "candidate_wall_ms": 5744.225,
+      "saved_ms": 2021.4566999999997,
+      "speedup_x": 1.3519111281330378
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_extraction_candidates",
+      "tool": "get_extraction_candidates",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 478.0614,
+      "candidate_wall_ms": 478.6915,
+      "saved_ms": -0.6301000000000272,
+      "speedup_x": 0.9986837033872545
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_group_contracts",
+      "tool": "get_group_contracts",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 830.6595,
+      "candidate_wall_ms": 820.1851,
+      "saved_ms": 10.474399999999946,
+      "speedup_x": 1.0127707757675675
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_hotspots",
+      "tool": "get_hotspots",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 589.1536,
+      "candidate_wall_ms": 547.0438,
+      "saved_ms": 42.10979999999995,
+      "speedup_x": 1.0769770171967947
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_impact_preview",
+      "tool": "get_impact_preview",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 811.4811,
+      "candidate_wall_ms": 798.6357,
+      "saved_ms": 12.845399999999927,
+      "speedup_x": 1.0160841795577131
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_parity_map",
+      "tool": "get_parity_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 1.7606,
+      "candidate_wall_ms": 1.4609,
+      "saved_ms": 0.29969999999999986,
+      "speedup_x": 1.2051475118077897
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_pr_risk_profile",
+      "tool": "get_pr_risk_profile",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 553.2688,
+      "candidate_wall_ms": 150.5393,
+      "saved_ms": 402.72950000000003,
+      "speedup_x": 3.675244936039958
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_project_intel",
+      "tool": "get_project_intel",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 488.9955,
+      "candidate_wall_ms": 449.5964,
+      "saved_ms": 39.399099999999976,
+      "speedup_x": 1.0876321518588672
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_ranked_context",
+      "tool": "get_ranked_context",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 6321.9928,
+      "candidate_wall_ms": 6291.7032,
+      "saved_ms": 30.289600000000064,
+      "speedup_x": 1.0048142131052844
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_related_symbols",
+      "tool": "get_related_symbols",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 815.4047,
+      "candidate_wall_ms": 788.2181,
+      "saved_ms": 27.1866,
+      "speedup_x": 1.0344912150583703
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_repo_health",
+      "tool": "get_repo_health",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 22944.1552,
+      "candidate_wall_ms": 15454.763,
+      "saved_ms": 7489.3922,
+      "speedup_x": 1.484600909117791
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_repo_map",
+      "tool": "get_repo_map",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 1190.4285,
+      "candidate_wall_ms": 1166.3623,
+      "saved_ms": 24.06619999999998,
+      "speedup_x": 1.0206335544281566
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_signal_chains",
+      "tool": "get_signal_chains",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 585.4273,
+      "candidate_wall_ms": 574.1485,
+      "saved_ms": 11.278799999999933,
+      "speedup_x": 1.019644395134708
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_symbol_diff",
+      "tool": "get_symbol_diff",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 573.0198,
+      "candidate_wall_ms": 576.978,
+      "saved_ms": -3.95819999999992,
+      "speedup_x": 0.9931397730936016
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_symbol_importance",
+      "tool": "get_symbol_importance",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 1749.675,
+      "candidate_wall_ms": 1715.6675,
+      "saved_ms": 34.007499999999936,
+      "speedup_x": 1.019821731192087
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_tectonic_map",
+      "tool": "get_tectonic_map",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 977.1249,
+      "candidate_wall_ms": 522.2279,
+      "saved_ms": 454.89700000000005,
+      "speedup_x": 1.871069891133737
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_get_untested_symbols",
+      "tool": "get_untested_symbols",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 774.8139,
+      "candidate_wall_ms": 708.9959,
+      "saved_ms": 65.81799999999998,
+      "speedup_x": 1.092832694801197
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_plan_refactoring",
+      "tool": "plan_refactoring",
+      "classification": "lazy_full_plus_sparse",
+      "baseline_wall_ms": 1035.377,
+      "candidate_wall_ms": 1005.8136,
+      "saved_ms": 29.5634,
+      "speedup_x": 1.0293925236246557
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_search_ast",
+      "tool": "search_ast",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 584.3034,
+      "candidate_wall_ms": 548.8522,
+      "saved_ms": 35.45119999999997,
+      "speedup_x": 1.0645915239111732
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_search_columns",
+      "tool": "search_columns",
+      "classification": "metadata_or_file_state_only",
+      "baseline_wall_ms": 477.7594,
+      "candidate_wall_ms": 18.5868,
+      "saved_ms": 459.17260000000005,
+      "speedup_x": 25.70423095960574
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_search_symbols",
+      "tool": "search_symbols",
+      "classification": "explicit_full",
+      "baseline_wall_ms": 2350.502,
+      "candidate_wall_ms": 2276.0082,
+      "saved_ms": 74.49379999999974,
+      "speedup_x": 1.0327300226774225
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_suggest_corrections",
+      "tool": "suggest_corrections",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 683.8203,
+      "candidate_wall_ms": 653.0771,
+      "saved_ms": 30.7432,
+      "speedup_x": 1.047074380651228
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_suggest_queries",
+      "tool": "suggest_queries",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 772.4505,
+      "candidate_wall_ms": 734.9397,
+      "saved_ms": 37.51080000000002,
+      "speedup_x": 1.051039289345779
+    },
+    {
+      "repo": "django/django",
+      "case": "expanded_winnow_symbols",
+      "tool": "winnow_symbols",
+      "classification": "lazy_full",
+      "baseline_wall_ms": 504.4136,
+      "candidate_wall_ms": 501.5645,
+      "saved_ms": 2.8490999999999644,
+      "speedup_x": 1.0056804259472112
+    }
+  ]
+}

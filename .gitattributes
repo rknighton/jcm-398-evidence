@@ -1,0 +1,5 @@
+# Every file in this bundle is content-addressed: INDEX.json and the manifests in
+# supporting-data/manifests/ record SHA-256 of the CSVs and of the harnesses.
+# Line-ending translation on checkout would change those bytes and make every
+# recorded hash look wrong. Disable it for everything.
+* -text

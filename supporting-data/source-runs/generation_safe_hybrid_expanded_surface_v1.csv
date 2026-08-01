@@ -1,0 +1,533 @@
+repo,repo_name,case,scope,tool,profile,mode,target_index,target_value,repetition,order_position,symbol_count,file_count,database_size_bytes,wall_ms,load_phase_ms,load_phase_pct,load_calls,response_bytes,rss_before_bytes,rss_after_bytes,rss_delta_bytes,canonical_response_hash,repo_git_head,repo_indexed_at,jcodemunch_version,jcodemunch_source_sha,benchmark_sha256,staged_harness_sha256,python_utf8_mode,source_root_basename,source_diff_sha256,source_dirty_paths,parity_debug_json
+django/django,django-3eb2e228,expanded_assemble_task_context,cold_generation_safe_hybrid_expanded_surface,assemble_task_context,expanded_direct_read_surface,baseline_full,3,"{""include"": [""anchor""], ""intent"": ""explore"", ""repo"": ""local/django-3eb2e228"", ""symbols"": [""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""], ""task"": ""Understand test_basic"", ""token_budget"": 1000}",1,1,45561,2730,39505920,391.1368,361.251,92.3592461767852,1,900,208932864,284385280,75452416,17c5a212f413e392b9eb87992ad9a8190a8f116ce54726d53c7a34fcbe613115,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_assemble_task_context,cold_generation_safe_hybrid_expanded_surface,assemble_task_context,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include"": [""anchor""], ""intent"": ""explore"", ""repo"": ""local/django-3eb2e228"", ""symbols"": [""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""], ""task"": ""Understand test_basic"", ""token_budget"": 1000}",1,2,45561,2730,39505920,364.5774,28.4037,7.790855933472562,1,900,213823488,285499392,71675904,17c5a212f413e392b9eb87992ad9a8190a8f116ce54726d53c7a34fcbe613115,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 359.375, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_audit_agent_config,cold_generation_safe_hybrid_expanded_surface,audit_agent_config,expanded_direct_read_surface,generation_safe_hybrid,3,"{""project_path"": ""C:\\Users\\Admin\\Documents\\GIT\\Temp\\jcm-perf-corpus\\django"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,565.0437,18.098,3.2029381090347524,1,1648,219574272,287678464,68104192,a522151aebe03d0d7ff0ab6665fd54604f31931373f30cbcf631baad3ce3e5e5,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 703.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_audit_agent_config,cold_generation_safe_hybrid_expanded_surface,audit_agent_config,expanded_direct_read_surface,baseline_full,3,"{""project_path"": ""C:\\Users\\Admin\\Documents\\GIT\\Temp\\jcm-perf-corpus\\django"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,569.1564,367.3443,64.54189041887255,1,1648,214855680,291966976,77111296,a522151aebe03d0d7ff0ab6665fd54604f31931373f30cbcf631baad3ce3e5e5,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 734.375, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_check_delete_safe,cold_generation_safe_hybrid_expanded_surface,check_delete_safe,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,55113.1371,52014.45189999999,94.37759241616459,81,1618,549462016,3052290048,2502828032,fabe2d56dfdfabf827b8fc0d0bbaf588e8ab7fcd80c7267a5f1a4423b6be9552,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 55031.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_check_delete_safe,cold_generation_safe_hybrid_expanded_surface,check_delete_safe,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,3423.4436,661.4221,19.320373789712793,81,1617,445562880,502091776,56528896,fabe2d56dfdfabf827b8fc0d0bbaf588e8ab7fcd80c7267a5f1a4423b6be9552,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 3453.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_check_edit_safe,cold_generation_safe_hybrid_expanded_surface,check_edit_safe,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,2260.9495,568.4423999999999,25.141755709271695,80,1555,460677120,514113536,53436416,283fd06aadd7c67a685f2d69182ece8c36606cec8bb9c19e36ad7c20551b3947,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 2296.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_check_edit_safe,cold_generation_safe_hybrid_expanded_surface,check_edit_safe,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,53250.5687,52020.92319999998,97.6908312342587,80,1556,582115328,3055689728,2473574400,283fd06aadd7c67a685f2d69182ece8c36606cec8bb9c19e36ad7c20551b3947,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 53281.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_check_rename_safe,cold_generation_safe_hybrid_expanded_surface,check_rename_safe,expanded_direct_read_surface,baseline_full,3,"{""new_name"": ""test_basic_renamed"", ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,624.8727,363.7908,58.21838592084435,1,372,562536448,573521920,10985472,aa5ee6ea501a12a30fdda487a6a8186b543b6262d34017475ccbebd7308e63ce,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 625.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_check_rename_safe,cold_generation_safe_hybrid_expanded_surface,check_rename_safe,expanded_direct_read_surface,generation_safe_hybrid,3,"{""new_name"": ""test_basic_renamed"", ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,622.7596,17.1427,2.7526994365080846,1,372,315555840,355057664,39501824,aa5ee6ea501a12a30fdda487a6a8186b543b6262d34017475ccbebd7308e63ce,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 625.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_digest,cold_generation_safe_hybrid_expanded_surface,digest,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228"", ""since_sha"": ""274a1d494d11d87a1b767340d1f398f197810f93""}",1,1,45561,2730,39505920,1649.0186,32.444900000000004,1.9675278374664786,3,2764,312897536,356130816,43233280,4ee69fb0f63fbab365ac5a15553cc82b07423ae1ae78bb54d26957af09c1b0c3,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 1593.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_digest,cold_generation_safe_hybrid_expanded_surface,digest,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228"", ""since_sha"": ""274a1d494d11d87a1b767340d1f398f197810f93""}",1,2,45561,2730,39505920,2354.2022,376.0116,15.971933082043673,3,2764,515362816,563265536,47902720,4ee69fb0f63fbab365ac5a15553cc82b07423ae1ae78bb54d26957af09c1b0c3,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 2296.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_find_dead_code,cold_generation_safe_hybrid_expanded_surface,find_dead_code,expanded_direct_read_surface,baseline_full,3,"{""granularity"": ""file"", ""include_tests"": false, ""min_confidence"": 1.0, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,2260.3011,370.7232,16.40149624313327,1,60359,510177280,556969984,46792704,c21796ad482f1f387f0ebf7f55c15369427be4eac42d3e3004151de7cbf4a30f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 2250.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_find_dead_code,cold_generation_safe_hybrid_expanded_surface,find_dead_code,expanded_direct_read_surface,generation_safe_hybrid,3,"{""granularity"": ""file"", ""include_tests"": false, ""min_confidence"": 1.0, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,1203.7227,15.7171,1.305707701615995,1,60359,321122304,321421312,299008,c21796ad482f1f387f0ebf7f55c15369427be4eac42d3e3004151de7cbf4a30f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 1203.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_find_implementations,cold_generation_safe_hybrid_expanded_surface,find_implementations,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_results"": 10, ""repo"": ""local/django-3eb2e228"", ""symbol"": ""Model"", ""token_budget"": 1000}",1,1,45561,2730,39505920,694.3806,30.9986,4.464208821502213,1,3392,312598528,352493568,39895040,c15b63648e6875a4b26e4db57d44ba9608a11232a866efdfc73e7f012ca92dae,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 671.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_find_implementations,cold_generation_safe_hybrid_expanded_surface,find_implementations,expanded_direct_read_surface,baseline_full,3,"{""max_results"": 10, ""repo"": ""local/django-3eb2e228"", ""symbol"": ""Model"", ""token_budget"": 1000}",1,2,45561,2730,39505920,718.4344,370.9312,51.6304898540493,1,3392,546816000,548761600,1945600,c15b63648e6875a4b26e4db57d44ba9608a11232a866efdfc73e7f012ca92dae,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 718.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_find_similar_symbols,cold_generation_safe_hybrid_expanded_surface,find_similar_symbols,expanded_direct_read_surface,baseline_full,3,"{""include_tests"": false, ""max_clusters"": 5, ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests/custom_pk/fields.py"", ""threshold"": 0.95, ""token_budget"": 1000}",1,1,45561,2730,39505920,412.0643,369.9479,89.77916795995188,1,342,543809536,546721792,2912256,9727891ab490f060599d5c6956fbf3282668be41c37810a354467376bf9c1809,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_find_similar_symbols,cold_generation_safe_hybrid_expanded_surface,find_similar_symbols,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_tests"": false, ""max_clusters"": 5, ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests/custom_pk/fields.py"", ""threshold"": 0.95, ""token_budget"": 1000}",1,2,45561,2730,39505920,399.1436,16.6242,4.16496719476399,1,342,312602624,349941760,37339136,9727891ab490f060599d5c6956fbf3282668be41c37810a354467376bf9c1809,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_architecture_metrics,cold_generation_safe_hybrid_expanded_surface,get_architecture_metrics,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228"", ""top_n"": 10}",1,1,45561,2730,39505920,661.6696,17.3547,2.622864946492933,1,4642,310435840,350179328,39743488,c41580347485f60ee4705693f31812020e6aad24364afc3138f90a83e82d3e88,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 656.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_architecture_metrics,cold_generation_safe_hybrid_expanded_surface,get_architecture_metrics,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228"", ""top_n"": 10}",1,2,45561,2730,39505920,659.7051,369.3302,55.98413594195345,1,4642,542658560,545189888,2531328,c41580347485f60ee4705693f31812020e6aad24364afc3138f90a83e82d3e88,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 656.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_call_hierarchy,cold_generation_safe_hybrid_expanded_surface,get_call_hierarchy,expanded_direct_read_surface,baseline_full,3,"{""depth"": 1, ""direction"": ""callees"", ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,697.1214,393.8283,56.49350314019911,1,1618,544366592,547672064,3305472,2ad5ff81f665200623fca9d073f4f064412a16507d006f71727451208b0a4aee,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 703.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_call_hierarchy,cold_generation_safe_hybrid_expanded_surface,get_call_hierarchy,expanded_direct_read_surface,generation_safe_hybrid,3,"{""depth"": 1, ""direction"": ""callees"", ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,685.8495,15.3458,2.237487962009158,1,1618,312430592,351404032,38973440,2ad5ff81f665200623fca9d073f4f064412a16507d006f71727451208b0a4aee,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 687.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_class_hierarchy,cold_generation_safe_hybrid_expanded_surface,get_class_hierarchy,expanded_direct_read_surface,generation_safe_hybrid,3,"{""class_name"": ""Model"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,390.1517,17.3566,4.448679834023535,1,16976,312242176,349929472,37687296,d846adb09044ba1ecb760216f6be583fed2933a8e86bb3a928dce1e2ecc2b9fb,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_class_hierarchy,cold_generation_safe_hybrid_expanded_surface,get_class_hierarchy,expanded_direct_read_surface,baseline_full,3,"{""class_name"": ""Model"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,402.302,371.785,92.41440509865723,1,16976,544526336,546467840,1941504,d846adb09044ba1ecb760216f6be583fed2933a8e86bb3a928dce1e2ecc2b9fb,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_dead_code_v2,cold_generation_safe_hybrid_expanded_surface,get_dead_code_v2,expanded_direct_read_surface,baseline_full,3,"{""include_tests"": false, ""max_results"": 10, ""min_confidence"": 1.0, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,1549.3455,344.6247,22.2432440020641,1,2607,546074624,549990400,3915776,57cb7f0834ac5662f0d1416293a6ffbe2c942134560a9702e3e6a5d7d28c388b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 1562.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_dead_code_v2,cold_generation_safe_hybrid_expanded_surface,get_dead_code_v2,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_tests"": false, ""max_results"": 10, ""min_confidence"": 1.0, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,1288.541,16.7245,1.2979408493792592,1,2607,313643008,352280576,38637568,57cb7f0834ac5662f0d1416293a6ffbe2c942134560a9702e3e6a5d7d28c388b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 1281.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_decorator_census,cold_generation_safe_hybrid_expanded_surface,get_decorator_census,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_sites"": true, ""max_decorators"": 10, ""max_sites_per"": 1, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,382.2665,17.6844,4.62619664553394,1,11605,312688640,349999104,37310464,bde712507bf35ec0f69dd37685a0a17942897fcc3a16c814c49a98aee2dbf2a6,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 375.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_decorator_census,cold_generation_safe_hybrid_expanded_surface,get_decorator_census,expanded_direct_read_surface,baseline_full,3,"{""include_sites"": true, ""max_decorators"": 10, ""max_sites_per"": 1, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,396.9151,376.2297,94.78845727965502,1,11605,546844672,548769792,1925120,bde712507bf35ec0f69dd37685a0a17942897fcc3a16c814c49a98aee2dbf2a6,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_endpoint_impact,cold_generation_safe_hybrid_expanded_surface,get_endpoint_impact,expanded_direct_read_surface,baseline_full,3,"{""call_depth"": 1, ""depth"": 1, ""handler_symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method"", ""include_infra"": false, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,7564.6036,348.04,4.600902022149581,2,924,502820864,578220032,75399168,f33cad5c048da412eeeb0e91369735424edbab9f6acb34a6c38f9dddd0a6a71f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 7531.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_endpoint_impact,cold_generation_safe_hybrid_expanded_surface,get_endpoint_impact,expanded_direct_read_surface,generation_safe_hybrid,3,"{""call_depth"": 1, ""depth"": 1, ""handler_symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method"", ""include_infra"": false, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,5535.5309,16.647000000000002,0.30072996250459016,2,924,309841920,353427456,43585536,f33cad5c048da412eeeb0e91369735424edbab9f6acb34a6c38f9dddd0a6a71f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 5531.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_extraction_candidates,cold_generation_safe_hybrid_expanded_surface,get_extraction_candidates,expanded_direct_read_surface,generation_safe_hybrid,3,"{""file_path"": ""tests/custom_pk/fields.py"", ""min_callers"": 1, ""min_complexity"": 5, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,370.2848,17.3584,4.68785108111378,1,400,310497280,349413376,38916096,bc4a816e58ac7bca6d691b004c6d629d4112e514abe3f7a56a7cacc464682136,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 375.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_extraction_candidates,cold_generation_safe_hybrid_expanded_surface,get_extraction_candidates,expanded_direct_read_surface,baseline_full,3,"{""file_path"": ""tests/custom_pk/fields.py"", ""min_callers"": 1, ""min_complexity"": 5, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,396.7009,389.2157,98.11313763089522,1,400,575393792,577339392,1945600,bc4a816e58ac7bca6d691b004c6d629d4112e514abe3f7a56a7cacc464682136,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_group_contracts,cold_generation_safe_hybrid_expanded_surface,get_group_contracts,expanded_direct_read_surface,baseline_full,3,"{""max_contracts"": 10, ""min_importers"": 1, ""repos"": [""local/django-3eb2e228"", ""local/fastapi-c1d6b9c4""], ""token_budget"": 1000}",1,1,45561,2730,39505920,696.8067,513.5721,73.70366846357821,2,423,583720960,585818112,2097152,1cbdbcf0bfe252b45de1b2cf08e7020d1bcb952eed75fd9c660d274e6280705f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 812.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_group_contracts,cold_generation_safe_hybrid_expanded_surface,get_group_contracts,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_contracts"": 10, ""min_importers"": 1, ""repos"": [""local/django-3eb2e228"", ""local/fastapi-c1d6b9c4""], ""token_budget"": 1000}",1,2,45561,2730,39505920,668.8091,27.2474,4.074017533553296,2,423,349687808,364642304,14954496,1cbdbcf0bfe252b45de1b2cf08e7020d1bcb952eed75fd9c660d274e6280705f,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 781.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_hotspots,cold_generation_safe_hybrid_expanded_surface,get_hotspots,expanded_direct_read_surface,generation_safe_hybrid,3,"{""days"": 90, ""repo"": ""local/django-3eb2e228"", ""top_n"": 10}",1,1,45561,2730,39505920,432.5088,18.2488,4.219289873408356,1,2081,351551488,354570240,3018752,ac86cb20b28dc4aab7175e1d84f12b28db5db8850d14b2a04a995eab61603dee,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_hotspots,cold_generation_safe_hybrid_expanded_surface,get_hotspots,expanded_direct_read_surface,baseline_full,3,"{""days"": 90, ""repo"": ""local/django-3eb2e228"", ""top_n"": 10}",1,2,45561,2730,39505920,446.8407,372.1959,83.29498633405595,1,2081,583888896,585818112,1929216,ac86cb20b28dc4aab7175e1d84f12b28db5db8850d14b2a04a995eab61603dee,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_impact_preview,cold_generation_safe_hybrid_expanded_surface,get_impact_preview,expanded_direct_read_surface,baseline_full,3,"{""include_decisions"": false, ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,689.6413,349.2504,50.64232667040097,1,586,584380416,587620352,3239936,2c4e197142070b4b191396b3c49bc77c88597efa7a599eaef745ccd677d301a7,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 703.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_impact_preview,cold_generation_safe_hybrid_expanded_surface,get_impact_preview,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_decisions"": false, ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,686.6571,15.773,2.297070837831576,1,586,312848384,351211520,38363136,2c4e197142070b4b191396b3c49bc77c88597efa7a599eaef745ccd677d301a7,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 687.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_parity_map,cold_generation_safe_hybrid_expanded_surface,get_parity_map,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_port_plan"": false, ""rename"": false, ""source_path"": ""tests/custom_pk/fields.py"", ""source_repo"": ""local/django-3eb2e228"", ""target_path"": ""tests/custom_pk/fields.py"", ""target_repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,2.182,0.0,0.0,0,234,347983872,347983872,0,8b82880d599f2feda9104c2e9bdc777dd0514e3a85bd7c2689caee4f0fcc6590,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 0.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_parity_map,cold_generation_safe_hybrid_expanded_surface,get_parity_map,expanded_direct_read_surface,baseline_full,3,"{""include_port_plan"": false, ""rename"": false, ""source_path"": ""tests/custom_pk/fields.py"", ""source_repo"": ""local/django-3eb2e228"", ""target_path"": ""tests/custom_pk/fields.py"", ""target_repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,2.0942,0.0,0.0,0,234,584392704,584392704,0,8b82880d599f2feda9104c2e9bdc777dd0514e3a85bd7c2689caee4f0fcc6590,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 0.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_pr_risk_profile,cold_generation_safe_hybrid_expanded_surface,get_pr_risk_profile,expanded_direct_read_surface,baseline_full,3,"{""base_ref"": ""274a1d494d11d87a1b767340d1f398f197810f93"", ""days"": 90, ""head_ref"": ""274a1d494d11d87a1b767340d1f398f197810f93"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,468.5027,375.5978,80.16982612907033,2,394,584417280,586338304,1921024,408bc258a58df1a627330b5cec5058f7a456c84fd5d0e4d0bdc674a3b3fa5192,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_pr_risk_profile,cold_generation_safe_hybrid_expanded_surface,get_pr_risk_profile,expanded_direct_read_surface,generation_safe_hybrid,3,"{""base_ref"": ""274a1d494d11d87a1b767340d1f398f197810f93"", ""days"": 90, ""head_ref"": ""274a1d494d11d87a1b767340d1f398f197810f93"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,105.0865,17.606299999999997,16.754102572642534,2,394,348086272,348241920,155648,408bc258a58df1a627330b5cec5058f7a456c84fd5d0e4d0bdc674a3b3fa5192,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 31.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_project_intel,cold_generation_safe_hybrid_expanded_surface,get_project_intel,expanded_direct_read_surface,generation_safe_hybrid,3,"{""category"": ""all"", ""repo"": ""local/django-3eb2e228"", ""scope_path"": ""tests""}",1,1,45561,2730,39505920,400.0201,17.8688,4.466975534479392,1,715,348332032,350597120,2265088,e5fcbeab0663cfb26e547411ea0fecb36b40e1fb5067d8887bb25bba7af4d83b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_project_intel,cold_generation_safe_hybrid_expanded_surface,get_project_intel,expanded_direct_read_surface,baseline_full,3,"{""category"": ""all"", ""repo"": ""local/django-3eb2e228"", ""scope_path"": ""tests""}",1,2,45561,2730,39505920,411.9435,370.5584,89.95369510624639,1,715,584409088,586416128,2007040,e5fcbeab0663cfb26e547411ea0fecb36b40e1fb5067d8887bb25bba7af4d83b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 406.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_ranked_context,cold_generation_safe_hybrid_expanded_surface,get_ranked_context,expanded_direct_read_surface,baseline_full,3,"{""fusion"": false, ""query"": ""test_basic"", ""repo"": ""local/django-3eb2e228"", ""strategy"": ""bm25"", ""token_budget"": 1000}",1,1,45561,2730,39505920,6103.8672,385.4954,6.315592842517938,1,3100,586469376,588398592,1929216,a33ea76ec5056ce1c5ca7b0e1e1df413483e58ff6bdba304090c6572600cff24,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 6093.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_ranked_context,cold_generation_safe_hybrid_expanded_surface,get_ranked_context,expanded_direct_read_surface,generation_safe_hybrid,3,"{""fusion"": false, ""query"": ""test_basic"", ""repo"": ""local/django-3eb2e228"", ""strategy"": ""bm25"", ""token_budget"": 1000}",1,2,45561,2730,39505920,6084.4541,18.3528,0.3016342912341141,1,3100,327913472,398819328,70905856,a33ea76ec5056ce1c5ca7b0e1e1df413483e58ff6bdba304090c6572600cff24,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 6062.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_related_symbols,cold_generation_safe_hybrid_expanded_surface,get_related_symbols,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_results"": 10, ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,700.5511,17.6361,2.5174608961430507,1,2288,371183616,373989376,2805760,ada25e290819b52209f1da01ef3da59d876a79f24b6da61f814b07b02792ed2c,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 703.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_related_symbols,cold_generation_safe_hybrid_expanded_surface,get_related_symbols,expanded_direct_read_surface,baseline_full,3,"{""max_results"": 10, ""repo"": ""local/django-3eb2e228"", ""symbol_id"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,717.9715,381.2743,53.10437809857355,1,2288,586481664,588406784,1925120,ada25e290819b52209f1da01ef3da59d876a79f24b6da61f814b07b02792ed2c,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 718.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_repo_health,cold_generation_safe_hybrid_expanded_surface,get_repo_health,expanded_direct_read_surface,baseline_full,3,"{""days"": 90, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,22880.8931,437.8719,1.9137010871310787,5,2813,510861312,556941312,46080000,b392f993dd7a7a825ac688bfd28fb4eb30a950add05d1c90907d43c3f96ba0ad,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 22562.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_repo_health,cold_generation_safe_hybrid_expanded_surface,get_repo_health,expanded_direct_read_surface,generation_safe_hybrid,3,"{""days"": 90, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,15241.199,19.3183,0.12675052664819875,5,2813,336011264,377438208,41426944,b392f993dd7a7a825ac688bfd28fb4eb30a950add05d1c90907d43c3f96ba0ad,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 15218.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_repo_map,cold_generation_safe_hybrid_expanded_surface,get_repo_map,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_per_file"": 3, ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests"", ""token_budget"": 1000}",1,1,45561,2730,39505920,1082.6648,17.9319,1.6562744073696678,1,32180,369209344,371134464,1925120,ad13323a99e175016df1d2cfbc7ca1849ef61387ec4099ab2b8ca8a2bd788cb8,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 1078.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_repo_map,cold_generation_safe_hybrid_expanded_surface,get_repo_map,expanded_direct_read_surface,baseline_full,3,"{""max_per_file"": 3, ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests"", ""token_budget"": 1000}",1,2,45561,2730,39505920,1088.1582,381.1231,35.02460395924049,1,32180,546377728,548532224,2154496,ad13323a99e175016df1d2cfbc7ca1849ef61387ec4099ab2b8ca8a2bd788cb8,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 1093.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_signal_chains,cold_generation_safe_hybrid_expanded_surface,get_signal_chains,expanded_direct_read_surface,baseline_full,3,"{""include_flow_edges"": false, ""include_tests"": false, ""max_depth"": 1, ""repo"": ""local/django-3eb2e228"", ""symbol"": ""test_basic""}",1,1,45561,2730,39505920,488.4362,358.646,73.42739952526041,1,298,511508480,548343808,36835328,6bcacda1e198c164ec39793cba99d8423a45b12dd3bde93dbfeb63e578efc515,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 484.375, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_signal_chains,cold_generation_safe_hybrid_expanded_surface,get_signal_chains,expanded_direct_read_surface,generation_safe_hybrid,3,"{""include_flow_edges"": false, ""include_tests"": false, ""max_depth"": 1, ""repo"": ""local/django-3eb2e228"", ""symbol"": ""test_basic""}",1,2,45561,2730,39505920,477.7136,17.6407,3.692735563735259,1,298,333197312,369987584,36790272,6bcacda1e198c164ec39793cba99d8423a45b12dd3bde93dbfeb63e578efc515,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 484.375, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_symbol_diff,cold_generation_safe_hybrid_expanded_surface,get_symbol_diff,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo_a"": ""local/django-3eb2e228"", ""repo_b"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,450.1034,17.784799999999997,3.9512698637690793,2,421,368242688,370196480,1953792,310941fd04a551ae0729d8fffb0ce4ae768bd3ca46a70fdb7da0d49977aaf203,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 453.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_symbol_diff,cold_generation_safe_hybrid_expanded_surface,get_symbol_diff,expanded_direct_read_surface,baseline_full,3,"{""repo_a"": ""local/django-3eb2e228"", ""repo_b"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,451.8882,357.9914,79.2212321543249,2,421,547688448,549613568,1925120,310941fd04a551ae0729d8fffb0ce4ae768bd3ca46a70fdb7da0d49977aaf203,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 453.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_symbol_importance,cold_generation_safe_hybrid_expanded_surface,get_symbol_importance,expanded_direct_read_surface,baseline_full,3,"{""algorithm"": ""pagerank"", ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests"", ""top_n"": 10}",1,1,45561,2730,39505920,1626.0125,387.5625,23.835148868781758,1,1243,510656512,548433920,37777408,ab2d4d18e530618be96b4ae4a6f872507e60d2a807f9408c113d12b382cdd151,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 1640.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_symbol_importance,cold_generation_safe_hybrid_expanded_surface,get_symbol_importance,expanded_direct_read_surface,generation_safe_hybrid,3,"{""algorithm"": ""pagerank"", ""repo"": ""local/django-3eb2e228"", ""scope"": ""tests"", ""top_n"": 10}",1,2,45561,2730,39505920,1573.6651,18.7183,1.189471635356214,1,1243,333660160,369459200,35799040,ab2d4d18e530618be96b4ae4a6f872507e60d2a807f9408c113d12b382cdd151,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 1578.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_tectonic_map,cold_generation_safe_hybrid_expanded_surface,get_tectonic_map,expanded_direct_read_surface,generation_safe_hybrid,3,"{""days"": 90, ""min_plate_size"": 5, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,495.9861,14.6942,2.9626233477107524,1,38014,338751488,339308544,557056,1dd02182a68bb1b7357b77f91f3946a5fde73698ea750f015ea1e1be62cac88c,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 468.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_get_tectonic_map,cold_generation_safe_hybrid_expanded_surface,get_tectonic_map,expanded_direct_read_surface,baseline_full,3,"{""days"": 90, ""min_plate_size"": 5, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,868.1164,356.6263,41.08047031481032,1,38014,548147200,550211584,2064384,1dd02182a68bb1b7357b77f91f3946a5fde73698ea750f015ea1e1be62cac88c,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 843.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_untested_symbols,cold_generation_safe_hybrid_expanded_surface,get_untested_symbols,expanded_direct_read_surface,baseline_full,3,"{""file_pattern"": ""tests/custom_pk/fields.py"", ""max_results"": 10, ""min_confidence"": 0.8, ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,702.5417,394.9308,56.21457060840659,1,1393,548466688,550408192,1941504,12aef118b54c6d119fe65d6bd761845d50d800b4d6281cea0b6ba266d0c084e9,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 703.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_get_untested_symbols,cold_generation_safe_hybrid_expanded_surface,get_untested_symbols,expanded_direct_read_surface,generation_safe_hybrid,3,"{""file_pattern"": ""tests/custom_pk/fields.py"", ""max_results"": 10, ""min_confidence"": 0.8, ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,674.6685,17.5713,2.604434622336748,1,1393,368500736,370425856,1925120,12aef118b54c6d119fe65d6bd761845d50d800b4d6281cea0b6ba266d0c084e9,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 671.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_plan_refactoring,cold_generation_safe_hybrid_expanded_surface,plan_refactoring,expanded_direct_read_surface,generation_safe_hybrid,3,"{""depth"": 1, ""new_name"": ""test_basic_renamed"", ""refactor_type"": ""rename"", ""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,1,45561,2730,39505920,927.7799,17.4125,1.8767921141641462,1,441,333725696,369479680,35753984,17c8787eba0fb0f2d1b42d14a58ccc8848622b08b833fe0a6e7c60649bc53fa0,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 921.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_plan_refactoring,cold_generation_safe_hybrid_expanded_surface,plan_refactoring,expanded_direct_read_surface,baseline_full,3,"{""depth"": 1, ""new_name"": ""test_basic_renamed"", ""refactor_type"": ""rename"", ""repo"": ""local/django-3eb2e228"", ""symbol"": ""tests/db_functions/comparison/test_nullif.py::NullIfTests.test_basic#method""}",1,2,45561,2730,39505920,941.7776,388.9505,41.29961256245635,1,441,548491264,550416384,1925120,17c8787eba0fb0f2d1b42d14a58ccc8848622b08b833fe0a6e7c60649bc53fa0,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 937.5, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_search_ast,cold_generation_safe_hybrid_expanded_surface,search_ast,expanded_direct_read_surface,baseline_full,3,"{""max_results"": 10, ""pattern"": ""lines:80+"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,495.1737,390.0062,78.76149318915766,1,205,549953536,552202240,2248704,a73bd6ce394230b25f72c4e7a565dd26f985d1baf39b3301f7b2ace4ac83cfda,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 578.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_search_ast,cold_generation_safe_hybrid_expanded_surface,search_ast,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_results"": 10, ""pattern"": ""lines:80+"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,483.156,18.3478,3.797489837650779,1,205,369143808,371523584,2379776,a73bd6ce394230b25f72c4e7a565dd26f985d1baf39b3301f7b2ace4ac83cfda,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 593.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_search_columns,cold_generation_safe_hybrid_expanded_surface,search_columns,expanded_direct_read_surface,generation_safe_hybrid,3,"{""max_results"": 10, ""query"": ""id"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,19.696,17.1756,87.20349309504468,1,256,368541696,368689152,147456,660634e945840aa1242e85e46f1cae2adac15da76a721eadf369c406df6b6e01,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 15.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_search_columns,cold_generation_safe_hybrid_expanded_surface,search_columns,expanded_direct_read_surface,baseline_full,3,"{""max_results"": 10, ""query"": ""id"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,377.7184,374.9685,99.27197086506774,1,256,550277120,552202240,1925120,660634e945840aa1242e85e46f1cae2adac15da76a721eadf369c406df6b6e01,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 390.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_search_symbols,cold_generation_safe_hybrid_expanded_surface,search_symbols,expanded_direct_read_surface,baseline_full,3,"{""detail_level"": ""compact"", ""fusion"": false, ""max_results"": 10, ""query"": ""test_basic"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,2195.8001,362.6624,16.51618469276871,1,2544,560934912,563728384,2793472,26cfba032623012c289bef810c2c2759cfff518a87ff8759b2bd74e9d20dd54d,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 2203.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_search_symbols,cold_generation_safe_hybrid_expanded_surface,search_symbols,expanded_direct_read_surface,generation_safe_hybrid,3,"{""detail_level"": ""compact"", ""fusion"": false, ""max_results"": 10, ""query"": ""test_basic"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,2178.82,18.8493,0.8651150622814183,1,2544,379736064,392613888,12877824,26cfba032623012c289bef810c2c2759cfff518a87ff8759b2bd74e9d20dd54d,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 2171.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_suggest_corrections,cold_generation_safe_hybrid_expanded_surface,suggest_corrections,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228"", ""window_days"": 30}",1,1,45561,2730,39505920,573.1023,16.8592,2.9417435595704293,2,710,381222912,383156224,1933312,34d44e7d1876c691a11174d54f25e4a8fa2d4b8e0604ea604d99a9f9c4a9c13a,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 578.125, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_suggest_corrections,cold_generation_safe_hybrid_expanded_surface,suggest_corrections,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228"", ""window_days"": 30}",1,2,45561,2730,39505920,591.467,382.8448,64.72800680342267,2,710,561836032,563773440,1937408,34d44e7d1876c691a11174d54f25e4a8fa2d4b8e0604ea604d99a9f9c4a9c13a,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 593.75, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_suggest_queries,cold_generation_safe_hybrid_expanded_surface,suggest_queries,expanded_direct_read_surface,baseline_full,3,"{""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,675.5366,380.4124,56.31262614046374,1,1620,561831936,563757056,1925120,d6df5fa8ee42ac48fa4b292ca2c0d380b3b85e2deeb8a7c17d21132860b9bd4b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 671.875, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"
+django/django,django-3eb2e228,expanded_suggest_queries,cold_generation_safe_hybrid_expanded_surface,suggest_queries,expanded_direct_read_surface,generation_safe_hybrid,3,"{""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,665.9032,17.5817,2.640278647106667,1,1620,381235200,383160320,1925120,d6df5fa8ee42ac48fa4b292ca2c0d380b3b85e2deeb8a7c17d21132860b9bd4b,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 656.25, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_winnow_symbols,cold_generation_safe_hybrid_expanded_surface,winnow_symbols,expanded_direct_read_surface,generation_safe_hybrid,3,"{""criteria"": [{""axis"": ""kind"", ""op"": ""eq"", ""value"": ""function""}], ""max_results"": 10, ""order"": ""asc"", ""rank_by"": ""name"", ""repo"": ""local/django-3eb2e228""}",1,1,45561,2730,39505920,399.1167,17.6235,4.415625805685405,1,3447,381235200,383172608,1937408,d3813e10e15ddbef9052698c675a80a5c9822a6696eb8c243ac1a3ccca307abc,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-generation-safe-hybrid,175f8765c4949317d4f48614b8cdacd8c537ab2755c49f13f78a0b2b855cab96,"M src/jcodemunch_mcp/server.py
+ M src/jcodemunch_mcp/storage/index_store.py
+ M src/jcodemunch_mcp/storage/sqlite_store.py
+ M src/jcodemunch_mcp/tools/check_references.py
+ M src/jcodemunch_mcp/tools/find_references.py
+ M src/jcodemunch_mcp/tools/get_blast_radius.py
+ M src/jcodemunch_mcp/tools/get_churn_rate.py
+ M src/jcodemunch_mcp/tools/get_file_outline.py
+ M src/jcodemunch_mcp/tools/get_file_risk.py
+ M src/jcodemunch_mcp/tools/get_file_tree.py
+ M src/jcodemunch_mcp/tools/get_symbol_complexity.py
+ M src/jcodemunch_mcp/tools/get_symbol_provenance.py
+?? tests/test_generation_safe_hybrid.py","{""process_cpu_ms"": 500.0, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 25844}"
+django/django,django-3eb2e228,expanded_winnow_symbols,cold_generation_safe_hybrid_expanded_surface,winnow_symbols,expanded_direct_read_surface,baseline_full,3,"{""criteria"": [{""axis"": ""kind"", ""op"": ""eq"", ""value"": ""function""}], ""max_results"": 10, ""order"": ""asc"", ""rank_by"": ""name"", ""repo"": ""local/django-3eb2e228""}",1,2,45561,2730,39505920,410.4156,381.6415,92.98903355525474,1,3447,561831936,563777536,1945600,d3813e10e15ddbef9052698c675a80a5c9822a6696eb8c243ac1a3ccca307abc,274a1d494d11d87a1b767340d1f398f197810f93,2026-07-29T20:21:07.572944,1.108.207,c2201a55b6e1b0ea38043c514ab7bc3a372bad13,199fcb38cf31944e24858d74197f4acc0d63bbbcd1e283bab8948abb95a81f2e,f93913c7c5a10f69e3de8d145eab6cd7082241f2fd469f125eb875ca7ff7079a,1,wt-1.108.207,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,,"{""process_cpu_ms"": 515.625, ""runtime_distribution_version"": ""1.108.199"", ""target_policy"": ""middle stride target with bounded tool-specific arguments"", ""worker_pid"": 11340}"

@@ -1,0 +1,298 @@
+{
+  "bundle": "Arc 1 and Arc 2 evidence for jgravelle/jcodemunch-mcp#398",
+  "pinned_source_sha": "c2201a55b6e1b0ea38043c514ab7bc3a372bad13",
+  "pinned_version": "1.108.207",
+  "distribution_string_in_csvs": "1.108.199",
+  "note_on_version": "CSVs carry the ambient installed distribution string 1.108.199 while jcodemunch_source_sha is c2201a55 (v1.108.207). The source SHA is the authoritative code identity; the distribution string is stale metadata.",
+  "verify": "python verify.py  (recomputes every figure quoted in #398; exit 0 means all reproduce)",
+  "corpora": {
+    "django/django": "274a1d494d11d87a1b767340d1f398f197810f93",
+    "fastapi/fastapi": "95f8322ee1dcda7ceace7b1c4f6c9915b36d748f",
+    "gin-gonic/gin": "34dac209ffb6ef85cc78c5d217bbb7ad001d68fd",
+    "expressjs/express": "a3714473feb3d2908add734d340e7755fd85e0a3"
+  },
+  "caveats": [
+    "The unified archive at jcodemunch_selective_hydration_all_measurements.csv retains exploratory rows at 6996cc08 alongside c2201a55 rows. Filter on jcodemunch_source_sha before aggregating. No 6996cc08 row backs a quoted figure.",
+    "The Arc 2 classification screen is one pair per case. 58 of its 144 cases (40.3%) are Express and Gin calls with sub-50ms baselines, which a single pair cannot separate from timing variance. Django 5.17x and FastAPI 2.59x are the load-bearing part.",
+    "generation_boundary_architecture_probe_v1.csv predates the pin (6996cc08). It is exploratory and backs no quoted figure; kept rather than dropped."
+  ],
+  "data_files": [
+    {
+      "file": "supporting-data/source-runs/cache_generation_churn_probe_v1.csv",
+      "arc": "arc1",
+      "purpose": "Cache-generation churn probe, early revision.",
+      "grain": "one row = one probe observation",
+      "rows": 6,
+      "columns": 34,
+      "modes": [
+        "baseline_full_warm_probe",
+        "generation_safe_hybrid_warm_probe",
+        "generation_unsafe_global_partial_warm_probe"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "92b8fa0017ec3794ad9e08932de5636debe05b684cd03872d8c0f76f9593b775"
+    },
+    {
+      "file": "supporting-data/source-runs/cache_generation_churn_probe_v7.csv",
+      "arc": "arc1",
+      "purpose": "Cache-generation churn probe, final revision. Records db mtime and WAL sidecar state before and after warm-up and measurement.",
+      "grain": "one row = one probe observation",
+      "rows": 6,
+      "columns": 34,
+      "modes": [
+        "baseline_full_warm_probe",
+        "generation_safe_hybrid_warm_probe",
+        "generation_unsafe_global_partial_warm_probe"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "5377fcd800d04c46ef506811ea91f240dd6c0a89dbca4829f2f24f1bbf6bca73"
+    },
+    {
+      "file": "supporting-data/source-runs/concurrency_search_fresh_process_v3.csv",
+      "arc": "arc1",
+      "purpose": "Concurrent search from fresh processes, 3rd revision.",
+      "grain": "one row = one worker call",
+      "rows": 12,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "385addab57946a9fc42f8d33d09523601a6cd269277514fe1c90ae78032119f9"
+    },
+    {
+      "file": "supporting-data/source-runs/concurrency_search_fresh_process_v4.csv",
+      "arc": "arc1",
+      "purpose": "Concurrent search from fresh processes, final revision.",
+      "grain": "one row = one worker call",
+      "rows": 12,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "1bbee386e57b24c826509b55b8d20f7da06eada30f8177d8c437115c69a8c459"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_boundary_architecture_probe_v1.csv",
+      "arc": "arc1",
+      "purpose": "Exploratory architecture probe. PRE-PIN at 6996cc08; backs no quoted figure.",
+      "grain": "one row = one probe observation",
+      "rows": 18,
+      "columns": 23,
+      "modes": [
+        "baseline_full",
+        "persistent_data_version_monitor",
+        "request_snapshot",
+        "shared_lazy_v1"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "6996cc08"
+      ],
+      "sha256": "2651f07d406c251826ec750ff20ecb00621ae9154c86c26fc8260c967a2dda11"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_boundary_followups_v1.csv",
+      "arc": "arc1",
+      "purpose": "Generation-boundary follow-ups: mutation during read, branch add, reindex.",
+      "grain": "one row = one boundary scenario observation",
+      "rows": 66,
+      "columns": 18,
+      "modes": [
+        "baseline",
+        "branch_full",
+        "branch_sparse",
+        "candidate"
+      ],
+      "repos": [],
+      "source_sha": [],
+      "sha256": "d165f68c200728bf185c7a4c111f024b91057ccb9a51fff9e1f7a68011b27dc2"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_combined_validation_v3.csv",
+      "arc": "arc1-3",
+      "purpose": "The 38-case Django headline. One paired A/B call per tool.",
+      "grain": "one row = one timed tool call in one mode",
+      "rows": 76,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "aa90f1d6a81e785be2fc8f11834b88dbb96971af6f75884d84a80970d28a34e9"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_concurrency_v1.csv",
+      "arc": "arc1",
+      "purpose": "Concurrent broad callers against the shared view, first revision.",
+      "grain": "one row = one worker call",
+      "rows": 18,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "5c83b1466746d8c91f0817186193f794d6059f2384d51f8aae3b9a6fce5b13bb"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_concurrency_v2.csv",
+      "arc": "arc1",
+      "purpose": "Concurrent broad callers against the shared view, final revision.",
+      "grain": "one row = one worker call",
+      "rows": 18,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "bed329f9082728ecf5842cca06dbd02711e40131354492f6a5127e63112bd0d4"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_e2e_deep_v3.csv",
+      "arc": "arc1-3",
+      "purpose": "Four-repo control, 6 cases x 5 repetitions x 2 modes per repo. Use this for per-case separation rather than pooled medians.",
+      "grain": "one row = one timed tool call in one mode at one repetition",
+      "rows": 240,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228",
+        "express-080294c3",
+        "fastapi-c1d6b9c4",
+        "gin-87ab3d33"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "7da9f444e771503d868114562c65d4cf9c0cde5f1e257d8f323988184506c807"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_e2e_screen_v1.csv",
+      "arc": "arc2",
+      "purpose": "Earlier end-to-end screen; input to analyze_generation_safe_hybrid_screen.",
+      "grain": "one row = one timed tool call in one mode",
+      "rows": 288,
+      "columns": 33,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228",
+        "express-080294c3",
+        "fastapi-c1d6b9c4",
+        "gin-87ab3d33"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "388a98487cf8e889597ebd64d6138246335c4ea686fa54d9fc47ccf4a08ed3bd"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_expanded_surface_v1.csv",
+      "arc": "arc2",
+      "purpose": "Expanded surface run feeding the hydration classification.",
+      "grain": "one row = one timed tool call in one mode",
+      "rows": 76,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "f1b9b97b49dc4f51515596c71e9ffb4307e528ed9ec39c8cb4def31eb94d1a45"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_hydration_trace_expanded_v2.csv",
+      "arc": "arc2",
+      "purpose": "Expanded Django surface, one pair per case.",
+      "grain": "one row = one timed tool call in one mode",
+      "rows": 76,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "f2ed5b13d4c0de90e857af16f18ad4b8e1d477418c4f3365286de87728345152"
+    },
+    {
+      "file": "supporting-data/source-runs/generation_safe_hybrid_hydration_trace_screen_v2.csv",
+      "arc": "arc2",
+      "purpose": "Hydration classification screen across four repos, one pair per case.",
+      "grain": "one row = one timed tool call in one mode",
+      "rows": 288,
+      "columns": 34,
+      "modes": [
+        "baseline_full",
+        "generation_safe_hybrid"
+      ],
+      "repos": [
+        "django-3eb2e228",
+        "express-080294c3",
+        "fastapi-c1d6b9c4",
+        "gin-87ab3d33"
+      ],
+      "source_sha": [
+        "c2201a55"
+      ],
+      "sha256": "8ad8a3070bb7b21f3c42250f8e5cea1dbeeaaaae06d5c1c65f94411db01870ab"
+    }
+  ]
+}
