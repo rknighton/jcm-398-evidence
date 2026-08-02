@@ -58,4 +58,7 @@ The no-dependency verifier checks the fixed schema, row identities, complete cel
 
 Limitations: the frozen suite is intentionally small; it establishes the roadmap gate on named public corpora, not universal ranking quality. The conservative interval is a mathematical safety envelope, not an empirically minimized error model. Timing reflects this Windows host and local storage. The Windows process CPU clock quantized some shortest candidate cells to zero; these are valid non-negative measurements below its resolution, while wall and scorer clocks remain positive. Because upstream has not selected an official Arc 4 implementation, adoption remains provisional even though the evidence verdict is pass.
 
-No issue comment, pull request, push, publication, release, or external submission was made. The focused follow-up issue draft remains outside the public evidence tree until submission is explicitly authorized.
+The evidence repository and its Arc 4 GitHub release are published. The focused
+upstream follow-up issue remains a local draft outside the public evidence tree and
+has not been submitted. No upstream issue comment, pull request, or issue submission
+was made as part of this evidence publication.

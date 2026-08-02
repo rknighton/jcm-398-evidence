@@ -64,4 +64,6 @@ path leakage. It writes only to the requested new destination and its sibling
 5. Upload the archive, checksum, and external manifest to the matching release tag.
 6. Link the release from the focused follow-up issue connected to umbrella issue 398.
 
-This local preparation intentionally stops before steps 5 and 6.
+Steps 1 through 5 are complete. The archive, checksum, and external manifest are
+published under the matching evidence-repository release tag. Step 6 remains pending:
+the focused upstream follow-up issue is still a local draft and has not been submitted.

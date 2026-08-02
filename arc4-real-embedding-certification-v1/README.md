@@ -82,5 +82,6 @@ intend to regenerate `measurements.csv`.
 
 ## Publication boundary
 
-The repository, release, and focused follow-up issue are prepared locally. Nothing in
-this bundle posts, pushes, publishes, creates a release, or submits an issue.
+The evidence repository and its Arc 4 release are published. The focused upstream
+follow-up issue remains a local draft and has not been submitted. Nothing in this
+bundle posts, pushes, publishes, creates a release, or submits an issue by itself.
