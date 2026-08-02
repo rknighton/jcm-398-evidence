@@ -3,3 +3,4 @@
 # Line-ending translation on checkout would change those bytes and make every
 # recorded hash look wrong. Disable it for everything.
 * -text
+arc4-real-embedding-certification-v1/licenses/*.txt whitespace=cr-at-eol

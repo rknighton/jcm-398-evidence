@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+arc4-real-embedding-certification-v1/working/
+arc4-real-embedding-certification-v1/dist/
+.release-assets/

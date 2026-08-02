@@ -1,9 +1,20 @@
-# Arc 1 and Arc 2 evidence for jcodemunch-mcp#398
+# Evidence for jcodemunch-mcp#398
 
 Supporting material requested on
 [#398](https://github.com/jgravelle/jcodemunch-mcp/issues/398), for the arcs now on
-`ROADMAP.md`. Harnesses and fixed-schema CSVs for Arcs 1 and 2, plus the unified archive
-so any figure can be recomputed instead of taken from prose.
+`ROADMAP.md`. The original root bundle covers Arcs 1 and 2. The versioned
+[`arc4-real-embedding-certification-v1`](arc4-real-embedding-certification-v1/README.md)
+bundle covers the later real-embedding certification gate, including its reusable
+harness, raw measurements, verifier, and separately downloadable prepared-index asset.
+
+## Evidence bundles
+
+| Bundle | Location | Verification |
+| --- | --- | --- |
+| Arcs 1 and 2 | Repository root | `python verify.py` |
+| Arc 4 real-embedding certification v1 | `arc4-real-embedding-certification-v1/` | `py -3 verify.py --self-test` from that directory |
+
+The remainder of this root document describes the original Arcs 1 and 2 bundle.
 
 Produced against source revision
 [`c2201a55`](https://github.com/jgravelle/jcodemunch-mcp/tree/c2201a55b6e1b0ea38043c514ab7bc3a372bad13)
@@ -24,9 +35,9 @@ line rather than an argument. Exit code 0 means all 26 checks reproduce.
 
 **What it covers:** the 38-case Django code-loading headline and its distribution, the
 four-repo per-case control, the Arc 2 Django and FastAPI medians, file integrity, and
-provenance classification. **What it does not cover:** the Arc 4 and Arc 5 semantic
-figures, and the pooled Arc 2 and Arc 3 case-group numbers. Those rest on CSVs outside
-this bundle's Arc 1 and Arc 2 scope.
+provenance classification. **What it does not cover:** the versioned Arc 4 pack, the Arc
+5 semantic figures, and the pooled Arc 2 and Arc 3 case-group numbers. Run the Arc 4
+verifier separately from its own directory.
 
 ```
 CHECK                                        CLAIMED        RECOMPUTED

@@ -1,0 +1,112 @@
+{
+  "archive": {
+    "name": "arc4-real-embedding-indexes-v1.zip",
+    "sha256": "bfc9378ba8a6bfe606e9eca76fc8621342e63005d4436cb144fee1afef23d4f1",
+    "size": 86948603
+  },
+  "asset": "arc4-real-embedding-indexes-v1.zip",
+  "coverage": {
+    "excluded": [
+      "jcodemunch"
+    ],
+    "included": [
+      "django",
+      "fastapi"
+    ],
+    "note": "The public asset includes both load-bearing gate corpora. The raw control measurements remain in measurements.csv."
+  },
+  "databases": {
+    "local-django-3eb2e228.db": {
+      "corpus": "django",
+      "corpus_commit": "274a1d494d11d87a1b767340d1f398f197810f93",
+      "database_filename": "local-django-3eb2e228.db",
+      "embedding_blob_bytes": 1536,
+      "embedding_generation_identity": "680da3a3087e07744d9dfdb6273de879fd3cfee421620ab8e42b9dfc48548388",
+      "embedding_meta": {
+        "embed_dimension": "384",
+        "embed_model": "all-MiniLM-L6-v2",
+        "embed_task_type": ""
+      },
+      "embedding_vector_count": 45561,
+      "license": {
+        "name": "BSD-3-Clause-style Django license",
+        "release_included": true,
+        "url": "https://github.com/django/django/blob/274a1d494d11d87a1b767340d1f398f197810f93/LICENSE"
+      },
+      "local_meta_path_markers": [],
+      "local_path_scan": "PASS",
+      "measured_working_database_sha256": "21767e35f79cf051c346389c90562126317fff9871ee9c7e4b33280fe3740529",
+      "metadata_path_transformation": {
+        "column": "value",
+        "replacement": "<redacted-local-root>",
+        "source_marker_class": "measured Windows user-profile path",
+        "source_marker_count": 1,
+        "table": "meta"
+      },
+      "public_repo": "django/django",
+      "release_database_sha256": "8100fc5d69effa7c396cbc73b33c9781dec1c0b655c4df51a191061fb7e7f416",
+      "role": "authoritative",
+      "sha256": "8100fc5d69effa7c396cbc73b33c9781dec1c0b655c4df51a191061fb7e7f416",
+      "size": 137502720,
+      "source_database_sha256": "2c0e469e07e1324c44ba3b293ac961dbfabc6a05c652b4b1dd30e184d8d75705",
+      "source_repo_id": "local/django-3eb2e228",
+      "sqlite_integrity": "ok",
+      "working_database_sha256": "21767e35f79cf051c346389c90562126317fff9871ee9c7e4b33280fe3740529"
+    },
+    "local-fastapi-c1d6b9c4.db": {
+      "corpus": "fastapi",
+      "corpus_commit": "95f8322ee1dcda7ceace7b1c4f6c9915b36d748f",
+      "database_filename": "local-fastapi-c1d6b9c4.db",
+      "embedding_blob_bytes": 1536,
+      "embedding_generation_identity": "deb2faecce4937fcca00ed3d0562fb1681e3e61e49b102cd900c6fba3dee6d35",
+      "embedding_meta": {
+        "embed_dimension": "384",
+        "embed_model": "all-MiniLM-L6-v2",
+        "embed_task_type": ""
+      },
+      "embedding_vector_count": 13405,
+      "license": {
+        "name": "MIT",
+        "release_included": true,
+        "url": "https://github.com/fastapi/fastapi/blob/95f8322ee1dcda7ceace7b1c4f6c9915b36d748f/LICENSE"
+      },
+      "local_meta_path_markers": [],
+      "local_path_scan": "PASS",
+      "measured_working_database_sha256": "fb0f933f2fff75684a26872b86bc8f7b7301b7d08c54a079630c05ede760e61e",
+      "metadata_path_transformation": {
+        "column": "value",
+        "replacement": "<redacted-local-root>",
+        "source_marker_class": "measured Windows user-profile path",
+        "source_marker_count": 1,
+        "table": "meta"
+      },
+      "public_repo": "fastapi/fastapi",
+      "release_database_sha256": "0f2c05ba62de8776b8070245bbecda8cc71301ae2534d8a7f9f0e1c3c75e3dd6",
+      "role": "required_second_point",
+      "sha256": "0f2c05ba62de8776b8070245bbecda8cc71301ae2534d8a7f9f0e1c3c75e3dd6",
+      "size": 43274240,
+      "source_database_sha256": "899ee4cb96df0ac5135219228c0d780a4437204472f72efd4d9e38447ef96d6a",
+      "source_repo_id": "local/fastapi-c1d6b9c4",
+      "sqlite_integrity": "ok",
+      "working_database_sha256": "fb0f933f2fff75684a26872b86bc8f7b7301b7d08c54a079630c05ede760e61e"
+    }
+  },
+  "embedding_model": "all-MiniLM-L6-v2",
+  "embedding_provider": "local_onnx",
+  "format": "zip-with-prepared-jcodemunch-sqlite-indexes",
+  "license_files": {
+    "licenses/django-LICENSE.txt": {
+      "sha256": "7e493fa7ce2cfdb8dc8a97d5e912f81fc5e0ddc58c5a236e98de2ee55ca978a8",
+      "size": 1579
+    },
+    "licenses/fastapi-LICENSE.txt": {
+      "sha256": "2853a942962e3bb755239b5fecb736503be392554c1d90f97cea7f29f4465d34",
+      "size": 1107
+    }
+  },
+  "measured_config_sha256": "b2ccb6837649f8516a243c244fedbed8ecd3e68b1cac7158074b83608ade3422",
+  "measured_harness_sha256": "0fb3438e706a26ae2c1dbc9a904473d319ee8d76ae6523ef93177e90e4654f52",
+  "publication_state": "local-draft-not-published",
+  "release_tag": "arc4-real-embedding-certification-v1",
+  "schema_version": "arc4-real-embedding-certification-v1"
+}

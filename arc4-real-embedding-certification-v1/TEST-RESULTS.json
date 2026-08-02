@@ -1,0 +1,76 @@
+{
+  "command": "py -3 run_tests.py",
+  "errors": 0,
+  "failures": 0,
+  "python_version": "3.13.7",
+  "schema_version": "arc4-public-test-results-v1",
+  "skipped": 0,
+  "status": "PASS",
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.BoundTests.test_dimension_mismatch_fails_closed"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.BoundTests.test_float32_bounds_contain_exact_scores"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.BoundTests.test_zero_vectors_are_exactly_zero"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.DeterminismTests.test_tie_break_is_independent_of_insertion_order"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_allocation_failure_falls_back"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_candidate_matches_deterministic_exact_top"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_certification_fraction_limit_falls_back"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_forced_exact_fallback_is_explicit"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_memory_cap_refusal_falls_back"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_missing_numpy_falls_back"
+    },
+    {
+      "status": "PASS",
+      "test": "test_arc4lib.LaneTests.test_score_case_reconciles_all_certified_buckets"
+    },
+    {
+      "status": "PASS",
+      "test": "test_release_asset.DatabaseAuditTests.test_accepts_integral_path_safe_database"
+    },
+    {
+      "status": "PASS",
+      "test": "test_release_asset.DatabaseAuditTests.test_rejects_machine_local_path"
+    },
+    {
+      "status": "PASS",
+      "test": "test_release_asset.SafeMemberTests.test_accepts_expected_member"
+    },
+    {
+      "status": "PASS",
+      "test": "test_release_asset.SafeMemberTests.test_rejects_absolute_member"
+    },
+    {
+      "status": "PASS",
+      "test": "test_release_asset.SafeMemberTests.test_rejects_parent_traversal"
+    }
+  ],
+  "tests_run": 16
+}

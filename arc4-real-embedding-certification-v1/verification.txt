@@ -1,0 +1,10 @@
+{
+  "claim_count": 97,
+  "column_count": 79,
+  "csv_sha256": "b480db692ae195d403edb29617315662f01ab4a737490ffed931103cd0dbd58f",
+  "release_asset_sha256": "bfc9378ba8a6bfe606e9eca76fc8621342e63005d4436cb144fee1afef23d4f1",
+  "roadmap_verdict": "pass",
+  "row_count": 360,
+  "self_test": "PASS",
+  "status": "PASS"
+}

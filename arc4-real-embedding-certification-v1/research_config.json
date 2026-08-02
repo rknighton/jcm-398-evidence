@@ -1,0 +1,104 @@
+{
+  "authority": {
+    "django_breadth_design_max": 0.25,
+    "django_breadth_pass_max": 0.1,
+    "genuine_disagreement_fail_above": 0.005,
+    "latest_release_at_freeze": "v1.108.212",
+    "roadmap_blob_sha": "68e5c627be61884bb17000eafccf5d802010c68e",
+    "roadmap_url": "https://github.com/jgravelle/jcodemunch-mcp/blob/main/ROADMAP.md",
+    "upstream_main_sha_at_freeze": "c78392cac0d50570d5cf86558d8d3674c0bea068",
+    "warm_speed_rationale": 5.0
+  },
+  "corpora": [
+    {
+      "name": "django",
+      "public_repo": "django/django",
+      "role": "authoritative",
+      "source_database": "local-django-3eb2e228.db",
+      "source_repo_id": "local/django-3eb2e228",
+      "source_root": "<local-checkout:django/django>"
+    },
+    {
+      "name": "fastapi",
+      "public_repo": "fastapi/fastapi",
+      "role": "required_second_point",
+      "source_database": "local-fastapi-c1d6b9c4.db",
+      "source_repo_id": "local/fastapi-c1d6b9c4",
+      "source_root": "<local-checkout:fastapi/fastapi>"
+    },
+    {
+      "name": "jcodemunch",
+      "public_repo": "jgravelle/jcodemunch-mcp",
+      "role": "control_only",
+      "source_database": "local-arc4-research-v1-upstream-6f37f3de.db",
+      "source_repo_id": "local/arc4-research-v1-upstream-6f37f3de",
+      "source_root": "<local-checkout:jgravelle/jcodemunch-mcp>"
+    }
+  ],
+  "embedding": {
+    "dimension": 384,
+    "document_task_type": "",
+    "document_text_contract": "jcodemunch_mcp.tools.embed_repo._sym_text",
+    "model": "all-MiniLM-L6-v2",
+    "normalization": "provider_l2_normalized_float32_storage",
+    "provider": "local_onnx",
+    "query_task_type": ""
+  },
+  "frozen_at_utc": "2026-08-02T17:23:24Z",
+  "measurement": {
+    "cache_states": [
+      "cold_fresh_process",
+      "generation_warm"
+    ],
+    "canonical_score_decimals": 12,
+    "matrix_max_bytes": 268435456,
+    "max_rescore_fraction": 0.25,
+    "modes": [
+      "exact_tiebreak_baseline",
+      "float32_certified_candidate",
+      "bounded_exact_fallback"
+    ],
+    "peak_rss_poll_seconds": 0.002,
+    "repetitions": 5,
+    "warmups": 1
+  },
+  "publication": {
+    "path_policy": "Machine-local roots are replaced with explicit placeholders.",
+    "source_config_sha256": "114eb10cf39185a4a2f04b59d0b98f61386f44cbb2c1f4d4f93d99664b96d45d"
+  },
+  "queries": [
+    {
+      "query": "validate input and raise a structured error",
+      "query_id": "semantic_input_validation",
+      "semantic_only": true,
+      "semantic_weight": 1.0,
+      "tie_heavy": false,
+      "top_k": 10
+    },
+    {
+      "query": "persist a model inside a database transaction",
+      "query_id": "semantic_transaction_persistence",
+      "semantic_only": true,
+      "semantic_weight": 1.0,
+      "tie_heavy": false,
+      "top_k": 25
+    },
+    {
+      "query": "authentication middleware request",
+      "query_id": "hybrid_authentication_middleware",
+      "semantic_only": false,
+      "semantic_weight": 0.5,
+      "tie_heavy": false,
+      "top_k": 10
+    },
+    {
+      "query": "test client response serialization",
+      "query_id": "hybrid_test_client_response",
+      "semantic_only": false,
+      "semantic_weight": 0.5,
+      "tie_heavy": true,
+      "top_k": 25
+    }
+  ],
+  "schema_version": "arc4-real-embedding-certification-v1"
+}

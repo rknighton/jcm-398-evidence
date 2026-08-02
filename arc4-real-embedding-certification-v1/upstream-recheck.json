@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-08-02T18:37:07Z",
+  "issue_398": {
+    "comments": 3,
+    "state": "closed",
+    "updated_at": "2026-08-01T23:35:41Z"
+  },
+  "latest_release": {
+    "published_at": "2026-08-02T17:32:32Z",
+    "tag": "v1.108.213"
+  },
+  "main": {
+    "changed_paths_since_measured_source": [
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "README.md",
+      "benchmarks/route_recall/results.json",
+      "pyproject.toml",
+      "src/jcodemunch_mcp/counter.py",
+      "tests/test_benchmark_reference.py",
+      "tests/test_claude_md_rotation.py",
+      "tests/test_counter.py",
+      "uv.lock"
+    ],
+    "current_sha": "16e66052fb0f8ed5b0ba6e3ebfae7a4e98bc9dde",
+    "measured_source_sha": "c78392cac0d50570d5cf86558d8d3674c0bea068"
+  },
+  "materiality": {
+    "arc4_roadmap_changed": false,
+    "embedding_path_changed": false,
+    "rerun_required": false,
+    "search_or_scoring_path_changed": false,
+    "summary": "The intervening release changes only the counter, package version, documentation, benchmark metadata, and related tests. The semantic search, embedding, scoring, and Arc 4 authority files are unchanged, so the measured semantic implementation remains byte-equivalent to current main for this research question."
+  },
+  "roadmap": {
+    "blob_sha": "68e5c627be61884bb17000eafccf5d802010c68e",
+    "size_bytes": 39346
+  },
+  "submission_state": "not_submitted"
+}

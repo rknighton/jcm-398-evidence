@@ -1,0 +1,78 @@
+{
+  "artifact_sha256": {
+    "DATA-DICTIONARY.md": "a829fdc1da8a785970d8617bf3a2ec99ffa07c53e2ba90fc5163e05dbc34ce19",
+    "README.md": "f68342d38928866eb6fb8192ab4d8864d5aa1b6b0ac86ed90d12ef9e2087da27",
+    "RELEASE-ASSET.md": "ec912bb43b93a313b0a0991f34ac1d81bac6dc4c375139242d1f5d1f432ba56a",
+    "REPORT.md": "4564eaec6cafffa7cbe74008e2d8a82b90159885fd360a6b01edd5bcd886c810",
+    "TEST-RESULTS.json": "449b7891c17778caa99ca7421ac59a7dc6e3174462a027ae4363d1dcb663d81c",
+    "THIRD-PARTY-NOTICES.md": "7146f591fc51101308e9ccd1edb217b44b9f31c4314f36942950210f4eda0c75",
+    "arc4lib.py": "132a4c3cd92eeadf5581be371e83215581ef428a20d694570d7b067351b529fb",
+    "claims.json": "81b8717b9ed504046e6be89552f2bdd8c956e3e696780e5480f74b05db7ee379",
+    "evidence.py": "0ff7b8146a18e6dec11527e127bd0fe74cbc5e35bcf3bb5df6e3602617fc11ba",
+    "licenses/django-LICENSE.txt": "7e493fa7ce2cfdb8dc8a97d5e912f81fc5e0ddc58c5a236e98de2ee55ca978a8",
+    "licenses/fastapi-LICENSE.txt": "2853a942962e3bb755239b5fecb736503be392554c1d90f97cea7f29f4465d34",
+    "measurements.csv": "b480db692ae195d403edb29617315662f01ab4a737490ffed931103cd0dbd58f",
+    "prepared-inputs.json": "623b077e57d0c6c8b0207c5124dd93e05a1a42d9015f92fd6ef0e5161c6e07c0",
+    "release-asset-manifest.json": "ecd4a525fc8632740e5997b6c73702194f063fd9a69e835ee23f3436d0f89999",
+    "release_asset.py": "dd52f0890ae3361907f3297da517236410c819cf8ecc75da490be0bbaeb70be9",
+    "research_config.json": "ae7de4523f1548f9ffd8e1b800f099ba459edcfda55f88451739058faff1629b",
+    "run_research.py": "0f4793233128a23fe167b72243e3404385d652afb1d8c237087955e0bbc58292",
+    "run_tests.py": "57149022a990cf8a60f29bcf3837a466b32d2bcd7a6d86d4f9a7ea3fd38cd27e",
+    "screen_measurements.csv": "0681743389c454033c979bd32c474c368dd696c89f3bbcdb2282712ad89bc41e",
+    "test_arc4lib.py": "82c659f2d18ffdd36e82991cd258ed8a65d4e8b51309f788601a75cb2ecf710f",
+    "test_release_asset.py": "0fec537547809d4a8e5d402a15f861d4a471dd861314684b156668e521c621bf",
+    "tools/materialize_public_pack.py": "477987377383605d00b10f45f9ce8b2d591fa11e34ee8edb5cb0357c5ae9d5ad",
+    "upstream-recheck.json": "14809d5b108e1d2fa4ad1b4bd4e0e729f5ee0a3bf6fb258854db3d3791861153",
+    "verification.txt": "4a49fbe9533866da4a4659ba4f82824cf6b8143440373ea9938685f92fb787d5",
+    "verify.py": "9305ac1172383e3d350a29799e342d306b0af8a8c1a12310f471f9e71c958e29",
+    "worker.py": "e0024b7bde8634c91af50f26fe9898842fab36fc4cc6b714ceec777d2769fd84"
+  },
+  "bundle": "Arc 4 real-embedding certification evidence for jgravelle/jcodemunch-mcp#398",
+  "csvs": {
+    "authoritative": {
+      "columns": 79,
+      "public_sha256": "b480db692ae195d403edb29617315662f01ab4a737490ffed931103cd0dbd58f",
+      "redactions": {
+        "baseline_import_root": 360,
+        "candidate_import_root": 360
+      },
+      "rows": 360,
+      "source_sha256": "f50451015e4b56522fdbca84eddd677ecf3da77724e054a75c1e2e69005da303"
+    },
+    "screen": {
+      "columns": 79,
+      "public_sha256": "0681743389c454033c979bd32c474c368dd696c89f3bbcdb2282712ad89bc41e",
+      "redactions": {
+        "baseline_import_root": 72,
+        "candidate_import_root": 72
+      },
+      "rows": 72,
+      "source_sha256": "a1ffe7d971b9b1e61d1ea1b63b9cbec82451fb40ae00495124c9071d4e2c2fcd"
+    }
+  },
+  "measurement_provenance": {
+    "canonical_source_csv_sha256": "f50451015e4b56522fdbca84eddd677ecf3da77724e054a75c1e2e69005da303",
+    "measured_harness_sha256": "0fb3438e706a26ae2c1dbc9a904473d319ee8d76ae6523ef93177e90e4654f52",
+    "run_id": "authoritative-20260802T181332Z-b2ccb68376",
+    "source_config_sha256": "b2ccb6837649f8516a243c244fedbed8ecd3e68b1cac7158074b83608ade3422"
+  },
+  "pack_directory": "arc4-real-embedding-certification-v1",
+  "public_path_transformation": {
+    "note": "Only machine-local import-root fields were replaced. Row IDs, measurements, and all other fields are retained.",
+    "replacement": {
+      "baseline_import_root": "<measured-baseline-checkout>/src",
+      "candidate_import_root": "<measured-candidate-checkout>/src"
+    },
+    "scope": [
+      "baseline_import_root",
+      "candidate_import_root"
+    ]
+  },
+  "release": {
+    "asset": "arc4-real-embedding-indexes-v1.zip",
+    "publication_state": "local-draft-not-published",
+    "tag": "arc4-real-embedding-certification-v1"
+  },
+  "schema_version": "arc4-real-embedding-certification-v1",
+  "upstream_umbrella_issue": "https://github.com/jgravelle/jcodemunch-mcp/issues/398"
+}
