@@ -106,7 +106,8 @@
   },
   "measured_config_sha256": "b2ccb6837649f8516a243c244fedbed8ecd3e68b1cac7158074b83608ade3422",
   "measured_harness_sha256": "0fb3438e706a26ae2c1dbc9a904473d319ee8d76ae6523ef93177e90e4654f52",
-  "publication_state": "local-draft-not-published",
+  "publication_state": "published",
+  "release_url": "https://github.com/rknighton/jcm-398-evidence/releases/tag/arc4-real-embedding-certification-v1",
   "release_tag": "arc4-real-embedding-certification-v1",
   "schema_version": "arc4-real-embedding-certification-v1"
 }

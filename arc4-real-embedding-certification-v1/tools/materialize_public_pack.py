@@ -179,8 +179,17 @@ def build_index(
         "licenses/fastapi-LICENSE.txt",
     ]
     release_manifest = output / "release-asset-manifest.json"
+    release_publication: dict[str, Any] = {
+        "publication_state": "local-draft-not-published"
+    }
     if release_manifest.is_file():
         artifact_names.append(release_manifest.name)
+        tracked_release = json.loads(release_manifest.read_text(encoding="utf-8"))
+        release_publication["publication_state"] = tracked_release.get(
+            "publication_state", "local-draft-not-published"
+        )
+        if tracked_release.get("release_url"):
+            release_publication["url"] = tracked_release["release_url"]
     hashes = {
         name: sha256_file(output / name)
         for name in artifact_names
@@ -194,7 +203,7 @@ def build_index(
         "release": {
             "tag": RELEASE_TAG,
             "asset": RELEASE_ASSET,
-            "publication_state": "local-draft-not-published",
+            **release_publication,
         },
         "measurement_provenance": {
             "source_config_sha256": manifest["config_sha256"],

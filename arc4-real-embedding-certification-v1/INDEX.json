@@ -13,7 +13,7 @@
     "licenses/fastapi-LICENSE.txt": "2853a942962e3bb755239b5fecb736503be392554c1d90f97cea7f29f4465d34",
     "measurements.csv": "b480db692ae195d403edb29617315662f01ab4a737490ffed931103cd0dbd58f",
     "prepared-inputs.json": "623b077e57d0c6c8b0207c5124dd93e05a1a42d9015f92fd6ef0e5161c6e07c0",
-    "release-asset-manifest.json": "ecd4a525fc8632740e5997b6c73702194f063fd9a69e835ee23f3436d0f89999",
+    "release-asset-manifest.json": "45c0d1c265de49b4f730ed1fb33a762336b674da6d6e6c9963b5458743fd6034",
     "release_asset.py": "dd52f0890ae3361907f3297da517236410c819cf8ecc75da490be0bbaeb70be9",
     "research_config.json": "ae7de4523f1548f9ffd8e1b800f099ba459edcfda55f88451739058faff1629b",
     "run_research.py": "0f4793233128a23fe167b72243e3404385d652afb1d8c237087955e0bbc58292",
@@ -21,10 +21,10 @@
     "screen_measurements.csv": "0681743389c454033c979bd32c474c368dd696c89f3bbcdb2282712ad89bc41e",
     "test_arc4lib.py": "82c659f2d18ffdd36e82991cd258ed8a65d4e8b51309f788601a75cb2ecf710f",
     "test_release_asset.py": "0fec537547809d4a8e5d402a15f861d4a471dd861314684b156668e521c621bf",
-    "tools/materialize_public_pack.py": "477987377383605d00b10f45f9ce8b2d591fa11e34ee8edb5cb0357c5ae9d5ad",
+    "tools/materialize_public_pack.py": "09c85034fb740d59a1b1b28d4e1148130d51a57d9a7c9bfc68ca26fff7bbbdb2",
     "upstream-recheck.json": "14809d5b108e1d2fa4ad1b4bd4e0e729f5ee0a3bf6fb258854db3d3791861153",
     "verification.txt": "4a49fbe9533866da4a4659ba4f82824cf6b8143440373ea9938685f92fb787d5",
-    "verify.py": "9305ac1172383e3d350a29799e342d306b0af8a8c1a12310f471f9e71c958e29",
+    "verify.py": "bfe71691a5de94813d30a87da787846d76a20729cee080abdd792d9ff73afb41",
     "worker.py": "e0024b7bde8634c91af50f26fe9898842fab36fc4cc6b714ceec777d2769fd84"
   },
   "bundle": "Arc 4 real-embedding certification evidence for jgravelle/jcodemunch-mcp#398",
@@ -70,8 +70,9 @@
   },
   "release": {
     "asset": "arc4-real-embedding-indexes-v1.zip",
-    "publication_state": "local-draft-not-published",
-    "tag": "arc4-real-embedding-certification-v1"
+    "publication_state": "published",
+    "tag": "arc4-real-embedding-certification-v1",
+    "url": "https://github.com/rknighton/jcm-398-evidence/releases/tag/arc4-real-embedding-certification-v1"
   },
   "schema_version": "arc4-real-embedding-certification-v1",
   "upstream_umbrella_issue": "https://github.com/jgravelle/jcodemunch-mcp/issues/398"

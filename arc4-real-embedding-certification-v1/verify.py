@@ -182,10 +182,16 @@ def validate_claims(
 
 def validate_index(index: dict[str, Any], root: Path) -> None:
     require(index["schema_version"] == SCHEMA_VERSION, "index schema mismatch")
+    publication_state = index["release"]["publication_state"]
     require(
-        index["release"]["publication_state"] == "local-draft-not-published",
+        publication_state in {"local-draft-not-published", "published"},
         "unexpected publication state",
     )
+    if publication_state == "published":
+        require(
+            index["release"].get("url", "").startswith("https://github.com/"),
+            "published release URL is missing",
+        )
     for relative, expected_hash in index["artifact_sha256"].items():
         path = root / relative
         require(path.is_file(), f"indexed artifact missing: {relative}")
@@ -197,9 +203,14 @@ def validate_release_manifest(path: Path, prepared: dict[str, Any]) -> None:
     require(manifest["asset"] == prepared["release_asset"], "release asset name mismatch")
     require(manifest["release_tag"] == prepared["release_tag"], "release tag mismatch")
     require(
-        manifest["publication_state"] == "local-draft-not-published",
+        manifest["publication_state"] in {"local-draft-not-published", "published"},
         "release manifest publication state mismatch",
     )
+    if manifest["publication_state"] == "published":
+        require(
+            manifest.get("release_url", "").startswith("https://github.com/"),
+            "published release manifest URL is missing",
+        )
     included = [
         record
         for record in prepared["corpora"].values()
