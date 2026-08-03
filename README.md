@@ -127,3 +127,16 @@ so neither has to be taken on trust.
 
 `mode` values beginning `generation_unsafe_global_` are a variant that was tried and
 rejected. They are retained so the rejection is auditable rather than invisible.
+
+## License
+
+[MIT No Attribution](LICENSE) (`MIT-0`).
+
+This bundle exists to be used. Everything here — the harnesses, `verify.py`, the
+measurement CSVs and the sub-bundles — may be copied, modified, redistributed and
+incorporated into other work with no conditions at all, including no attribution
+requirement and no need to carry this notice. Vendoring a harness or lifting a
+verifier wholesale into `jcodemunch-mcp` needs no permission and no credit.
+
+Chosen deliberately over MIT or Apache-2.0: an attribution clause on measurement
+evidence is a paperwork condition on the party the evidence was produced for.
