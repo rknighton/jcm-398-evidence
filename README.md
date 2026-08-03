@@ -132,11 +132,12 @@ rejected. They are retained so the rejection is auditable rather than invisible.
 
 [MIT No Attribution](LICENSE) (`MIT-0`).
 
-This bundle exists to be used. Everything here — the harnesses, `verify.py`, the
-measurement CSVs and the sub-bundles — may be copied, modified, redistributed and
+This bundle exists to be used. Everything here, the harnesses, `verify.py`, the
+measurement CSVs and the sub-bundles, may be copied, modified, redistributed and
 incorporated into other work with no conditions at all, including no attribution
 requirement and no need to carry this notice. Vendoring a harness or lifting a
 verifier wholesale into `jcodemunch-mcp` needs no permission and no credit.
 
-Chosen deliberately over MIT or Apache-2.0: an attribution clause on measurement
-evidence is a paperwork condition on the party the evidence was produced for.
+Chosen deliberately over MIT or Apache-2.0, because an attribution clause on
+measurement evidence is a paperwork condition on the party the evidence was
+produced for.
