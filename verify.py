@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Recompute every figure quoted in jgravelle/jcodemunch-mcp#398 from the shipped CSVs.
+"""Recompute the Arc 1 and Arc 2 figures from jgravelle/jcodemunch-mcp#398.
+
+Covers the 38-case Django code-loading headline and its distribution, the
+four-repo per-case control, the Arc 2 Django and FastAPI medians, file
+integrity, and provenance classification. It does not cover the Arc 4 and Arc 5
+semantic figures or the pooled Arc 2 and Arc 3 case-group numbers, which rest on
+CSVs outside this bundle. The Arc 4 pack ships its own verifier.
 
 No arguments, no dependencies beyond the standard library, no checkout required.
 Reads only the CSVs in this bundle and prints what it derives next to what the
