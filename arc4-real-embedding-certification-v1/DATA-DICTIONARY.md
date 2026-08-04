@@ -42,7 +42,7 @@ Nullability: only `superseded_run_id`, `supersession_reason`, and `fallback_reas
 | `result_boundary_score` | float64 | Exact baseline combined score at the top-k boundary. |
 | `exact_tie_count` | integer | Candidates participating in exact equal-score groups. Excluded from certification breadth. |
 | `near_tie_count` | integer | Certified uncertain candidates without an exact tie or genuine top-k disagreement. |
-| `genuine_disagreement_count` | integer | Certified participants in a float32-versus-exact top-k membership disagreement after exact ties are excluded. |
+| `genuine_disagreement_count` | integer | Certified participants whose float32-versus-exact top-k result differs, by membership **or** by ordered rank within the same membership, after exact ties are excluded. Earlier revisions of this table said "membership" alone; `disagreement_participants` in `arc4lib.py` compares rank positions, so a reordering of the same members counts. The published zero therefore covers a wider condition than the old wording claimed. |
 | `other_certified_count` | integer | Certified candidates caused by interval violations or a fail-closed fallback, excluding other buckets. |
 | `total_certified_count` | integer | Disjoint union of near-tie, genuine-disagreement, and other-certified candidates. |
 | `exact_tie_fraction` | float | The matching count divided by candidate_count for this row. |
