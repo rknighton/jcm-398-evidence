@@ -54,7 +54,7 @@ django: separated regressions                      0                 0   ok
 
 | Path | What |
 | --- | --- |
-| `verify.py` | Recomputes every published figure and self-checks file hashes. Start here. |
+| `verify.py` | Recomputes the Arc 1 and Arc 2 checks scoped above and self-checks file hashes. Start here. |
 | `INDEX.json` | Machine-readable manifest: per-file purpose, row grain, modes, repos, provenance SHA, hashes. |
 | `DATA-DICTIONARY.md` | What every column means, including which timing column to use and how to pair A/B rows. |
 | `supporting-data/source-runs/` | The 14 fixed-schema CSVs. |
