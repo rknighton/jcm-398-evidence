@@ -1,0 +1,24 @@
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: <LOCAL_RESEARCH_ROOT>\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\Scripts\python.exe -m pip install --upgrade pip
+Collecting onnxruntime==1.24.4
+  Downloading onnxruntime-1.24.4-cp313-cp313-win_amd64.whl.metadata (5.4 kB)
+Requirement already satisfied: flatbuffers in c:\users\admin\documents\git\jcodemunch-perf-pass2\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\lib\site-packages (from onnxruntime==1.24.4) (25.12.19)
+Requirement already satisfied: numpy>=1.21.6 in c:\users\admin\documents\git\jcodemunch-perf-pass2\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\lib\site-packages (from onnxruntime==1.24.4) (2.4.4)
+Requirement already satisfied: packaging in c:\users\admin\documents\git\jcodemunch-perf-pass2\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\lib\site-packages (from onnxruntime==1.24.4) (26.3)
+Requirement already satisfied: protobuf in c:\users\admin\documents\git\jcodemunch-perf-pass2\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\lib\site-packages (from onnxruntime==1.24.4) (7.35.1)
+Collecting sympy (from onnxruntime==1.24.4)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy->onnxruntime==1.24.4)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Downloading onnxruntime-1.24.4-cp313-cp313-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 24.8 MB/s  0:00:00
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Installing collected packages: mpmath, sympy, onnxruntime
+  Attempting uninstall: onnxruntime
+    Found existing installation: onnxruntime 1.28.0
+    Uninstalling onnxruntime-1.28.0:
+      Successfully uninstalled onnxruntime-1.28.0
+
+Successfully installed mpmath-1.3.0 onnxruntime-1.24.4 sympy-1.14.0

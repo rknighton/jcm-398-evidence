@@ -1,0 +1,53 @@
+{
+  "coverage_floors": {
+    "geometric_boundary": 10000,
+    "hash_seeds": [
+      0,
+      1,
+      2,
+      11,
+      101
+    ],
+    "provider_text": 5000,
+    "repetitions_per_lane_seed": 5,
+    "top_k": [
+      1,
+      5,
+      10,
+      25,
+      50,
+      100
+    ]
+  },
+  "generation": {
+    "dimensions": [
+      2,
+      3,
+      8,
+      16,
+      32,
+      64,
+      128,
+      384
+    ],
+    "geometric_seed": 398228,
+    "known_seed": 11,
+    "text_quotas": {
+      "django": 1667,
+      "fastapi": 1667,
+      "jcodemunch": 1666
+    }
+  },
+  "numpy_version": "2.4.4",
+  "provider": {
+    "generation_onnxruntime": "1.24.4",
+    "model": "all-MiniLM-L6-v2",
+    "name": "local_onnx"
+  },
+  "schema_version": "jcm-adversarial-falsification-v1",
+  "target": {
+    "commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+    "tag": "v1.108.228"
+  },
+  "wheel_sha256": "81af0f0308cdbed7e4884fc272b589a6691e8119828858ed6b99b2aa09132af9"
+}

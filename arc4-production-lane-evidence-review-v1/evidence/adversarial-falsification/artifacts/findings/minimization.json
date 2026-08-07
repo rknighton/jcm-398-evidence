@@ -1,0 +1,231 @@
+{
+  "attempts": [
+    {
+      "candidate_count": 2,
+      "fixture_sha256": "cd61554a7ce66598e4079802c748d8000e0bb6de591a5a797e1b7eca47cda977",
+      "numpy_top": "symbol-03962",
+      "numpy_top_score": "0x1.0000020000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": false
+    },
+    {
+      "candidate_count": 4,
+      "fixture_sha256": "5c9260e6b314052a6d7745e23531ad701e53d06e547514b3bb2a50cd4899b48f",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 8,
+      "fixture_sha256": "9b99d95eeb91b27e612c61559ab263121bfa6ca8c4f80e296ea50f2ceee898d2",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 16,
+      "fixture_sha256": "fded4bff5722ba1447dd22f890234aa38bf327d32ae88219c70c059d24dd9b3d",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 32,
+      "fixture_sha256": "4c2b04c70ab827c132f473c0674082167739bd4cbfaa2fcb4eda51d35bbe9fb7",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 64,
+      "fixture_sha256": "722ddd19c8e830e360339a6947a2dbf62bb25554019536c0d918decd05ca4347",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 128,
+      "fixture_sha256": "07df082a21c07d2833ed52e255dc4747f3fc3718585ebacb2f7839f24b5d8ec6",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 256,
+      "fixture_sha256": "d9131bec5e4f6efe5478392ee5e323fef3b8d2f8da60d0af6d283fe823119289",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 512,
+      "fixture_sha256": "fe3da5b98e30c034288f2247d0d3d3cfa53eb41d986b3daffb9287ab910ea321",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 1024,
+      "fixture_sha256": "5c5f83320b4903072b4712c3031f2055a8464184da99630ba6281f174dca1ef5",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 1536,
+      "fixture_sha256": "ff588f95ca6a331b4c6ba8409f2290de3b3427920f15e102697e61a9036686c5",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 2048,
+      "fixture_sha256": "7ff90f5aea388d896377f0005969cad386aba728018ac12568c2364dc80363c3",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 2560,
+      "fixture_sha256": "1fbcb2d37da6052a2f38e99d8f659b907e521daaaaa00b47c40c6458443d952d",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3000,
+      "fixture_sha256": "e92e6014eb5d26b6f34604f4c6dc5757678397b0c350c494b35c47616a827aa4",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3500,
+      "fixture_sha256": "f04cd0ec2fa7319f949918bfe3f59c58fd652d7780f56fcc109563016e32612c",
+      "numpy_top": "symbol-00664",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3750,
+      "fixture_sha256": "2b28259080b6e0c3507c19e58aa7bb38c0c352804c00bdec1a6252d26758751c",
+      "numpy_top": "symbol-00307",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3875,
+      "fixture_sha256": "bb445da2c291712792eb1422dbcc13f9dc36fb1d4daa985613531a6a442eb748",
+      "numpy_top": "symbol-00157",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3938,
+      "fixture_sha256": "2d2d5a8eea1db5e0dec48a57b79a52a61df5aacf9d5e63815b43d5637195d667",
+      "numpy_top": "symbol-00157",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3969,
+      "fixture_sha256": "a93ed1b01002962476e97611964747551f8b7d564e3e19d3c7a27477205d7b22",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3985,
+      "fixture_sha256": "267210b09b0d36be4feca96a61dc192050f448a10968fbea322e47b624358c6e",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3993,
+      "fixture_sha256": "78b3e63cd6f02d9baecdfad183e63a56bebd998446ebafb57900271a939d53f8",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3997,
+      "fixture_sha256": "f677f768b5b0f8309c5901b7136af50b86afa677f3e2db169c8ba7d4f393bcb5",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 3999,
+      "fixture_sha256": "a77bb4a7bba3accacf9b848c6b0e0541b99f4f5b51d0b970c35fba6ac505da92",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    },
+    {
+      "candidate_count": 4000,
+      "fixture_sha256": "09fdc0b58299a7aa03fed9513ea3f2e026334134361b75a55bde21f3fead472c",
+      "numpy_top": "symbol-00046",
+      "numpy_top_score": "0x1.0000040000000p+0",
+      "python_top": "symbol-03962",
+      "python_top_score": "0x1.0000008548b89p+0",
+      "rank0_flip": true
+    }
+  ],
+  "retained_sha256": "5c9260e6b314052a6d7745e23531ad701e53d06e547514b3bb2a50cd4899b48f",
+  "smallest_tested_flip": {
+    "candidate_count": 4,
+    "fixture_sha256": "5c9260e6b314052a6d7745e23531ad701e53d06e547514b3bb2a50cd4899b48f",
+    "numpy_top": "symbol-00046",
+    "numpy_top_score": "0x1.0000040000000p+0",
+    "python_top": "symbol-03962",
+    "python_top_score": "0x1.0000008548b89p+0",
+    "rank0_flip": true
+  },
+  "strategy": "declared width sweep with winner preservation"
+}

@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C20","status":"passed","evidence":{"matrix_rows_checked":240,"raw_vectors_checked":240,"final_vectors_checked":240,"candidate_set_matches_rows":240,"ordering_hash_matches_rows":240}}

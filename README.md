@@ -13,6 +13,7 @@ harness, raw measurements, verifier, and separately downloadable prepared-index 
 | --- | --- | --- |
 | Arcs 1 and 2 | Repository root | `python verify.py` |
 | Arc 4 real-embedding certification v1 | `arc4-real-embedding-certification-v1/` | `py -3 verify.py --self-test` from that directory |
+| Arc 4 production-lane evidence review v1 | `arc4-production-lane-evidence-review-v1/` | `py -3 verify_package.py` from that directory |
 
 The remainder of this root document describes the original Arcs 1 and 2 bundle.
 

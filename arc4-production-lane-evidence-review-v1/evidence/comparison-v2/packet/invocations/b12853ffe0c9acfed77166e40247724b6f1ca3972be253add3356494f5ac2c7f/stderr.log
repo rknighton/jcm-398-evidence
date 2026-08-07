@@ -1,0 +1,1 @@
+{"schema":"arc4.row-result/v1","status":"rejected","error_code":"debug_adapter_score","failure_family":"failed_precondition","m9_classification":"failed_precondition","product":"jcodemunch_mcp","lane":"numpy_absent","fallback_state":"not_observed","embedding_mode":"hybrid","network_attempts":[],"execution_namespace":"repair","is_control":false,"control_id":null}

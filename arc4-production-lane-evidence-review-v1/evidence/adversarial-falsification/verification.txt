@@ -1,0 +1,16 @@
+{
+  "geometric_rank0_flips": 3211,
+  "manifest_sha256": "53fc9ac7dfed6fcda2f66cac2a5261d158b9d225f4987b66c53180875a45670b",
+  "provider_actual_findings": 5,
+  "provider_vectors_reproduced": 5000,
+  "public_rank0_flip": true,
+  "self_test": "PASS",
+  "status": "PASS",
+  "tamper_rejections": [
+    "score",
+    "query",
+    "lane",
+    "coverage",
+    "summary"
+  ]
+}

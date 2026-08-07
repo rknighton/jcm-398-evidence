@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C15","status":"passed","evidence":{"rows_checked":264,"storage_tuning_absent_rows":264,"home_tuning_absent_rows":264,"effective_weight_matches_rows":264}}

@@ -1,0 +1,1 @@
+{"case_id":"known-minimal-two-candidate","lane":"numpy","numpy":"2.4.4","ordered":["symbol-03962","symbol-00046"],"python":"3.13.7","python_hash_seed":"0","scores":{"symbol-00046":"0x1.0000000000000p+0","symbol-03962":"0x1.0000020000000p+0"},"vectorised":true}

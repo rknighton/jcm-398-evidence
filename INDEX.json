@@ -17,6 +17,18 @@
     "Two Arc 1 boundary files carry pre-pin rows. generation_boundary_architecture_probe_v1.csv is entirely at 6996cc08. generation_boundary_followups_v1.csv is mixed, holding both 6996cc08 and c2201a55 rows, and records provenance in a `source_sha` column rather than `jcodemunch_source_sha`. Neither backs a quoted figure; both are kept rather than dropped. See provenance_class on each entry below.",
     "The source-run CSVs use several experiment-specific schemas (18, 23, 33 and 34 columns; see the columns field per entry). The unified master CSV normalizes them into one fixed 57-column schema."
   ],
+  "additional_bundles": [
+    {
+      "path": "arc4-real-embedding-certification-v1",
+      "purpose": "Guarded real-embedding research candidate certification",
+      "verify": "py -3 verify.py --self-test"
+    },
+    {
+      "path": "arc4-production-lane-evidence-review-v1",
+      "purpose": "Adversarially reviewed Arc 4 production-lane evidence synthesis and curated supporting evidence",
+      "verify": "py -3 verify_package.py"
+    }
+  ],
   "data_files": [
     {
       "file": "supporting-data/source-runs/cache_generation_churn_probe_v1.csv",

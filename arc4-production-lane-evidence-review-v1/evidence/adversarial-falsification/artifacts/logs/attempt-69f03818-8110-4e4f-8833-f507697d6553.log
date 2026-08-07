@@ -1,0 +1,17 @@
+{
+  "batch_size": 128,
+  "comparison": "float32-byte-for-byte",
+  "dimensions": [
+    384
+  ],
+  "mismatch_count": 0,
+  "provider": {
+    "model": "all-MiniLM-L6-v2",
+    "name": "local_onnx"
+  },
+  "queries": 5000,
+  "reproduced": 5000,
+  "schema_version": "jcm-provider-vector-reproduction-v1",
+  "status": "PASS",
+  "target": "jcodemunch-mcp-v1.108.228"
+}

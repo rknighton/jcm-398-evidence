@@ -1,0 +1,92 @@
+{
+  "conclusion": "rank_0_equivalence_falsified",
+  "controls": {
+    "baseline_packet_status": "PASS",
+    "provider_vector_mismatches": 0,
+    "provider_vectors_reproduced": 5000,
+    "target_source_clean": true
+  },
+  "failed_attempts_preserved": [
+    "attempt-001-two-candidate-minimization-failed",
+    "attempt-003-biased-text-allocation",
+    "attempt-007-onnxruntime-1.28-vector-reproduction-failed",
+    "attempt-008-relative-interpreter-launch-failed"
+  ],
+  "geometric": {
+    "all_disagreements": 3211,
+    "dimensions": [
+      2,
+      3,
+      8,
+      16,
+      32,
+      64,
+      128,
+      384
+    ],
+    "executed": 10002,
+    "independent_boundary_cases": 10000,
+    "rank0_flips": 3211
+  },
+  "hybrid": {
+    "findings": 11,
+    "membership_changes": 0,
+    "public_cases": 35,
+    "rank0_flips": 0
+  },
+  "minimal": {
+    "candidate_count": 4,
+    "fresh_process_replays": 50,
+    "numpy_top": "symbol-00046",
+    "permutation_flips": 24,
+    "permutations": 24,
+    "python_top": "symbol-03962",
+    "stable": true
+  },
+  "provider_text": {
+    "actual_shipped_scorer_findings": 5,
+    "generated": 5000,
+    "public_path_parity_findings": 5,
+    "quotas": {
+      "django": 1667,
+      "fastapi": 1667,
+      "jcodemunch": 1666
+    },
+    "rank0_flips": 0,
+    "screen_hits": 33
+  },
+  "public_geometric_counterexample": {
+    "numpy_mapped_top": "symbol-00046",
+    "numpy_top": "counterexample.py::omega_boundary_candidate#function",
+    "python_mapped_top": "symbol-03962",
+    "python_top": "counterexample.py::gamma_boundary_candidate#function",
+    "rank0_flip": true,
+    "tool_adapter_parity": true
+  },
+  "publication_state": "local_only",
+  "schema_version": "jcm-adversarial-falsification-v1"
+}
+{
+  "geometric_rank0_flips": 3211,
+  "manifest_sha256": "27da63ac868d3ec51c3d4b4a3f98f55551496dca13e9e1d3a2b9578fd2c1f4d0",
+  "provider_actual_findings": 5,
+  "provider_vectors_reproduced": 5000,
+  "public_rank0_flip": true,
+  "self_test": "PASS",
+  "status": "PASS",
+  "tamper_rejections": [
+    "score",
+    "query",
+    "lane",
+    "coverage",
+    "summary"
+  ]
+}
+{
+  "geometric_rank0_flips": 3211,
+  "manifest_sha256": "27da63ac868d3ec51c3d4b4a3f98f55551496dca13e9e1d3a2b9578fd2c1f4d0",
+  "provider_actual_findings": 5,
+  "provider_vectors_reproduced": 5000,
+  "public_rank0_flip": true,
+  "status": "PASS"
+}

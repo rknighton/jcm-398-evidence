@@ -1,0 +1,1 @@
+{"case_id":"width-4","lane":"numpy","numpy":"2.4.4","ordered":["symbol-00046","symbol-03999","symbol-03962","symbol-04000"],"python":"3.13.7","python_hash_seed":"0","scores":{"symbol-00046":"0x1.0000040000000p+0","symbol-03962":"0x1.0000000000000p+0","symbol-03999":"0x1.0000020000000p+0","symbol-04000":"0x1.fffffe0000000p-1"},"vectorised":true}

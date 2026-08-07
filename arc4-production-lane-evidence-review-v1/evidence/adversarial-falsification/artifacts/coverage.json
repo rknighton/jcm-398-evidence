@@ -1,0 +1,33 @@
+{
+  "geometric_cases": 10002,
+  "hash_seeds": [
+    0,
+    1,
+    2,
+    11,
+    101
+  ],
+  "hybrid_weights": [
+    0.01,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.99
+  ],
+  "provider_text_queries": 5000,
+  "text_by_corpus": {
+    "django": 1667,
+    "fastapi": 1667,
+    "jcodemunch": 1666
+  },
+  "top_k_boundaries": [
+    1,
+    5,
+    10,
+    25,
+    50,
+    100
+  ]
+}

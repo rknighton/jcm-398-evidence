@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<LOCAL_RESEARCH_ROOT>\arc4-production-lane-adversarial-falsification-v1\harness\campaign.py", line 184, in <module>
+    if __name__=="__main__": raise SystemExit(main())
+                                              ~~~~^^
+  File "<LOCAL_RESEARCH_ROOT>\arc4-production-lane-adversarial-falsification-v1\harness\campaign.py", line 179, in main
+    parts["geometric_execution"]=execute_geometric(); parts["geometric_findings"]=compare_geometric(); parts["minimal_reproduction"]=repeat_minimal()
+                                                                                                                                     ~~~~~~~~~~~~~~^^
+  File "<LOCAL_RESEARCH_ROOT>\arc4-production-lane-adversarial-falsification-v1\harness\campaign.py", line 159, in repeat_minimal
+    if not stable: raise RuntimeError("minimal rank-0 counterexample did not reproduce")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: minimal rank-0 counterexample did not reproduce

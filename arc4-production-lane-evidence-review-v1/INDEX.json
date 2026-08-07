@@ -1,0 +1,104 @@
+{
+  "schema_version": "arc4-production-lane-evidence-review/v1",
+  "bundle": "Arc 4 production-lane evidence review for jgravelle/jcodemunch-mcp#398",
+  "publication_state": "third-party-review-candidate",
+  "purpose": "Conservative synthesis of retained production-lane experiments, with complete claim-bearing data and provenance.",
+  "upstream_umbrella_issue": "https://github.com/jgravelle/jcodemunch-mcp/issues/398",
+  "entrypoints": {
+    "decision_report": "REPORT.md",
+    "reader_guide": "README.md",
+    "claim_ledger": "CLAIM-LEDGER.csv",
+    "source_map": "SOURCE-MAP.md",
+    "dataset_inventory": "DATASET-INVENTORY.md",
+    "data_dictionary": "DATA-DICTIONARY.md",
+    "provenance_annotation": "PROVENANCE-ANNOTATION.md",
+    "validation_receipt": "VALIDATION.txt"
+  },
+  "integrity": {
+    "package_manifest": "CHECKSUMS.sha256",
+    "source_manifest": "SOURCE-HASHES.sha256",
+    "verifier": "verify_package.py",
+    "verifier_test": "test_verify_package.py",
+    "verify_command": "py -3 -B verify_package.py",
+    "test_command": "py -3 -B -m unittest -v test_verify_package.py",
+    "maximum_repository_file_mib": 95,
+    "multi_file_archives": 0,
+    "claim_ledger_rows": 11
+  },
+  "datasets": {
+    "adversarial_falsification": {
+      "path": "evidence/adversarial-falsification",
+      "role": "Constructed sensitivity testing plus generated-text screening and complete replay of nominated cases.",
+      "provider_text_queries": 5000,
+      "provider_text_screen_nominations": 33,
+      "provider_text_complete_replay_findings": 5,
+      "provider_text_complete_replay_first_changed_positions_one_based": [
+        38,
+        65,
+        65,
+        76,
+        78
+      ],
+      "provider_text_rank0_changes": 0,
+      "provider_text_top25_changes": 0,
+      "provider_text_top100_membership_changes": 0,
+      "geometric_executed_cases": 10002,
+      "geometric_independent_boundary_cases": 10000,
+      "geometric_rank0_changes": 3211,
+      "preserved_attempt_files": 55,
+      "claim_ceiling": "No production rate, safety probability, or answer-quality direction can be inferred. The 4,967 screen rejections were not completely replayed."
+    },
+    "comparison_v1": {
+      "path": "evidence/comparison-v1",
+      "role": "Supplemental precursor retained for provenance and diagnostic value.",
+      "ranking_problems": 12,
+      "raw_files": 96,
+      "rank0_matches": 12,
+      "ordered_top_k_matches": 12,
+      "top_k_membership_matches": 12
+    },
+    "comparison_v2": {
+      "path": "evidence/comparison-v2",
+      "role": "Authoritative official-package fixed comparison.",
+      "ranking_problems": 12,
+      "replicated_pairs": 120,
+      "full_ranking_files": 360,
+      "rank0_difference_problems": 0,
+      "ordered_top_k_difference_problems": 0,
+      "top_k_membership_difference_problems": 0,
+      "exact_tie_difference_problems": 8,
+      "full_depth_divergence_problems": 10,
+      "controls_passed": 21,
+      "controls_expected": 21,
+      "claim_ceiling": "fixed_suite_descriptive_only_no_inference",
+      "paired_data": {
+        "path": "evidence/comparison-v2/packet/paired.jsonl.gz",
+        "metadata": "evidence/comparison-v2/packet/paired.jsonl.gz.json",
+        "compression_scope": "one oversized file only",
+        "source_lines": 132,
+        "source_sha256": "bfa58e4dabb95f9a765c1c3514eede5fdbb6d80adf263f8eae3eec19161685ef"
+      }
+    },
+    "guarded_candidate": {
+      "path": "../arc4-real-embedding-certification-v1",
+      "role": "Separately published research-candidate evidence supporting exact boundary checks as a plausible control. It is not official-release performance evidence."
+    }
+  },
+  "publication_transformations": {
+    "source": "PROVENANCE-ANNOTATION.md",
+    "classes": [
+      "exact source copy",
+      "publication-normalized copy",
+      "verified single-file gzip representation"
+    ],
+    "excluded": [
+      "working environments",
+      "caches",
+      "cloned source trees",
+      "dependency wheelhouses",
+      "nested Git metadata",
+      "superseded web output"
+    ]
+  },
+  "license": "MIT-0"
+}

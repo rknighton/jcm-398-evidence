@@ -1,0 +1,37 @@
+{
+  "count": 3,
+  "dimension": 3,
+  "query": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "seed": null,
+  "top_k": 3,
+  "vectors": [
+    {
+      "id": "zeta",
+      "vector": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "alpha",
+      "vector": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "mu",
+      "vector": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

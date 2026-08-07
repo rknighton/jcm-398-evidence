@@ -1,0 +1,47 @@
+{
+  "baseline_packet": {
+    "manifest_sha256": "9719ab15b3ce75f6f69f1fe399a6ddb92e3bbc242e9cecc44df14599f09ea341",
+    "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\arc4-production-lane-comparison-v1",
+    "verification_receipt_sha256": "d12dfff24cc3da0f2c5b5dc490b69f0ecf5d690552f724c35e4f7fe6d3801e2e",
+    "verification_status": "PASS"
+  },
+  "corpora": {
+    "django": {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-django-3eb2e228.db",
+      "sha256": "21767e35f79cf051c346389c90562126317fff9871ee9c7e4b33280fe3740529"
+    },
+    "fastapi": {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-fastapi-c1d6b9c4.db",
+      "sha256": "fb0f933f2fff75684a26872b86bc8f7b7301b7d08c54a079630c05ede760e61e"
+    },
+    "jcodemunch": {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-arc4-research-v1-upstream-6f37f3de.db",
+      "sha256": "9b6a007e9554a7afdb98936180d0abebce8b86693d842841122c72e9093cdc58"
+    }
+  },
+  "provider_reproduction": {
+    "batch_size": 128,
+    "comparison": "float32-byte-for-byte",
+    "dimensions": [
+      384
+    ],
+    "mismatch_count": 0,
+    "mismatches": [],
+    "provider": {
+      "model": "all-MiniLM-L6-v2",
+      "name": "local_onnx"
+    },
+    "queries": 5000,
+    "reproduced": 5000,
+    "schema_version": "jcm-provider-vector-reproduction-v1",
+    "status": "PASS",
+    "target": "jcodemunch-mcp-v1.108.228"
+  },
+  "schema_version": "jcm-adversarial-provenance-v1",
+  "target": {
+    "source_clean": true,
+    "source_commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+    "tag": "v1.108.228",
+    "wheel_sha256": "81af0f0308cdbed7e4884fc272b589a6691e8119828858ed6b99b2aa09132af9"
+  }
+}

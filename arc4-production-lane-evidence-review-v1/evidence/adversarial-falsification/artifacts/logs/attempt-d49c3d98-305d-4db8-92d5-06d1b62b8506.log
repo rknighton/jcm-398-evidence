@@ -1,0 +1,1 @@
+{"coverage":{"django":{"candidate_vectors":45561,"queries":1667,"screen_hits":8},"fastapi":{"candidate_vectors":13405,"queries":1667,"screen_hits":15},"jcodemunch":{"candidate_vectors":13960,"queries":1666,"screen_hits":10}},"hits":33,"queries":5000,"sha256":"134cb1ac1d9f13d0971ba1148fa9ed61859e49bae99c9926177bd31761c2467b"}

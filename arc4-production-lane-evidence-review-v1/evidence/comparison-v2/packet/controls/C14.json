@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C14","status":"passed","evidence":{"cold_rows_checked":132,"cold_repos_zero_rows":132,"warm_rows_checked":132,"warm_expected_cache_rows":132,"warm_matrix_stamp_unchanged_rows":120}}

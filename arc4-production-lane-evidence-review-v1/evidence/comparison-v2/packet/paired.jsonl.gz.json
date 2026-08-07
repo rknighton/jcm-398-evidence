@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "published_file": "paired.jsonl.gz",
+  "compression": "gzip",
+  "compression_level": 9,
+  "deterministic_mtime": 0,
+  "source_file": "paired.jsonl",
+  "source_bytes": 197630471,
+  "source_lines": 132,
+  "source_sha256": "bfa58e4dabb95f9a765c1c3514eede5fdbb6d80adf263f8eae3eec19161685ef",
+  "compressed_bytes": 20760409,
+  "compressed_sha256": "a238300afc502d4fe61280d0bb4a9bdb13d51a10df54023c8c06897ca5b29068"
+}

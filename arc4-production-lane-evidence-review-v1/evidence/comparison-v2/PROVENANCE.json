@@ -1,0 +1,160 @@
+{
+  "schema": "arc4.provenance/v1",
+  "status": "pre_registration_build_in_progress",
+  "research_boundary": {
+    "local_only": true,
+    "measured_rows_exist": false,
+    "external_mutation": false,
+    "claim_policy": "Prefer a narrower supported statement over a broader inferred statement."
+  },
+  "governing_design": {
+    "path": "DESIGN.md",
+    "sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+    "size_bytes": 99194,
+    "jdoc_repo": "local/arc4-production-lane-comparison-v2",
+    "jdoc_selection": [
+      "DESIGN.md"
+    ],
+    "jdoc_verification": {
+      "substantive_sections_clean": 76,
+      "drift": 0,
+      "missing": 0,
+      "errors": 0,
+      "expected_empty_root_skip": 1
+    }
+  },
+  "design_lineage": [
+    {
+      "sha256": "3E55A8B5EBA038F6A43CB1B7B9A418AE9B67964E2B580561C970A6088BF42D34",
+      "disposition": "rejected_before_execution"
+    },
+    {
+      "sha256": "E9FF37A5EE0A637A4AE16A3D816A2CA19B2EC73FB85E12DE9F056416EA9373B7",
+      "disposition": "superseded_after_exact_rebuild_failed"
+    },
+    {
+      "sha256": "820ABD74BE0AD8353F15A0A55C7DD1E68AA0415EE4FAA20B4A80FBB1B56F0230",
+      "disposition": "superseded_by_deterministic_contract_hardening"
+    },
+    {
+      "sha256": "1E01E355EFED31E6896397B23B52F51A85BF9EB7500D4136C01F8C0A38E6BF69",
+      "disposition": "superseded_by_provenance_chronology_correction"
+    },
+    {
+      "sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+      "disposition": "final_pre_registration_design"
+    }
+  ],
+  "authorization": {
+    "repository": "jgravelle/jcodemunch-mcp",
+    "issue": 398,
+    "comment_id": 5177953577,
+    "url": "https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577",
+    "retrieved_read_only_at_utc": "2026-08-05T18:42:00Z",
+    "author": "jgravelle",
+    "short_quote": "Yes to the production-lane comparison, on your terms.",
+    "requirements_paraphrase": [
+      "Use release v1.108.228.",
+      "Treat this as a new comparison of the two shipped production lanes, not a rerun of the rejected packet.",
+      "Report rank 0, ordered top-k, membership and exact ties separately.",
+      "Do not treat the absent certified scorer as a gap in the v1.108.228 result."
+    ]
+  },
+  "independent_top_level_tasks": [
+    {
+      "thread_id": "<internal-task-id-redacted>",
+      "role": "provenance_validator",
+      "final_gate": "GO",
+      "design_sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+      "write_scope": "read_only"
+    },
+    {
+      "thread_id": "<internal-task-id-redacted>",
+      "role": "protocol_reviewer",
+      "final_gate": "GO",
+      "design_sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+      "write_scope": "read_only"
+    },
+    {
+      "thread_id": "<internal-task-id-redacted>",
+      "role": "implementation_mapper",
+      "final_gate": "GO",
+      "design_sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+      "write_scope": "read_only"
+    },
+    {
+      "thread_id": "<internal-task-id-redacted>",
+      "role": "harness_builder",
+      "final_gate": null,
+      "design_sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+      "write_scope": [
+        "harness/",
+        "tests/"
+      ]
+    }
+  ],
+  "munch_runtime_identities": {
+    "jdocmunch": {
+      "version": "1.123.0",
+      "transport": "stdio",
+      "pid_at_observation": 35028,
+      "instance_id": "943a0f00-cf38-442b-9381-72870641f278",
+      "launch_id": "7921d43c-ff96-4110-8448-9d01f76b1e30"
+    },
+    "jcodemunch": {
+      "version": "1.108.241",
+      "transport": "stdio",
+      "pid_at_observation": 14444,
+      "instance_id": "dbdbd0ac-eed5-4506-bbcd-effeba3d9bb5",
+      "launch_id": "2d9f52fa-3b41-4aa7-bb97-40f661ff3a0c"
+    },
+    "jdatamunch": {
+      "version": "1.31.0",
+      "transport": "stdio",
+      "pid_at_observation": 19692,
+      "instance_id": "09f0a76c-bd74-4288-bdbe-f4a062d80441",
+      "launch_id": "7d657b08-64a4-4c81-bf5f-38e09064e551"
+    },
+    "annotation": "PIDs are point-in-time observations. Instance and launch IDs identify the active tool surfaces used during design review."
+  },
+  "source_state": {
+    "main_checkout": {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-mcp",
+      "head": "3e7f18fa484f2810b127d86e9d88eb26e0d3edce",
+      "branch": "codex/large-index-performance",
+      "clean": true,
+      "used_as_treatment_source": false
+    },
+    "detached_checkout": {
+      "path": "working/source-8bed872e",
+      "head": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+      "branch": null,
+      "clean": true
+    },
+    "remote_tag_read_only_result": {
+      "command": "git ls-remote --tags origin refs/tags/v1.108.228 refs/tags/1.108.228",
+      "result": "8bed872e9436093be9f89d35fb84e0cb58a293af refs/tags/v1.108.228"
+    },
+    "jcode_repo": "local/source-8bed872e-77f94422",
+    "jcode_indexed_files": 743,
+    "jcode_indexed_symbols": 14482
+  },
+  "journals": {
+    "failure": "FAILURE-JOURNAL.jsonl",
+    "methodology": "METHODOLOGY-JOURNAL.jsonl"
+  },
+  "annotations": [
+    {
+      "classification": "observation",
+      "statement": "The exact local rebuild did not reproduce the official wheel SHA-256."
+    },
+    {
+      "classification": "observation",
+      "statement": "The independent provenance replay found identical 267-member path sets, 203 raw differences including RECORD, zero normalized payload differences and zero RECORD validation errors."
+    },
+    {
+      "classification": "claim_ceiling",
+      "statement": "These observations support newline-normalized payload equivalence, not a bit-reproducible build or end-to-end supply-chain authenticity."
+    }
+  ]
+}

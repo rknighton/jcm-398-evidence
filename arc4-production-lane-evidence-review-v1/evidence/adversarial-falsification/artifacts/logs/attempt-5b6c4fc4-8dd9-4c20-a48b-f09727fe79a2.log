@@ -1,0 +1,3 @@
+{"database":"C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\arc4-production-lane-adversarial-falsification-v1\\working\\public-counterexample-base\\local-public-counterexample-source-224c3cba.db","repo":"local/public-counterexample-source-224c3cba","status":"prepared","symbols":["counterexample.py::alpha_boundary_candidate#function","counterexample.py::beta_boundary_candidate#function","counterexample.py::gamma_boundary_candidate#function","counterexample.py::omega_boundary_candidate#function"]}
+{"lane":"numpy","mapped_top":"symbol-00046","parity":true,"top":"counterexample.py::omega_boundary_candidate#function"}
+{"lane":"python","mapped_top":"symbol-03962","parity":true,"top":"counterexample.py::gamma_boundary_candidate#function"}

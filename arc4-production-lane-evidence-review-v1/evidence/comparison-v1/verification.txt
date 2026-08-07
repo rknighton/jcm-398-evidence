@@ -1,0 +1,14 @@
+{
+  "comparisons_sha256": "9c5669968540bbfac7ab489cc509b56f8a9f62a65a28b99009e7825ac4fc2400",
+  "manifest_sha256": "9719ab15b3ce75f6f69f1fe399a6ddb92e3bbc242e9cecc44df14599f09ea341",
+  "paired_cases": 12,
+  "self_test": "PASS",
+  "status": "PASS",
+  "tamper_rejections": [
+    "score",
+    "remove_trial",
+    "lane_label",
+    "summary"
+  ],
+  "trials": 48
+}

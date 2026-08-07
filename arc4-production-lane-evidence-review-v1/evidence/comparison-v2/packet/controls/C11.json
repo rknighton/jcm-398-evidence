@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C11","status":"passed","evidence":{"matrix_rows_checked":240,"topup_tripwire_events":0,"database_unchanged_rows":240,"embedding_count_unchanged_rows":240}}

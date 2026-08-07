@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C12","status":"passed","evidence":{"preflight_rows_checked":24,"get_matrix_called_rows":0,"cold_rows":12,"cold_cache_hit_rows":0,"warm_rows":12,"warm_cache_hit_rows":12}}

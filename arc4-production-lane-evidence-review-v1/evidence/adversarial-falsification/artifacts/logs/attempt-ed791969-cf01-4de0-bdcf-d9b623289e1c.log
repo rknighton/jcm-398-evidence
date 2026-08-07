@@ -1,0 +1,24 @@
+Collecting onnxruntime
+  Downloading onnxruntime-1.28.0-cp313-cp313-win_amd64.whl.metadata (5.7 kB)
+Collecting flatbuffers (from onnxruntime)
+  Using cached flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+Requirement already satisfied: numpy>=1.21.6 in c:\users\admin\documents\git\jcodemunch-perf-pass2\arc4-production-lane-adversarial-falsification-v1\working\venv-numpy\lib\site-packages (from onnxruntime) (2.4.4)
+Collecting packaging (from onnxruntime)
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting protobuf>=4.25.8 (from onnxruntime)
+  Using cached protobuf-7.35.1-cp310-abi3-win_amd64.whl.metadata (595 bytes)
+Downloading onnxruntime-1.28.0-cp313-cp313-win_amd64.whl (13.8 MB)
+   ---------------------------------------- 13.8/13.8 MB 38.2 MB/s  0:00:00
+Using cached protobuf-7.35.1-cp310-abi3-win_amd64.whl (439 kB)
+Using cached flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Installing collected packages: flatbuffers, protobuf, packaging, onnxruntime
+
+Successfully installed flatbuffers-25.12.19 onnxruntime-1.28.0 packaging-26.3 protobuf-7.35.1
+{
+  "comparisons_sha256": "9c5669968540bbfac7ab489cc509b56f8a9f62a65a28b99009e7825ac4fc2400",
+  "manifest_sha256": "9719ab15b3ce75f6f69f1fe399a6ddb92e3bbc242e9cecc44df14599f09ea341",
+  "paired_cases": 12,
+  "status": "PASS",
+  "trials": 48
+}

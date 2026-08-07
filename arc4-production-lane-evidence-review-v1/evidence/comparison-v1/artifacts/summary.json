@@ -1,0 +1,72 @@
+{
+  "by_corpus": {
+    "django": {
+      "cases": 4,
+      "membership_equal": 4,
+      "ordered_equal": 4,
+      "rank_0_equal": 4
+    },
+    "fastapi": {
+      "cases": 4,
+      "membership_equal": 4,
+      "ordered_equal": 4,
+      "rank_0_equal": 4
+    },
+    "jcodemunch": {
+      "cases": 4,
+      "membership_equal": 4,
+      "ordered_equal": 4,
+      "rank_0_equal": 4
+    }
+  },
+  "by_query": {
+    "hybrid_authentication_middleware": {
+      "cases": 3,
+      "membership_equal": 3,
+      "ordered_equal": 3,
+      "rank_0_equal": 3
+    },
+    "hybrid_test_client_response": {
+      "cases": 3,
+      "membership_equal": 3,
+      "ordered_equal": 3,
+      "rank_0_equal": 3
+    },
+    "semantic_input_validation": {
+      "cases": 3,
+      "membership_equal": 3,
+      "ordered_equal": 3,
+      "rank_0_equal": 3
+    },
+    "semantic_transaction_persistence": {
+      "cases": 3,
+      "membership_equal": 3,
+      "ordered_equal": 3,
+      "rank_0_equal": 3
+    }
+  },
+  "cases_with_numpy_exact_ties": 12,
+  "cases_with_python_exact_ties": 12,
+  "controls_pass": true,
+  "exact_ties": {
+    "numpy": {
+      "full_ranking_group_count": 12972,
+      "full_ranking_participant_count": 61458,
+      "top_k_boundary_crossing_group_count": 4,
+      "top_k_intersecting_group_count": 16
+    },
+    "python": {
+      "full_ranking_group_count": 12946,
+      "full_ranking_participant_count": 61422,
+      "top_k_boundary_crossing_group_count": 4,
+      "top_k_intersecting_group_count": 16
+    }
+  },
+  "membership_equal": 12,
+  "nondeterminism": false,
+  "ordered_top_k_equal": 12,
+  "paired_case_count": 12,
+  "rank_0_equal": 12,
+  "schema_version": "jcm-production-lane-v1",
+  "trial_count": 48
+}

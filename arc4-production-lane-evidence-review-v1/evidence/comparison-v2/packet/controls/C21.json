@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C21","status":"passed","evidence":{"rows_checked":264,"tripwire_installed_before_config_rows":264,"tripwire_lifetime_guard_rows":264,"outbound_attempts":0,"credentials_absent_rows":264,"sharing_disabled_rows":264}}

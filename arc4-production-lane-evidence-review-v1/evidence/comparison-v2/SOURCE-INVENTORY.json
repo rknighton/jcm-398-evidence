@@ -1,0 +1,133 @@
+{
+  "schema": "arc4.source-inventory/v1",
+  "status": "pre_registration_incomplete",
+  "design_sha256": "4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE",
+  "treatment": {
+    "package": "jcodemunch-mcp",
+    "version": "1.108.228",
+    "release_tag": "v1.108.228",
+    "release_commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+    "official_wheel": {
+      "path": "inputs/jcodemunch_mcp-1.108.228-py3-none-any.whl",
+      "sha256": "FF74B6344430053C6FAD9064892D6A3904FFBA6265823E3FBA4DFDE78F9A0488",
+      "size_bytes": 1316338,
+      "source": "official PyPI release artifact"
+    },
+    "excluded_local_wheel": {
+      "sha256": "81AF0F0308CDBED7E4884FC272B589A6691E8119828858ED6B99B2AA09132AF9",
+      "role": "provenance comparison only",
+      "treatment": false
+    }
+  },
+  "p0": {
+    "gate_status": "pending_harness_owned_replay",
+    "exact_rebuild_attempt": {
+      "attempt_id": "P0-exact-rebuild-1",
+      "source_checkout": "working/source-8bed872e",
+      "source_commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+      "python": "3.13.7",
+      "build_frontend_command": "py -3 -m pip wheel --no-deps",
+      "isolated_backend": "hatchling 1.31.0",
+      "rebuilt_wheel_path": "working/p0-build/jcodemunch_mcp-1.108.228-py3-none-any.whl",
+      "rebuilt_wheel_sha256": "C7FDF3BF2B666A6C9850C4485B2715500DF569F315D8A986DC1D9BE30FB92939",
+      "rebuilt_wheel_size_bytes": 1309798,
+      "official_wheel_sha256": "FF74B6344430053C6FAD9064892D6A3904FFBA6265823E3FBA4DFDE78F9A0488",
+      "result": "failed_exact_hash"
+    },
+    "member_comparison_observed": {
+      "official_member_count": 267,
+      "rebuilt_member_count": 267,
+      "raw_differing_members": 203,
+      "python_newline_only_members": 201,
+      "license_newline_only": true,
+      "record_differs": true,
+      "normalized_substantive_differences": 0
+    },
+    "independent_provenance_review_replay": {
+      "thread_id": "<internal-task-id-redacted>",
+      "matching_paths": 267,
+      "unsafe_or_duplicate_zip_entries": 0,
+      "normalized_payload_differences": 0,
+      "record_validation_errors": 0
+    },
+    "claim_ceiling": "Newline-normalized payload equivalence only. No bit-reproducible-build, publisher-build-environment or end-to-end supply-chain claim."
+  },
+  "authoritative_original_matrix": {
+    "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\measurements.csv",
+    "sha256": "F50451015E4B56522FDBCA84EDDD677ECF3DA77724E054A75C1E2E69005DA303",
+    "size_bytes": 1806083,
+    "expected_rows": 360,
+    "expected_columns": 79
+  },
+  "non_authoritative_release_matrix": {
+    "path": "C:\\Users\\Admin\\Documents\\GIT\\jcm-398-evidence\\arc4-real-embedding-certification-v1\\measurements.csv",
+    "sha256": "B480DB692AE195D403EDB29617315662F01AB4A737490FFED931103CD0DBD58F",
+    "size_bytes": 1759283,
+    "use": "reject as study input",
+    "annotation": "Row-for-row equal to the authoritative matrix except path-redacted baseline_import_root and candidate_import_root columns."
+  },
+  "original_packet_support": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\research_config.json",
+      "sha256": "114EB10CF39185A4A2F04B59D0B98F61386F44CBB2C1F4D4F93D99664B96D45D",
+      "size_bytes": 3139
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\manifest.json",
+      "sha256": "1BFB5BEDECF33DFA8480A2F0D682F95A3382FE9263FE19329C41AC398ACA3AA8",
+      "size_bytes": 6427
+    }
+  ],
+  "corpora": [
+    {
+      "corpus_id": "django",
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-django-3eb2e228.db",
+      "sha256": "21767E35F79CF051C346389C90562126317FFF9871EE9C7E4B33280FE3740529",
+      "size_bytes": 137502720
+    },
+    {
+      "corpus_id": "fastapi",
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-fastapi-c1d6b9c4.db",
+      "sha256": "FB0F933F2FFF75684A26872B86BC8F7B7301B7D08C54A079630C05EDE760E61E",
+      "size_bytes": 43274240
+    },
+    {
+      "corpus_id": "jcodemunch",
+      "path": "C:\\Users\\Admin\\Documents\\GIT\\jcodemunch-perf-pass2\\candidate-cold-hydration-vetting\\arc4-real-embedding-certification-v1\\working\\indexes\\local-arc4-research-v1-upstream-6f37f3de.db",
+      "sha256": "9B6A007E9554A7AFDB98936180D0ABEBCE8B86693D842841122C72E9093CDC58",
+      "size_bytes": 42561536,
+      "local_only_private_source_derived_text": true
+    }
+  ],
+  "query_vectors": {
+    "source_path": "C:\\Users\\Admin\\Documents\\GIT\\jcm-398-evidence\\arc4-real-embedding-certification-v1\\prepared-inputs.json",
+    "source_sha256": "623B077E57D0C6C8B0207C5124DD93E05A1A42D9015F92FD6EF0E5161C6E07C0",
+    "source_size_bytes": 51539,
+    "dimension": 384,
+    "vectors": [
+      {
+        "query_id": "semantic_input_validation",
+        "sha256": "4993f06e82012359a98d6c00b285bba5e5f3ebc58a33719c1d9fee6abb9b4898"
+      },
+      {
+        "query_id": "semantic_transaction_persistence",
+        "sha256": "e3b2663419c7dd78b0ee5f4255fe1d318accb7273d0eb73e3d045853d141e867"
+      },
+      {
+        "query_id": "hybrid_authentication_middleware",
+        "sha256": "5312460bf00d3b9bedb7c99c52aebae23f458d9d487e4e5cc9093acbbd353f58"
+      },
+      {
+        "query_id": "hybrid_test_client_response",
+        "sha256": "7b66a6300e3925f0ea9f71e84536709129c413827229a6286fb307fb0f3fa135"
+      }
+    ]
+  },
+  "pending_before_preregistration": [
+    "Harness-owned P0 receipt and comparison-tool SHA-256.",
+    "NumPy 2.4.4 wheel identity and complete local wheelhouse.",
+    "Closed canonical and raw environment manifests.",
+    "Frozen case matrix, transfer decisions and original-matrix decomposition.",
+    "Final harness and verifier hashes."
+  ]
+}

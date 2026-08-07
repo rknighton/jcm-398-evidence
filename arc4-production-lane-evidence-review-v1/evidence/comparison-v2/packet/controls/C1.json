@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C1","status":"passed","evidence":{"lanes":{"numpy_present":{"wheel_sha256":"ff74b6344430053c6fad9064892d6a3904ffba6265823e3fba4dfde78f9a0488","package_version":"1.108.228"},"numpy_absent":{"wheel_sha256":"ff74b6344430053c6fad9064892d6a3904ffba6265823e3fba4dfde78f9a0488","package_version":"1.108.228"}}}}

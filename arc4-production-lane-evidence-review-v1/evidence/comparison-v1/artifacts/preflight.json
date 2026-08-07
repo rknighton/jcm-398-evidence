@@ -1,0 +1,39 @@
+{
+  "databases": {
+    "django": {
+      "license": {
+        "name": "BSD-3-Clause-style Django license",
+        "release_included": true,
+        "url": "https://github.com/django/django/blob/274a1d494d11d87a1b767340d1f398f197810f93/LICENSE"
+      },
+      "sha256": "21767e35f79cf051c346389c90562126317fff9871ee9c7e4b33280fe3740529"
+    },
+    "fastapi": {
+      "license": {
+        "name": "MIT",
+        "release_included": true,
+        "url": "https://github.com/fastapi/fastapi/blob/95f8322ee1dcda7ceace7b1c4f6c9915b36d748f/LICENSE"
+      },
+      "sha256": "fb0f933f2fff75684a26872b86bc8f7b7301b7d08c54a079630c05ede760e61e"
+    },
+    "jcodemunch": {
+      "license": {
+        "exclusion_reason": "The control index is a repackaged derivative containing indexed source text. Public redistribution requires written permission under the pinned custom license.",
+        "name": "jCodeMunch-MCP Dual-Use License 1.1",
+        "release_included": false,
+        "url": "https://github.com/jgravelle/jcodemunch-mcp/blob/c78392cac0d50570d5cf86558d8d3674c0bea068/LICENSE"
+      },
+      "sha256": "9b6a007e9554a7afdb98936180d0abebce8b86693d842841122c72e9093cdc58"
+    }
+  },
+  "disk_free_bytes": 427797704704,
+  "package_version": "1.108.228",
+  "prepared_inputs_sha256": "623b077e57d0c6c8b0207c5124dd93e05a1a42d9015f92fd6ef0e5161c6e07c0",
+  "python_version": "3.13.7",
+  "remote_tag": "v1.108.228",
+  "remote_tag_commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+  "schema_version": "jcm-production-lane-v1",
+  "source_clean": true,
+  "source_commit": "8bed872e9436093be9f89d35fb84e0cb58a293af",
+  "wheel_sha256": "81af0f0308cdbed7e4884fc272b589a6691e8119828858ed6b99b2aa09132af9"
+}

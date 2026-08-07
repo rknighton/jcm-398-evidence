@@ -1,0 +1,1 @@
+{"schema":"arc4.control/v1","control_id":"C6","status":"passed","evidence":{"rows_checked":132,"matrix_rows_checked":120,"numpy_import_failures_before":132,"find_spec_none_before":132,"numpy_helper_none_before":132,"numpy_import_failures_after":132,"find_spec_none_after":132,"numpy_helper_none_after":132,"fallback_matrix_rows":120,"cache_python_rows":132}}
