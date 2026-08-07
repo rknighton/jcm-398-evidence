@@ -25,8 +25,9 @@
     },
     {
       "path": "arc4-production-lane-evidence-review-v1",
-      "purpose": "Adversarially reviewed Arc 4 production-lane evidence synthesis and curated supporting evidence",
-      "verify": "py -3 verify_package.py"
+      "purpose": "Adversarially reviewed Arc 4 production-lane evidence synthesis, including a complete two-lane replay of all 5,000 generated queries at v1.108.228",
+      "verify": "py -3 verify_package.py",
+      "second_gate": "py -3 evidence/full-suite-replay/harness/compare_lanes.py"
     }
   ],
   "data_files": [

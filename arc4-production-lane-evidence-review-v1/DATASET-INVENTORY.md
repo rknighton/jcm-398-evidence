@@ -4,7 +4,7 @@ The generated queries, screen negatives, failed attempts, raw comparisons, and f
 
 ## Adversarial dataset
 
-- [All 5,000 balanced generated-text queries](evidence/adversarial-falsification/artifacts/queries/provider-text.jsonl), including the 33 screen nominations and the 4,967 queries that were not fully replayed.
+- [All 5,000 balanced generated-text queries](evidence/adversarial-falsification/artifacts/queries/provider-text.jsonl), including the 33 the preliminary filter nominated and the 4,967 it rejected. All 5,000 have since been replayed through both lanes; see the complete replay dataset below.
 - [All geometric boundary inputs](evidence/adversarial-falsification/artifacts/queries/geometric.jsonl) supporting 10,002 executed cases, including 10,000 independently generated boundary cases.
 - [Screen outputs](evidence/adversarial-falsification/artifacts/screens/), including the preliminary provider-text screen.
 - [Confirmed findings](evidence/adversarial-falsification/artifacts/findings/), including replay outputs, minimization evidence, and the public counterexample.

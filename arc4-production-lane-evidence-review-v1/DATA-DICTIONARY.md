@@ -45,7 +45,7 @@ Record grain: one screen run over the 5,000 generated queries.
 | `closest_rank0_margins` | array | Diagnostic list of the smallest observed rank-0 margins. |
 | `top_k_boundaries` | array | Diagnostic values near returned-result boundaries. |
 
-The 4,967 queries outside `hits` were screen rejections. They must not be counted as complete two-method negative results.
+The 4,967 queries outside `hits` were screen rejections. They were not complete two-method negative results when this screen ran, and they must not be read as such. All 5,000 have since been replayed through both lanes in `evidence/full-suite-replay/`, which measures the filter against ground truth: 5 of the 33 nominations were correct, 28 were false alarms, and 109 real disagreements were missed.
 
 ### `artifacts/findings/provider-actual-findings.json`
 

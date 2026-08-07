@@ -32,7 +32,7 @@ Purpose: prove that NumPy-present float32 and NumPy-absent float64 lanes can div
 - [All geometric query inputs](evidence/adversarial-falsification/artifacts/queries/geometric.jsonl)
 - [All preserved attempts](evidence/adversarial-falsification/artifacts/attempts/)
 
-Lifecycle: complete and verified as a falsification packet. Adversarial generator yield is not a production rate. The 4,967 provider-text screen negatives were not fully replayed through both lanes.
+Lifecycle: complete and verified as a falsification packet. Adversarial generator yield is not a production rate. Its stated limitation, that the 4,967 screen negatives were never replayed through both lanes, has since been closed by the complete replay above, which also measures this packet's filter against ground truth.
 
 ## Complete generated-suite replay
 

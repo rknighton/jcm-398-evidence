@@ -15,6 +15,8 @@ harness, raw measurements, verifier, and separately downloadable prepared-index 
 | Arc 4 real-embedding certification v1 | `arc4-real-embedding-certification-v1/` | `py -3 verify.py --self-test` from that directory |
 | Arc 4 production-lane evidence review v1 | `arc4-production-lane-evidence-review-v1/` | `py -3 verify_package.py` from that directory |
 
+The production-lane review bundle answers the comparison agreed in [issue 398 comment 5177953577](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577) and contains a complete two-lane replay of all 5,000 generated queries at the pinned v1.108.228. Its verifier prints which figures it recomputes from raw records and which it only cross-checks between documents.
+
 The remainder of this root document describes the original Arcs 1 and 2 bundle.
 
 Produced against source revision
