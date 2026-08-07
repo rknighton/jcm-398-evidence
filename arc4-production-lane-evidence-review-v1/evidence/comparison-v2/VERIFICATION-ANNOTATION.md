@@ -8,6 +8,8 @@ This annotation records verifier execution after synthesis. It does not change t
 
 Governing design SHA-256: `4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE`.
 
+> **Publication note.** The digest quoted above is the pre-normalization identity of `DESIGN.md`, recorded in `SOURCE-HASHES.sha256`. The published copy had a machine-specific research root replaced with a placeholder and therefore hashes differently. The design content is unchanged. See PROVENANCE-ANNOTATION.md.
+
 Initial base-verification verifier SHA-256: `DB76B2EBD7C05D4384E870C157007168E08C344880BF06C69ECEA7671F824B94`.
 
 Initial base-verification manifest SHA-256: `FECE0839A779D0F94B028592B21223BB4EC1D6DB7E5228213E64BA9951DCEF0A`.

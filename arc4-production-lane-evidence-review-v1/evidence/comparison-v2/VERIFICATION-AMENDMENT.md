@@ -6,6 +6,8 @@ This is a post-execution verification-only amendment recorded on 2026-08-06 afte
 
 It does not amend the frozen measurements, row identities, pair identities, treatment, environments, controls, metrics, findings, claim ceiling, or issue 398 publication boundary. DESIGN.md remains frozen at SHA-256 `4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE`.
 
+> **Publication note.** The digest quoted above is the pre-normalization identity of `DESIGN.md`, recorded in `SOURCE-HASHES.sha256`. The published copy had a machine-specific research root replaced with a placeholder and therefore hashes differently. The design content is unchanged. See PROVENANCE-ANNOTATION.md.
+
 ## Observed blocker
 
 The unchanged command `py -3 verify.py --self-test --write-receipt` performs all 93 mutation tests in one process and emits its canonical receipt only after the entire suite finishes. The first combined attempt exceeded 900 seconds. A direct attempt remained CPU-active until a bounded runner stopped it at 1,800.028 seconds. It emitted no partial result.

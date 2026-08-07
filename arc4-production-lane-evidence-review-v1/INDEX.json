@@ -2,17 +2,33 @@
   "schema_version": "arc4-production-lane-evidence-review/v1",
   "bundle": "Arc 4 production-lane evidence review for jgravelle/jcodemunch-mcp#398",
   "publication_state": "third-party-review-candidate",
-  "purpose": "Conservative synthesis of retained production-lane experiments, with complete claim-bearing data and provenance.",
+  "purpose": "Conservative synthesis of retained production-lane experiments plus a complete two-lane replay of the generated suite, with all claim-bearing data and provenance.",
+  "answers": {
+    "request": "https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577",
+    "terms": [
+      "pin v1.108.228",
+      "report rank 0, ordered top-k, membership and exact ties separately",
+      "new production-lane comparison, not a rerun of the certification candidate"
+    ]
+  },
   "upstream_umbrella_issue": "https://github.com/jgravelle/jcodemunch-mcp/issues/398",
+  "related_issues": [
+    "https://github.com/jgravelle/jcodemunch-mcp/issues/403",
+    "https://github.com/jgravelle/jcodemunch-mcp/issues/399"
+  ],
   "entrypoints": {
     "decision_report": "REPORT.md",
     "reader_guide": "README.md",
+    "newest_result": "evidence/full-suite-replay/REPORT.md",
     "claim_ledger": "CLAIM-LEDGER.csv",
     "source_map": "SOURCE-MAP.md",
     "dataset_inventory": "DATASET-INVENTORY.md",
     "data_dictionary": "DATA-DICTIONARY.md",
     "provenance_annotation": "PROVENANCE-ANNOTATION.md",
-    "validation_receipt": "VALIDATION.txt"
+    "local_path_disclosure": "LOCAL-PATH-DISCLOSURE.json",
+    "retained_verifier_status": "RETAINED-VERIFIERS.md",
+    "validation_receipt": "VALIDATION.txt",
+    "issue_comment_draft": "ISSUE-398-COMMENT-DRAFT.md"
   },
   "integrity": {
     "package_manifest": "CHECKSUMS.sha256",
@@ -21,11 +37,47 @@
     "verifier_test": "test_verify_package.py",
     "verify_command": "py -3 -B verify_package.py",
     "test_command": "py -3 -B -m unittest -v test_verify_package.py",
+    "independent_second_gate": "evidence/full-suite-replay/harness/compare_lanes.py",
     "maximum_repository_file_mib": 95,
     "multi_file_archives": 0,
-    "claim_ledger_rows": 11
+    "claim_ledger_rows": 13,
+    "verifier_coverage": "verify_package.py prints, on every successful run, the set it recomputes from raw records, the set it only cross-checks between documents, and the set it does not cover. This package does not claim that every published figure is recomputed."
   },
   "datasets": {
+    "full_suite_replay": {
+      "path": "evidence/full-suite-replay",
+      "role": "Complete two-lane replay of every frozen generated query at the pinned release.",
+      "pinned_version": "1.108.228",
+      "queries": 5000,
+      "rank0_differences": 0,
+      "ordered_differences_by_k": {
+        "1": 0,
+        "5": 5,
+        "10": 11,
+        "25": 19,
+        "50": 51,
+        "100": 114
+      },
+      "membership_differences_by_k": {
+        "1": 0,
+        "5": 4,
+        "10": 10,
+        "25": 16,
+        "50": 33,
+        "100": 29
+      },
+      "exact_tie_partition_difference_queries": 130,
+      "ordered_top_100_difference_queries": 114,
+      "full_depth_ordering_difference_queries": 4971,
+      "screen_missed_disagreements": 109,
+      "published_findings_reproduced": 5,
+      "disagreement_mechanism": {
+        "byte_identical_stored_vectors_ordered_differently": 103,
+        "numpy_float32_tie_separated_by_float64": 9,
+        "genuine_score_order_inversion": 2
+      },
+      "claim_ceiling": "A within-suite rate for mechanically generated queries over three fixed corpora on one host. Not a production rate. Compares the scoring lane, not a complete tool response, and establishes no answer-quality direction."
+    },
     "adversarial_falsification": {
       "path": "evidence/adversarial-falsification",
       "role": "Constructed sensitivity testing plus generated-text screening and complete replay of nominated cases.",
@@ -46,7 +98,7 @@
       "geometric_independent_boundary_cases": 10000,
       "geometric_rank0_changes": 3211,
       "preserved_attempt_files": 55,
-      "claim_ceiling": "No production rate, safety probability, or answer-quality direction can be inferred. The 4,967 screen rejections were not completely replayed."
+      "claim_ceiling": "No production rate, safety probability, or answer-quality direction can be inferred. The screen's miss rate, unknown when this packet was written, is now measured in evidence/full-suite-replay."
     },
     "comparison_v1": {
       "path": "evidence/comparison-v1",
@@ -61,8 +113,14 @@
       "path": "evidence/comparison-v2",
       "role": "Authoritative official-package fixed comparison.",
       "ranking_problems": 12,
+      "unique_query_vectors": 4,
       "replicated_pairs": 120,
+      "returned_result_depths": [
+        10,
+        25
+      ],
       "full_ranking_files": 360,
+      "distinct_full_ranking_contents": 36,
       "rank0_difference_problems": 0,
       "ordered_top_k_difference_problems": 0,
       "top_k_membership_difference_problems": 0,
@@ -81,8 +139,19 @@
     },
     "guarded_candidate": {
       "path": "../arc4-real-embedding-certification-v1",
-      "role": "Separately published research-candidate evidence supporting exact boundary checks as a plausible control. It is not official-release performance evidence."
+      "role": "Separately published research-candidate evidence supporting exact boundary checks as one available control. It is not official-release performance evidence.",
+      "measured_package_version": "1.108.212",
+      "version_caveat": "Measured 16 releases before the 1.108.228 pinned by every other strand here."
     }
+  },
+  "suite_overlap": {
+    "note": "comparison_v1, comparison_v2 and guarded_candidate cover the same 12 corpus and query-form problems over the same three corpora. They are three views of one fixed suite, not three independent suites.",
+    "shared_corpora": [
+      "django",
+      "fastapi",
+      "jcodemunch"
+    ],
+    "shared_problem_count": 12
   },
   "publication_transformations": {
     "source": "PROVENANCE-ANNOTATION.md",
@@ -91,13 +160,17 @@
       "publication-normalized copy",
       "verified single-file gzip representation"
     ],
+    "normalized_file_count": 13,
+    "retained_local_path_files": "LOCAL-PATH-DISCLOSURE.json",
     "excluded": [
       "working environments",
       "caches",
       "cloned source trees",
       "dependency wheelhouses",
       "nested Git metadata",
-      "superseded web output"
+      "superseded web output",
+      "the three frozen corpus databases",
+      "the pinned dependency wheel"
     ]
   },
   "license": "MIT-0"

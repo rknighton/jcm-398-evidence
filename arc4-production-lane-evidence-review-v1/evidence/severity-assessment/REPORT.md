@@ -1,5 +1,18 @@
 # JCodeMunch v1.108.228 production-lane severity assessment
 
+> **Superseded in part, 2026-08-07.** This assessment was written when only 33 of the
+> 5,000 generated queries had been replayed through both shipped lanes. It states rates
+> over the full 5,000 that the evidence at the time could not support, and the synthesis
+> in `../../REPORT.md` withdrew that denominator. All 5,000 have since been replayed; see
+> `../full-suite-replay/REPORT.md`. Read this document as the severity reasoning of that
+> earlier state, retained because rejected and superseded work stays useful, and take
+> every number in the table below from the replay instead. Specifically: "zero of 5,000
+> provider-text cases" was a screening result, not a replay result; the 0.1% and 0.02%
+> incidences were computed on a denominator only 33 of which had been tested; and "no
+> measured provider-text case changed membership through top 100" is now false, since the
+> complete replay found 29 top-100 membership changes and 4 inside the first five results.
+> The rank-0 conclusion survives and is now stronger: 0 changes in 5,000.
+
 ## Verdict
 
 This has **low demonstrated normal-use severity**. Meaningful user impact has not been established.
@@ -17,11 +30,11 @@ The issue record previously held two statements together:
 
 The first statement is confirmed only as a possibility under deliberately selected geometry. The second is not materially rebutted. Five ordinary local-ONNX queries over three real code corpora produced deep ordered public-path differences, but none changed rank 0, membership, or any measured downstream outcome.
 
-Maintainer sources:
+Sources, with authors named because two of these three are the reporter's own words rather than the maintainer's:
 
-- [Production-lane comparison requirements and v1.108.228 boundary](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577)
-- [Clarification that the prior zero never exercised the NumPy-absent production lane](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5175071271)
-- [Original maintainer disposition of the synthetic hazard](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5172823848)
+- Maintainer, agreeing to the production-lane comparison and naming v1.108.228: [comment 5177953577](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577)
+- Reporter, retracting the prior zero because it never exercised the NumPy-absent production lane: [comment 5175071271](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5175071271)
+- Maintainer, original disposition of the synthetic hazard: [comment 5172823848](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5172823848)
 
 ## Severity by result dimension
 

@@ -8,6 +8,8 @@
 
 `DESIGN.md` remains the frozen research contract at SHA-256 `4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE`. This status document is post-execution synthesis. It does not amend the design, observations, pair records, controls, metrics, or findings.
 
+> **Publication note.** The digest quoted above is the pre-normalization identity of `DESIGN.md`, recorded in `SOURCE-HASHES.sha256`. The published copy had a machine-specific research root replaced with a placeholder and therefore hashes differently. The design content is unchanged. See PROVENANCE-ANNOTATION.md.
+
 The packet is intentionally stopped at the user's direction. No external issue, comment, repository, release, or other state has been created or changed.
 
 ## Research result

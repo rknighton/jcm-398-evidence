@@ -123,6 +123,8 @@ One preflight acceptance check was changed from literal ordered top-k equality a
 | --- | --- |
 | Governing design | `DESIGN.md` |
 | Design SHA-256 | `4E885E262545660378CA508748AB5A8DF49CF1AA8B2AF96DDA0A6748AFE88FBE` |
+
+> **Publication note.** The digest quoted above is the pre-normalization identity of `DESIGN.md`, recorded in `SOURCE-HASHES.sha256`. The published copy had a machine-specific research root replaced with a placeholder and therefore hashes differently. The design content is unchanged. See PROVENANCE-ANNOTATION.md.
 | Authorization | GitHub issue 398 comment 5177953577: production-lane comparison approved on the design's terms |
 | Treatment version | 1.108.228 |
 | Official wheel SHA-256 | `FF74B6344430053C6FAD9064892D6A3904FFBA6265823E3FBA4DFDE78F9A0488` |

@@ -1,0 +1,303 @@
+{
+  "schema_version": "arc4.local-path-disclosure/v1",
+  "purpose": "These published files retain the machine-specific research root they were written with. They are raw measurement, provenance, configuration and log records whose bytes are bound into content-addressed manifests; rewriting them would invalidate the frozen packet identities described in PROVENANCE-ANNOTATION.md, including the authenticated 53-of-93 mutation checkpoint. The paths disclose a Windows account name and private research directory names, and no credential, token, key, non-loopback address or third-party material. verify_package.py fails if a local path appears in any file not listed here, if a listed file no longer contains one, or if a count drifts.",
+  "patterns": {
+    "windows_research_root": "case-insensitive <drive>:\\\\Users\\\\Admin, in raw or JSON-escaped form, any letter case",
+    "file_url_research_root": "case-insensitive /Users/Admin/ inside a file:// URL"
+  },
+  "excluded_from_this_list": [
+    "test_verify_package.py",
+    "verify_package.py"
+  ],
+  "excluded_reason": "the verifier and its test carry the search literals by construction",
+  "file_count": 79,
+  "occurrence_count": 881,
+  "files": {
+    "evidence/adversarial-falsification/artifacts/logs/attempt-5b6c4fc4-8dd9-4c20-a48b-f09727fe79a2.log": {
+      "windows_research_root": 1
+    },
+    "evidence/adversarial-falsification/artifacts/logs/attempt-7f268128-2f79-4c42-9bd1-40109b3b57f5.log": {
+      "windows_research_root": 4
+    },
+    "evidence/adversarial-falsification/artifacts/logs/attempt-ed791969-cf01-4de0-bdcf-d9b623289e1c.log": {
+      "windows_research_root": 1
+    },
+    "evidence/adversarial-falsification/artifacts/provenance.json": {
+      "windows_research_root": 4
+    },
+    "evidence/comparison-v1/artifacts/controls/controls.json": {
+      "file_url_research_root": 5,
+      "windows_research_root": 5
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_authentication_middleware__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_authentication_middleware__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_authentication_middleware__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_authentication_middleware__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_test_client_response__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_test_client_response__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_test_client_response__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__hybrid_test_client_response__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_input_validation__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_input_validation__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_input_validation__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_input_validation__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_transaction_persistence__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_transaction_persistence__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_transaction_persistence__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/django__semantic_transaction_persistence__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_authentication_middleware__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_authentication_middleware__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_authentication_middleware__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_authentication_middleware__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_test_client_response__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_test_client_response__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_test_client_response__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__hybrid_test_client_response__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_input_validation__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_input_validation__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_input_validation__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_input_validation__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_transaction_persistence__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_transaction_persistence__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_transaction_persistence__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/fastapi__semantic_transaction_persistence__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_authentication_middleware__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_authentication_middleware__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_authentication_middleware__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_authentication_middleware__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_test_client_response__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_test_client_response__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_test_client_response__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__hybrid_test_client_response__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_input_validation__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_input_validation__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_input_validation__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_input_validation__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_transaction_persistence__numpy__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_transaction_persistence__numpy__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_transaction_persistence__python__r1.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/artifacts/raw/jcodemunch__semantic_transaction_persistence__python__r2.json": {
+      "file_url_research_root": 1,
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v1/config.json": {
+      "windows_research_root": 4
+    },
+    "evidence/comparison-v1/verify.py": {
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v2/PROVENANCE.json": {
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v2/SOURCE-INVENTORY.json": {
+      "windows_research_root": 8
+    },
+    "evidence/comparison-v2/packet/CONFIG.json": {
+      "windows_research_root": 33
+    },
+    "evidence/comparison-v2/packet/ENVIRONMENT-LOCK.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/FAILURE-JOURNAL.jsonl": {
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v2/packet/ORIGINAL-MATRIX-DECOMPOSITION.json": {
+      "windows_research_root": 1
+    },
+    "evidence/comparison-v2/packet/SOURCE-BUILD-RECEIPT.json": {
+      "windows_research_root": 10
+    },
+    "evidence/comparison-v2/packet/SOURCE-INVENTORY.json": {
+      "windows_research_root": 19
+    },
+    "evidence/comparison-v2/packet/controls/C3.json": {
+      "windows_research_root": 6
+    },
+    "evidence/comparison-v2/packet/env/raw-numpy-absent.json": {
+      "windows_research_root": 3
+    },
+    "evidence/comparison-v2/packet/env/raw-numpy-present.json": {
+      "windows_research_root": 3
+    },
+    "evidence/comparison-v2/packet/invocations/685c9aa38671a21558e10bef404679efc839d465a0d14efb3c06e320aae21ad1/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/685c9aa38671a21558e10bef404679efc839d465a0d14efb3c06e320aae21ad1/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/invocations/777773b25e104123586b2bd218f7cf86d26ee807820867e11cc0e3a62c04c08a/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/777773b25e104123586b2bd218f7cf86d26ee807820867e11cc0e3a62c04c08a/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/invocations/7a2a1883f41b830ca0cbde13b991ec9994616dc3b2b790ba6c7285a4361eefdb/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/7a2a1883f41b830ca0cbde13b991ec9994616dc3b2b790ba6c7285a4361eefdb/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/invocations/b12853ffe0c9acfed77166e40247724b6f1ca3972be253add3356494f5ac2c7f/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/b12853ffe0c9acfed77166e40247724b6f1ca3972be253add3356494f5ac2c7f/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/invocations/b9a5f726d8451f156a4c015b9b16f5798fed43976d970cb6e7c622a528566c71/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/b9a5f726d8451f156a4c015b9b16f5798fed43976d970cb6e7c622a528566c71/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/invocations/d6f7a7e5606d6e058a3c4b8c4b80e5a5a25ca236e6992f2c91d363927a540598/invocation-binding.json": {
+      "windows_research_root": 14
+    },
+    "evidence/comparison-v2/packet/invocations/d6f7a7e5606d6e058a3c4b8c4b80e5a5a25ca236e6992f2c91d363927a540598/job-artifact.json": {
+      "windows_research_root": 9
+    },
+    "evidence/comparison-v2/packet/raw/rows.jsonl": {
+      "windows_research_root": 528
+    }
+  }
+}

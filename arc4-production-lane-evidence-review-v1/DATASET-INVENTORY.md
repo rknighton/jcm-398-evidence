@@ -11,6 +11,15 @@ The generated queries, screen negatives, failed attempts, raw comparisons, and f
 - [Failed or superseded attempts](evidence/adversarial-falsification/artifacts/attempts/), retained as diagnostic evidence rather than positive findings.
 - [Chronological journal](evidence/adversarial-falsification/artifacts/JOURNAL.jsonl), [summary](evidence/adversarial-falsification/artifacts/summary.json), [coverage](evidence/adversarial-falsification/artifacts/coverage.json), [provenance](evidence/adversarial-falsification/artifacts/provenance.json), and [original manifest](evidence/adversarial-falsification/artifacts/manifest.json).
 
+## Complete replay dataset
+
+- [Per-lane records for all 5,000 queries](evidence/full-suite-replay/raw/), two lanes by three corpora, each holding the ordered top 100, its exact score encodings, and a SHA-256 over the complete ordering.
+- [Full-depth scores](evidence/full-suite-replay/raw/) for the 29 queries whose first swap leaves both top-100 lists, so no disagreement is left unclassified.
+- [The 114 disagreements](evidence/full-suite-replay/raw/disagreements.jsonl), with both lanes' full top-100 lists and scores.
+- [Machine summary](evidence/full-suite-replay/results-summary.json) and [report](evidence/full-suite-replay/REPORT.md).
+
+The three corpus databases stay outside the publication boundary. Their SHA-256 digests are in the adversarial provenance record and the harness verifies each before scoring.
+
 ## Comparison-v1 dataset
 
 - [All precursor raw ranking outputs](evidence/comparison-v1/artifacts/raw/)
