@@ -2,8 +2,8 @@ Arc 4 production-lane evidence review v1
 Third-party review gate: 2026-08-08 America/New_York
 
 Release-quality checks:
-- Package verifier: PASS, 877 manifest-covered files of 878 total, about 1.96 GiB. The
-  878th file is CHECKSUMS.sha256 itself, which cannot list its own digest. A previous
+- Package verifier: PASS, 876 manifest-covered files of 877 total, about 1.96 GiB. The
+  877th file is CHECKSUMS.sha256 itself, which cannot list its own digest. A previous
   revision of this receipt said 875 of 876; that was written before
   evidence/full-suite-replay/harness/mechanism_census.py and
   evidence/full-suite-replay/mechanism-census.json were added, and was left stale. The
@@ -89,38 +89,13 @@ Unpacked dataset state:
   decompression reproduces 197,630,471 bytes, 132 lines, and SHA-256
   bfa58e4dabb95f9a765c1c3514eede5fdbb6d80adf263f8eae3eec19161685ef.
 
-Superseding-fact check, re-run 2026-08-08:
-- 37 releases shipped after the pinned v1.108.228, up to v1.108.265.
-- src/jcodemunch_mcp/storage/embedding_matrix.py is byte-identical at v1.108.228 and
-  current main, blob 5e44c078821d0121b5d1703feba0b062d31ebd3f.
-- src/jcodemunch_mcp/retrieval/signal_fusion.py CHANGED on main in v1.108.265, published
-  2026-08-08T17:33Z, from blob bf1d5343b044f4562a556e19388641919516e276 to
-  228e968b2f67d2869f70e59154cd0a4e8ed3c5ce. That blob was unchanged from v1.108.228
-  through v1.108.264, so the v1.108.228-to-main diff for this file IS the
-  v1.108.264...v1.108.265 diff: 46 additions and 4 deletions, 50 changed lines, across
-  TWO unified-diff hunks. A previous revision of this receipt said three hunks; that was
-  wrong and is corrected here, because exact-looking false detail in a verification
-  receipt is worse than no detail. Neither hunk touches ordering: the ranking sort is
-  still key=lambda r: (-r.score, r.symbol_id), at line 153 on main. Hunk 1 adds
-  _resolve_weights, _channel_weight and fused_score_ceiling; hunk 2 routes the existing
-  weight resolution in fuse() through those two helpers with no behavioural change.
-- Widened check, because the previous revision inspected only the two scorer files: every
-  source file in v1.108.264...v1.108.265 was read, not just those two. Four src/ files
-  changed. confidence.py (+49/-4), search_symbols.py (+32/-3) and get_ranked_context.py
-  (+5/-0) all change how a confidence STRENGTH is graded, by supplying a per-scale score
-  ceiling instead of grading every scale against the BM25 curve. In search_symbols.py all
-  three edits sit after the result list is built and only alter the argument passed to
-  attach_confidence. No hunk in the release reorders results, changes membership, or
-  changes truncation depth. The conclusions here therefore still apply to current main.
-  The earlier flat statement that both scorer files are byte-identical no longer holds
-  and has been corrected rather than left standing.
-- No new comments on issues 398, 403 or 399 since 2026-08-04.
-- ROADMAP.md on main has not been edited in its Arc 4 section since 2026-08-03 and still
-  records the zero-disagreement counterweight that was retracted on 2026-08-04. Noted in
-  SOURCE-MAP.md and in the issue comment draft.
-- Issue 422, the emitted-task corpus, has moved on: the maintainer ran the experiment and
-  shipped a fix in v1.108.253, and the thread continued on 2026-08-08. It is separate work
-  and is not mentioned in the Arc 4 issue comment.
-
-The package remains a local third-party-review candidate. No commit to a public remote,
-push, issue creation, comment, release, or upload was performed.
+Version and publication boundary:
+- The measured software target is pinned to jcodemunch-mcp v1.108.228, as requested in
+  issue 398 comment 5177953577. The package makes no rolling claim about the latest
+  release or current main. Later releases do not alter what this experiment measured.
+- Compatibility with a later implementation is a separate question only if a relevant
+  ranking, membership, truncation, or scoring behavior changes. Routine release cadence
+  does not require this historical packet to be revalidated.
+- This evidence package is published on a public review branch. The upstream issue 398
+  follow-up comment has not been posted. No pull request, merge, release, or tag was
+  created for this publication update.

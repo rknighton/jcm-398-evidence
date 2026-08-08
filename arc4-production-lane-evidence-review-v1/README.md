@@ -17,7 +17,7 @@ It answers the production-lane comparison the maintainer agreed to in [issue 398
 9. Read [PROVENANCE-ANNOTATION.md](PROVENANCE-ANNOTATION.md) and [LOCAL-PATH-DISCLOSURE.json](LOCAL-PATH-DISCLOSURE.json) before comparing public copies with the frozen local originals.
 10. Read [RETAINED-VERIFIERS.md](RETAINED-VERIFIERS.md) before running any verifier other than the package one.
 
-The two drafts prepared for publication are [ISSUE-398-COMMENT-DRAFT.md](ISSUE-398-COMMENT-DRAFT.md) and [FOLLOW-UP-5000.md](FOLLOW-UP-5000.md). The first is the reply intended for the issue thread; the second is the follow-up specification, now marked complete by the replay above.
+The issue-thread submission draft is maintained separately from this evidence repository. This package contains the evidence and its review surfaces, not the upstream submission text. [FOLLOW-UP-5000.md](FOLLOW-UP-5000.md) is the earlier follow-up specification, now marked complete by the replay above.
 
 ## Verify the package
 

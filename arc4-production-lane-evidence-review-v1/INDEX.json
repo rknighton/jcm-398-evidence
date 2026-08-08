@@ -1,7 +1,7 @@
 {
   "schema_version": "arc4-production-lane-evidence-review/v1",
   "bundle": "Arc 4 production-lane evidence review for jgravelle/jcodemunch-mcp#398",
-  "publication_state": "third-party-review-candidate",
+  "publication_state": "public-review-branch-upstream-comment-not-posted",
   "purpose": "Conservative synthesis of retained production-lane experiments plus a complete two-lane replay of the generated suite, with all claim-bearing data and provenance.",
   "answers": {
     "request": "https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577",
@@ -27,7 +27,6 @@
     "local_path_disclosure": "LOCAL-PATH-DISCLOSURE.json",
     "retained_verifier_status": "RETAINED-VERIFIERS.md",
     "validation_receipt": "VALIDATION.txt",
-    "issue_comment_draft": "ISSUE-398-COMMENT-DRAFT.md",
     "requested_deliverable": "evidence/comparison-v2/RESEARCH-REPORT.md",
     "supplemental_breadth": "evidence/full-suite-replay/REPORT.md"
   },
