@@ -52,7 +52,7 @@ The strongest case against this judgment is the absence of representative field 
 
 - **The replay measures the scoring lane, not the whole tool.** It compares the ordering the scorer produces. Adapter-to-tool agreement was separately confirmed for 5 cases, not for 5,000. The requested comparison, by contrast, measured complete tool responses.
 
-- **The mechanism account is the least mature thing here.** It classifies the first differing pair, and its stored-vector explanation rests on an inspected example plus a census derived from databases this package does not ship. It is offered as a hypothesis, and nothing in the recommendation depends on it.
+- **The mechanism account is the least mature thing here.** It classifies the first differing pair, and its stored-vector explanation rests on an inspected example plus a census derived from databases this package does not ship. It is offered as a hypothesis. Nothing in the recommendation below depends on it, and the earlier revision of this report failed that test by making canonical ordering a numbered recommendation; that recommendation has been withdrawn and the material now lives only in [the full-suite report](evidence/full-suite-replay/REPORT.md#why-the-lanes-disagree).
 
 - **Formal acceptance has a ceiling.** The comparison-v2 findings were directly reconciled, but literal completion of every design requirement was not achieved: the final mutation campaign stopped at 53 of 93 tests, and the final refined verifier has no canonical success receipt. This limits formal acceptance claims without erasing the retained observations.
 
@@ -60,12 +60,12 @@ The strongest case against this judgment is the absence of representative field 
 
 1. **Continue treating the faster method as a reasonable engineering choice.** The available evidence makes practical acceptability more likely than not, while stopping short of a safety proof.
 
-2. **Investigate canonical ordering of equivalent results, as a hypothesis worth testing.** In 103 of the 114 disagreeing queries the first differing pair was tied by the pure-Python lane and separated by the NumPy lane, so `(-score, symbol_id)` had nothing to act on in one lane. An inspected Django example shows two symbols with byte-identical stored vectors whose NumPy scores still differ by one float32 step, which would make a blocked reduction row-order sensitive. Neither the coverage of a canonicalisation nor its cost has been measured here, so this is a follow-up to scope rather than a change to make. It does not move the premise on which the maintainer [parked lane 3](https://github.com/jgravelle/jcodemunch-mcp/issues/403#issuecomment-5167882069), and it is not a request to unpark it.
+2. **Keep the sensitive examples as regression cases.** Label the synthetic rank-0 cases, the two genuine inversions, and the deep reorderings as consistency tests, not demonstrated quality failures.
 
-3. **Keep the sensitive examples as regression cases.** Label the synthetic rank-0 cases, the two genuine inversions, and the deep reorderings as consistency tests, not demonstrated quality failures.
+3. **Prioritize representative monitoring if stronger assurance becomes necessary.** The complete generated-suite replay is useful supplemental evidence; production observation is required to estimate real incidence and downstream effect.
 
-4. **Prioritize representative monitoring if stronger assurance becomes necessary.** The complete generated-suite replay is useful supplemental evidence; production observation is required to estimate real incidence and downstream effect.
+4. **Keep claims conservative.** Do not claim perfect equivalence, a production failure rate, or answer degradation from the available data.
 
-5. **Keep claims conservative.** Do not claim perfect equivalence, a production failure rate, or answer degradation from the available data.
+No fifth recommendation proposes a code change. The maintainer asked for a comparison, not a remedy, and the only remedy this package could have pointed at rests on material it does not ship. The stored-vector hypothesis and the census behind it are retained in full under [evidence/full-suite-replay/](evidence/full-suite-replay/REPORT.md#why-the-lanes-disagree) for whoever wants to test it.
 
 Detailed provenance, limitations, and verification status remain in the [source map](SOURCE-MAP.md), [claim ledger](CLAIM-LEDGER.csv), [retained-verifier status](RETAINED-VERIFIERS.md), and [source notes](SOURCE-NOTES.md).

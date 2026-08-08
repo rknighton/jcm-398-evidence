@@ -22,7 +22,22 @@ conclusion without reconstructing the environment that produced it.
 
 Fail-closed. A missing query, a lane and corpus mismatch, a short top-100 list,
 an unequal candidate count, or a swap it cannot classify are all errors and all
-force a non-zero exit. There is no `continue` in the checking loop.
+force a non-zero exit. This file contains seven `continue` statements and none of
+them skips a check silently, which is worth spelling out because a silent skip is
+exactly how a verifier turns an unexamined case into a green result:
+
+  - four of them (the vector-hash mismatch, the short top-100 list, a control
+    finding that did not reproduce, a committed artifact that is absent) follow a
+    recorded failure that already forces exit 1;
+  - one leaves a query whose two lanes produced identical orderings, which has
+    nothing left to classify;
+  - two are in `load_deep`, which skips a blank JSONL line and an absent
+    deep-score file. An absent deep-score file is not silent either: the queries
+    that needed it then classify as `unclassifiable_outside_top_100`, which is a
+    failure.
+
+Nothing is dropped from the error list on the way out, so a green result means
+every query was examined.
 
 Control: it re-derives the five findings published in
 ../adversarial-falsification/artifacts/findings/provider-actual-findings.json
