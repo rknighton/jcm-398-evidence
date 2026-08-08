@@ -6,8 +6,9 @@ READ THIS BEFORE CITING ITS OUTPUT.
 Its output, ../mechanism-census.json, is **attested, not gated**. It is derived
 from the three frozen corpus databases, which are deliberately outside the
 publication boundary, so a third party cannot recompute it from the shipped
-bytes. `verify_package.py` therefore does not check its numbers, and neither
-`REPORT.md` nor the issue-comment draft rests any decision-facing claim on them.
+bytes. `verify_package.py` therefore does not check its numbers, and no
+decision-facing claim in the package-level `REPORT.md` or `CLAIM-LEDGER.csv`
+rests on them.
 
 What IS derivable from the shipped bytes, and is gated, is the score-relationship
 classification in compare_lanes.py: whether the first swapped pair was tied in
@@ -127,7 +128,7 @@ def main() -> int:
             "Derived from the three frozen corpus databases, which are outside the publication "
             "boundary. It cannot be recomputed from the shipped bytes and verify_package.py does "
             "not check it. Reproduce with JCM398_INDEX_ROOT set. No decision-facing claim in "
-            "REPORT.md or the issue-comment draft rests on these numbers."
+            "the package-level REPORT.md or CLAIM-LEDGER.csv rests on these numbers."
         ),
         "scope_limit": (
             "The per-query entries classify the FIRST differing pair only. 83 of the 114 "

@@ -3,12 +3,14 @@ Third-party review gate: 2026-08-08 America/New_York
 
 Release-quality checks:
 - Package verifier: PASS, 876 manifest-covered files of 877 total, about 1.96 GiB. The
-  877th file is CHECKSUMS.sha256 itself, which cannot list its own digest. A previous
-  revision of this receipt said 875 of 876; that was written before
-  evidence/full-suite-replay/harness/mechanism_census.py and
-  evidence/full-suite-replay/mechanism-census.json were added, and was left stale. The
-  verifier always printed the correct live count, so this was receipt drift and never a
-  manifest defect.
+  877th file is CHECKSUMS.sha256 itself, which cannot list its own digest. Two earlier
+  revisions of this receipt are worth reconciling against, because the count moved twice.
+  It read 875 of 876 before evidence/full-suite-replay/harness/mechanism_census.py and
+  evidence/full-suite-replay/mechanism-census.json were added, which took it to 877 of
+  878. Removing ISSUE-398-COMMENT-DRAFT.md from the package, so that the upstream
+  submission text is maintained outside this repository, took it to the current 876 of
+  877. The verifier always printed the correct live count, so both stale figures were
+  receipt drift and neither was a manifest defect.
 - Package verifier unit tests: PASS, 19 tests. They exercise the verifier's machinery on
   synthetic packages and deliberately do not run the headline recomputation against real
   data; running verify_package.py is what does that.
@@ -50,9 +52,10 @@ Release-quality checks:
   checked in both directions, with two negative tests.
 - Attested but not gated: evidence/full-suite-replay/mechanism-census.json is derived from
   the three excluded corpus databases. verify_package.py does not check it, and no
-  decision-facing claim in REPORT.md, CLAIM-LEDGER.csv or the issue comment rests on it.
-  That last sentence was not true in the previous revision even though it was written
-  there. REPORT.md made "investigate canonical ordering" recommendation 2, CLAIM-LEDGER
+  decision-facing claim in REPORT.md or CLAIM-LEDGER.csv rests on it. The external issue
+  398 submission is outside this package and is reviewed separately. That package-scoped
+  assurance was not true in the previous revision even though it was written there.
+  REPORT.md made "investigate canonical ordering" recommendation 2, CLAIM-LEDGER
   C12 made the top-level engineering judgment conditional on canonical ordering, C09
   ranked boundary rescoring "secondary to canonical ordering", and the issue comment gave
   the hypothesis an advocacy paragraph. All four were withdrawn in this revision. The
@@ -99,3 +102,39 @@ Version and publication boundary:
 - This evidence package is published on a public review branch. The upstream issue 398
   follow-up comment has not been posted. No pull request, merge, release, or tag was
   created for this publication update.
+
+Superseding-fact check, run 2026-08-08, dated and NOT binding on anything above:
+- This is a frozen observation, not a maintained freshness check. It will not be updated
+  merely because new releases ship, and it does not extend the measurement beyond
+  v1.108.228. It is retained because a reader may reasonably ask whether the relevant
+  ordering path had already changed by the time this package was prepared.
+- 37 releases shipped after the pinned v1.108.228 through v1.108.265, which was published
+  2026-08-08T17:33Z.
+- src/jcodemunch_mcp/storage/embedding_matrix.py is byte-identical at v1.108.228 and
+  v1.108.265, blob 5e44c078821d0121b5d1703feba0b062d31ebd3f.
+- src/jcodemunch_mcp/retrieval/signal_fusion.py changed in v1.108.265, from blob
+  bf1d5343b044f4562a556e19388641919516e276 to
+  228e968b2f67d2869f70e59154cd0a4e8ed3c5ce. That blob was unchanged from v1.108.228
+  through v1.108.264, so the v1.108.228-to-v1.108.265 diff for this file is the
+  v1.108.264...v1.108.265 diff: 46 additions and 4 deletions, 50 changed lines, across
+  two unified-diff hunks, @@ -65,6 +65,50 @@ and @@ -85,15 +129,13 @@. An earlier
+  revision of this receipt said three hunks; that was wrong and is corrected here.
+  Neither hunk touches ordering: the ranking sort remains
+  key=lambda r: (-r.score, r.symbol_id), at line 153 in v1.108.265. Hunk 1 adds
+  _resolve_weights, _channel_weight and fused_score_ceiling; hunk 2 routes the existing
+  weight resolution in fuse() through those two helpers with no ordering change.
+- Every source file in v1.108.264...v1.108.265 was read, not only the two scorers. Four
+  src/ files changed. confidence.py (+49/-4), search_symbols.py (+32/-3) and
+  get_ranked_context.py (+5/-0) all change how confidence strength is graded by supplying
+  a per-scale score ceiling instead of grading every scale against the BM25 curve. In
+  search_symbols.py all three edits sit after the result list is built and only alter the
+  argument passed to attach_confidence. No hunk in that release reorders results, changes
+  membership, or changes truncation depth.
+- At the time of this check, issues 398, 403 and 399 had received no new comments since
+  2026-08-04.
+- ROADMAP.md on main, as observed during this check, had not been edited in its Arc 4
+  section since 2026-08-03 and still recorded the zero-disagreement counterweight that
+  was retracted on 2026-08-04. SOURCE-MAP.md retains that finding.
+- Issue 422, the emitted-task corpus, had moved on: the maintainer ran the experiment and
+  shipped a fix in v1.108.253, and the thread continued on 2026-08-08. It is separate
+  work and is not part of the Arc 4 production-lane conclusion.

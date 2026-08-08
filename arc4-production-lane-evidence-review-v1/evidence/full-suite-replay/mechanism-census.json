@@ -1,7 +1,7 @@
 {
   "schema": "jcm398.mechanism-census/v1",
   "status": "attested_not_gated",
-  "derivation_note": "Derived from the three frozen corpus databases, which are outside the publication boundary. It cannot be recomputed from the shipped bytes and verify_package.py does not check it. Reproduce with JCM398_INDEX_ROOT set. No decision-facing claim in REPORT.md or the issue-comment draft rests on these numbers.",
+  "derivation_note": "Derived from the three frozen corpus databases, which are outside the publication boundary. It cannot be recomputed from the shipped bytes and verify_package.py does not check it. Reproduce with JCM398_INDEX_ROOT set. No decision-facing claim in the package-level REPORT.md or CLAIM-LEDGER.csv rests on these numbers.",
   "scope_limit": "The per-query entries classify the FIRST differing pair only. 83 of the 114 disagreements change more than two top-100 positions, so this does not characterise the whole permutation, and no claim here should be read as doing so.",
   "corpus_sha256": {
     "django": "21767e35f79cf051c346389c90562126317fff9871ee9c7e4b33280fe3740529",
