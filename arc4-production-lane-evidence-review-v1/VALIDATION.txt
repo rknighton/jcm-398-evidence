@@ -1,9 +1,9 @@
 Arc 4 production-lane evidence review v1
-Third-party review gate: 2026-08-07 America/New_York
+Third-party review gate: 2026-08-08 America/New_York
 
 Release-quality checks:
 - Package verifier: PASS, 875 manifest-covered files of 876 total, about 1.96 GiB.
-- Package verifier unit tests: PASS, 16 tests. They exercise the verifier's machinery on
+- Package verifier unit tests: PASS, 19 tests. They exercise the verifier's machinery on
   synthetic packages and deliberately do not run the headline recomputation against real
   data; running verify_package.py is what does that.
 - Recomputed by the verifier, not read from a summary: the 5,000 query records; the 33
@@ -23,10 +23,13 @@ Release-quality checks:
   packet/raw/full-rankings/ under the positive-score ranking rule in harness/metrics.py,
   matching SUMMARY.json exactly, including m5_full 820, m6_full 540, 80 tie-differing
   pairs over 8 problems, and the m12 histogram with none=20. m11 was not reproduced.
-- Independent second gate: evidence/full-suite-replay/harness/compare_lanes.py PASS,
-  standard library only, no corpus database and no install required. It re-derives the
-  replay's reported numbers and reproduces all five previously published findings with
-  byte-identical top-100 lists in both lanes.
+- Supplemental replay reproducer: evidence/full-suite-replay/harness/compare_lanes.py PASS,
+  standard library only, no corpus database and no install required. Read-only by default:
+  it re-derives the replay's reported numbers, compares them byte for byte against the
+  committed artifacts, fails on drift, and reproduces all five previously published
+  findings with byte-identical top-100 lists in both lanes. Drift detection was exercised
+  by mutating results-summary.json, which produced exit 1 and a hash-mismatch message.
+  It is a reproducer, not the release gate; verify_package.py is the release gate.
 - Existing repository root verifier: PASS, 26 of 26 checks reproduce.
 - Existing guarded-candidate verifier self-test: PASS, 360 rows and 97 claims.
 - The four retained experiment verifiers do NOT run in this layout, by design. Their
@@ -34,6 +37,12 @@ Release-quality checks:
   from the previous receipt, which named only one of them.
 - JSON parse: PASS, 183 files. Python syntax parse: PASS, 56 files.
 - Claim ledger parse: PASS, 13 rows, 13 unique claim IDs, every path pointer resolves.
+- Replay-to-source reconciliation: PASS. Both lanes join to the 5,000 shipped query records
+  on identity, corpus and vector hash with no missing, extra, duplicate or mismatched row,
+  checked in both directions, with two negative tests.
+- Attested but not gated: evidence/full-suite-replay/mechanism-census.json is derived from
+  the three excluded corpus databases. verify_package.py does not check it, and no
+  decision-facing claim in REPORT.md, CLAIM-LEDGER.csv or the issue comment rests on it.
 - Local research paths: 79 files retain them, 881 occurrences, every one declared in
   LOCAL-PATH-DISCLOSURE.json and confirmed by the verifier in both directions. The
   previous receipt reported no matches; that was wrong, because the check searched for a
@@ -65,16 +74,26 @@ Unpacked dataset state:
   decompression reproduces 197,630,471 bytes, 132 lines, and SHA-256
   bfa58e4dabb95f9a765c1c3514eede5fdbb6d80adf263f8eae3eec19161685ef.
 
-Superseding-fact check, 2026-08-07:
-- 34 releases shipped after the pinned v1.108.228, up to v1.108.262. The two files that
-  determine every result here, src/jcodemunch_mcp/storage/embedding_matrix.py and
-  src/jcodemunch_mcp/retrieval/signal_fusion.py, are byte-identical at v1.108.228 and
-  v1.108.262 (blob 5e44c078821d0121b5d1703feba0b062d31ebd3f and
-  bf1d5343b044f4562a556e19388641919516e276). The conclusions apply to current main.
+Superseding-fact check, re-run 2026-08-08:
+- 37 releases shipped after the pinned v1.108.228, up to v1.108.265.
+- src/jcodemunch_mcp/storage/embedding_matrix.py is byte-identical at v1.108.228 and
+  current main, blob 5e44c078821d0121b5d1703feba0b062d31ebd3f.
+- src/jcodemunch_mcp/retrieval/signal_fusion.py CHANGED on main in v1.108.265, published
+  2026-08-08T17:33Z, from blob bf1d5343b044f4562a556e19388641919516e276 to
+  228e968b2f67d2869f70e59154cd0a4e8ed3c5ce. The diff is 50 source lines across 3 hunks and
+  none of them touch ordering: the ranking sort is still
+  key=lambda r: (-r.score, r.symbol_id), now at line 153. The release rewrites
+  compute_confidence's strength sub-signal, which grades ranking quality and does not
+  participate in ranking. The conclusions here therefore still apply to current main, but
+  the earlier flat statement that both files are byte-identical no longer holds and has
+  been corrected rather than left standing.
 - No new comments on issues 398, 403 or 399 since 2026-08-04.
 - ROADMAP.md on main has not been edited in its Arc 4 section since 2026-08-03 and still
   records the zero-disagreement counterweight that was retracted on 2026-08-04. Noted in
   SOURCE-MAP.md and in the issue comment draft.
+- Issue 422, the emitted-task corpus, has moved on: the maintainer ran the experiment and
+  shipped a fix in v1.108.253, and the thread continued on 2026-08-08. It is separate work
+  and is not mentioned in the Arc 4 issue comment.
 
 The package remains a local third-party-review candidate. No commit to a public remote,
 push, issue creation, comment, release, or upload was performed.

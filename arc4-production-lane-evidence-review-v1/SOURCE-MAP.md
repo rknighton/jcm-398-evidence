@@ -44,7 +44,7 @@ Purpose: run every frozen generated query through both shipped lanes, closing th
 - [Comparison verifier](evidence/full-suite-replay/harness/compare_lanes.py)
 - [Replay harness](evidence/full-suite-replay/harness/full_replay.py)
 
-Lifecycle: complete. Its comparison step re-derives every reported number from the shipped records and reproduces the adversarial packet's five findings as a control. It measures a within-suite rate, not a production rate, and compares the scoring lane rather than a complete tool response.
+Lifecycle: complete, and supplemental to the requested comparison above. `compare_lanes.py` is a read-only reproducer: it re-derives this packet's reported numbers from the shipped records, compares them byte for byte against the committed artifacts, fails on drift, and reproduces the adversarial packet's five findings as a control. `verify_package.py` remains the release acceptance gate. Neither derives `mechanism-census.json`, which is attested rather than gated. This packet measures a within-suite rate, not a production rate, and compares the scoring lane rather than a complete tool response.
 
 ## Derived severity assessment
 

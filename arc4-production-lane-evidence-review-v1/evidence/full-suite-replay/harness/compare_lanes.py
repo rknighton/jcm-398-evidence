@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
 """Compare the two shipped scoring lanes across every frozen provider-text query.
 
-Reads the per-lane records under ../raw/ and writes, beside them:
+Reads the per-lane records under ../raw/ and derives, beside them:
 
   ../results-summary.json   the four dimensions issue 398 asked to see separately
   ../raw/disagreements.jsonl  one record per query whose lanes disagreed anywhere
+
+**Read-only by default.** It recomputes both artifacts in memory and compares them
+byte for byte against the committed copies, failing on any drift. That is what
+makes it an acceptance gate rather than a script that agrees with whatever it just
+wrote. Pass --regenerate to write, which is correct only when the per-lane records
+under ../raw/ have themselves changed.
+
+It does not derive the stored-vector mechanism census in ../mechanism-census.json.
+That needs the corpus databases, which are outside the publication boundary, so the
+census is attested rather than gated and no decision-facing claim rests on it.
 
 Needs no corpus database and no jcodemunch install. It runs on the shipped bytes
 with the standard library alone, which is the point: a reader can check the
@@ -22,6 +32,7 @@ replay disagree about those five, nothing else here is trustworthy.
 
 from __future__ import annotations
 
+import argparse
 import collections
 import hashlib
 import json
@@ -110,6 +121,13 @@ def classify(first: int, numpy_row, python_row) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Compare the two shipped scoring lanes.")
+    parser.add_argument(
+        "--regenerate",
+        action="store_true",
+        help="write the derived artifacts instead of checking them against the committed copies",
+    )
+    args = parser.parse_args()
     summary = {
         "schema": "jcm398.full-5000-replay-summary/v1",
         "pinned_version": PINNED_VERSION,
@@ -267,18 +285,30 @@ def main() -> int:
     )
 
     out_path = RAW / "disagreements.jsonl"
-    out_path.write_text(
-        "".join(
-            json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n" for row in disagreements
-        ),
-        encoding="utf-8",
-        newline="\n",
-    )
-    summary["disagreements_file_sha256"] = hashlib.sha256(out_path.read_bytes()).hexdigest()
+    summary_path = REPLAY_ROOT / "results-summary.json"
+    derived_disagreements = "".join(
+        json.dumps(row, sort_keys=True, separators=(",", ":")) + "\n" for row in disagreements
+    ).encode("utf-8")
+    summary["disagreements_file_sha256"] = hashlib.sha256(derived_disagreements).hexdigest()
     summary["errors"] = errors
-    (REPLAY_ROOT / "results-summary.json").write_text(
-        json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
-    )
+    derived_summary = (json.dumps(summary, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+    if args.regenerate:
+        out_path.write_bytes(derived_disagreements)
+        summary_path.write_bytes(derived_summary)
+        print("regenerated ../raw/disagreements.jsonl and ../results-summary.json")
+    else:
+        for path, derived in ((out_path, derived_disagreements), (summary_path, derived_summary)):
+            if not path.is_file():
+                fail(f"committed artifact missing: {path.name}; rerun with --regenerate")
+                continue
+            committed = path.read_bytes()
+            if committed != derived:
+                fail(
+                    f"{path.name} drifted: committed sha256 "
+                    f"{hashlib.sha256(committed).hexdigest()} != derived "
+                    f"{hashlib.sha256(derived).hexdigest()}"
+                )
 
     printable = {
         k: v
@@ -291,7 +321,10 @@ def main() -> int:
         for message in errors:
             print(" -", message)
         return 1
-    print("\nPASS: structural checks and the five-finding control both hold.")
+    print(
+        "\nPASS: structural checks, the five-finding control, and byte equality with the "
+        "committed artifacts all hold."
+    )
     return 0
 
 

@@ -19,7 +19,6 @@
   "entrypoints": {
     "decision_report": "REPORT.md",
     "reader_guide": "README.md",
-    "newest_result": "evidence/full-suite-replay/REPORT.md",
     "claim_ledger": "CLAIM-LEDGER.csv",
     "source_map": "SOURCE-MAP.md",
     "dataset_inventory": "DATASET-INVENTORY.md",
@@ -28,7 +27,9 @@
     "local_path_disclosure": "LOCAL-PATH-DISCLOSURE.json",
     "retained_verifier_status": "RETAINED-VERIFIERS.md",
     "validation_receipt": "VALIDATION.txt",
-    "issue_comment_draft": "ISSUE-398-COMMENT-DRAFT.md"
+    "issue_comment_draft": "ISSUE-398-COMMENT-DRAFT.md",
+    "requested_deliverable": "evidence/comparison-v2/RESEARCH-REPORT.md",
+    "supplemental_breadth": "evidence/full-suite-replay/REPORT.md"
   },
   "integrity": {
     "package_manifest": "CHECKSUMS.sha256",
@@ -37,7 +38,7 @@
     "verifier_test": "test_verify_package.py",
     "verify_command": "py -3 -B verify_package.py",
     "test_command": "py -3 -B -m unittest -v test_verify_package.py",
-    "independent_second_gate": "evidence/full-suite-replay/harness/compare_lanes.py",
+    "independent_second_gate": "evidence/full-suite-replay/harness/compare_lanes.py is a read-only reproducer for the supplemental replay, not the release gate; verify_package.py is the release gate.",
     "maximum_repository_file_mib": 95,
     "multi_file_archives": 0,
     "claim_ledger_rows": 13,
@@ -46,7 +47,7 @@
   "datasets": {
     "full_suite_replay": {
       "path": "evidence/full-suite-replay",
-      "role": "Complete two-lane replay of every frozen generated query at the pinned release.",
+      "role": "Supplemental scorer-level replay of every frozen generated query vector at the pinned release. Not the requested deliverable; see comparison_v2 for that.",
       "pinned_version": "1.108.228",
       "queries": 5000,
       "rank0_differences": 0,
@@ -72,11 +73,17 @@
       "screen_missed_disagreements": 109,
       "published_findings_reproduced": 5,
       "disagreement_mechanism": {
-        "byte_identical_stored_vectors_ordered_differently": 103,
-        "numpy_float32_tie_separated_by_float64": 9,
-        "genuine_score_order_inversion": 2
+        "note": "First differing pair only. 83 of the 114 disagreements change more than two top-100 positions.",
+        "first_pair_python_tied_numpy_separated": 103,
+        "first_pair_numpy_tied_python_separated": 9,
+        "first_pair_strict_inversion_both_lanes": 2
       },
-      "claim_ceiling": "A within-suite rate for mechanically generated queries over three fixed corpora on one host. Not a production rate. Compares the scoring lane, not a complete tool response, and establishes no answer-quality direction."
+      "claim_ceiling": "A within-suite rate for mechanically generated queries over three fixed corpora on one host. Not a production rate. Compares the scoring lane, not a complete tool response, and establishes no answer-quality direction.",
+      "mechanism_census": {
+        "path": "evidence/full-suite-replay/mechanism-census.json",
+        "status": "attested_not_gated",
+        "note": "Derived from the three frozen corpus databases, which are outside the publication boundary. verify_package.py does not check it and no decision-facing claim rests on it."
+      }
     },
     "adversarial_falsification": {
       "path": "evidence/adversarial-falsification",
@@ -111,7 +118,7 @@
     },
     "comparison_v2": {
       "path": "evidence/comparison-v2",
-      "role": "Authoritative official-package fixed comparison.",
+      "role": "The requested deliverable: the v1.108.228 two-production-lane comparison accepted in issue 398 comment 5177953577, measuring complete tool responses on 12 fixed ranking problems.",
       "ranking_problems": 12,
       "unique_query_vectors": 4,
       "replicated_pairs": 120,
@@ -173,5 +180,12 @@
       "the pinned dependency wheel"
     ]
   },
-  "license": "MIT-0"
+  "license": "MIT-0",
+  "evidence_hierarchy": [
+    "requested deliverable: evidence/comparison-v2, the v1.108.228 two-production-lane comparison on 12 fixed ranking problems",
+    "supplemental breadth: evidence/full-suite-replay, a scorer-level replay of 5,000 mechanically generated query vectors",
+    "possibility tests: evidence/adversarial-falsification, synthetic and geometric sensitivity cases",
+    "hypotheses and follow-ups: evidence/full-suite-replay/mechanism-census.json, attested rather than gated",
+    "provenance only: evidence/comparison-v1, evidence/severity-assessment, rejected attempts, retained historical verifiers"
+  ]
 }

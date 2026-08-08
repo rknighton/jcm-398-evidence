@@ -87,6 +87,8 @@ RECOMPUTED = [
     "lossless reconstruction of the single gzip-stored dataset",
     "every published file against its manifest digest",
     "the local-path disclosure, in both directions",
+    "the replay against the shipped query corpus, joined on identity, corpus and vector "
+    "hash in both directions",
 ]
 CROSS_CHECKED = [
     "each experiment summary against INDEX.json",
@@ -96,6 +98,9 @@ CROSS_CHECKED = [
     "local Markdown links, publication hygiene, and the repository file-size gate",
 ]
 NOT_COVERED = [
+    "the stored-vector mechanism census in evidence/full-suite-replay/mechanism-census.json, "
+    "which is derived from the excluded corpus databases and is therefore attested rather than "
+    "gated; no decision-facing claim rests on it",
     "comparison-v2 m5, m6, m10, m11 and m12, which are reproducible from "
     "packet/raw/full-rankings/ but are not re-derived here; see VALIDATION.txt for the "
     "external run that did reproduce m1 to m6, m10 and m12",
@@ -364,6 +369,50 @@ def recompute_full_suite_replay(root: Path) -> dict:
     return result
 
 
+def reconcile_replay_to_source(source_path: Path, replay_root: Path) -> list[str]:
+    """The replay covers the shipped query corpus exactly, in both directions.
+
+    Comparing the two lanes to each other proves they agree; it does not prove
+    they replayed the shipped queries. This closes that gap by joining on
+    query_id, corpus and vector hash, and failing on a missing record, an extra
+    record, a duplicate, or a metadata mismatch.
+    """
+    errors: list[str] = []
+    source: dict[str, tuple[str, str]] = {}
+    with source_path.open("r", encoding="utf-8") as stream:
+        for line in stream:
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if row["query_id"] in source:
+                errors.append(f"duplicate source query: {row['query_id']}")
+            source[row["query_id"]] = (row["corpus_seed"], row["vector_sha256"])
+
+    for lane in ("numpy", "python"):
+        seen: dict[str, tuple[str, str]] = {}
+        for corpus in ("django", "fastapi", "jcodemunch"):
+            path = replay_root / f"raw/{lane}-{corpus}.jsonl"
+            with path.open("r", encoding="utf-8") as stream:
+                stream.readline()
+                for line in stream:
+                    row = json.loads(line)
+                    query_id = row["query_id"]
+                    if query_id in seen:
+                        errors.append(f"{lane}: query replayed twice: {query_id}")
+                    seen[query_id] = (corpus, row["vector_sha256"])
+        for query_id in sorted(set(source) - set(seen)):
+            errors.append(f"{lane}: shipped query never replayed: {query_id}")
+        for query_id in sorted(set(seen) - set(source)):
+            errors.append(f"{lane}: replayed a query absent from the shipped corpus: {query_id}")
+        for query_id in sorted(set(source) & set(seen)):
+            if source[query_id] != seen[query_id]:
+                errors.append(
+                    f"{lane}: {query_id} replayed as {seen[query_id]} but shipped as "
+                    f"{source[query_id]}"
+                )
+    return errors
+
+
 def verify_claim_ledger(root: Path) -> tuple[list[str], int, int]:
     """Every evidence pointer that looks like a path must resolve."""
     errors: list[str] = []
@@ -584,6 +633,9 @@ def verify_headline_claims() -> list[str]:
 
         replay_root = ROOT / "evidence/full-suite-replay"
         replay_summary = json.loads((replay_root / "results-summary.json").read_text(encoding="utf-8"))
+        errors.extend(
+            reconcile_replay_to_source(artifacts / "queries/provider-text.jsonl", replay_root)
+        )
         replay = recompute_full_suite_replay(replay_root)
         check("replay queries recomputed", replay["queries"], 5000)
         check("replay queries summary", replay_summary["queries_total"], replay["queries"])

@@ -24,7 +24,7 @@ py -3 -B -m unittest -v test_verify_package.py
 
 The verifier prints the set it recomputes, the set it cross-checks between documents, and the set it does not cover. Read that output rather than assuming the three sets are one.
 
-`evidence/full-suite-replay/harness/compare_lanes.py` is a second independent gate. It re-derives the complete replay's four reported dimensions from the shipped per-lane records using the standard library alone, needs no corpus database and no jcodemunch install, and exits non-zero if any check or the five-finding control fails.
+`evidence/full-suite-replay/harness/compare_lanes.py` is a read-only reproducer for the supplemental replay, not the release gate. It re-derives that packet's four reported dimensions from the shipped per-lane records using the standard library alone, needs no corpus database and no jcodemunch install, compares its output byte for byte against the committed artifacts, and exits non-zero on any structural failure, a five-finding control failure, or drift. Pass `--regenerate` only when the per-lane records have themselves changed. It does not derive the attested stored-vector census in `mechanism-census.json`.
 
 ## Reconciling a retained verifier by hand
 

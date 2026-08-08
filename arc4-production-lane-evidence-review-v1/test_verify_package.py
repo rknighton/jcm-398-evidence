@@ -229,6 +229,81 @@ class VerifyPackageTests(unittest.TestCase):
             any(error.startswith("missing paired gzip metadata") for error in errors), errors
         )
 
+    def make_replay(self, root: Path, lane_rows: dict[str, list[tuple[str, str, str]]]) -> Path:
+        """Minimal replay tree. lane_rows maps corpus to (query_id, corpus, vector_sha256)."""
+        replay = root / "replay"
+        (replay / "raw").mkdir(parents=True)
+        for lane in ("numpy", "python"):
+            for corpus in ("django", "fastapi", "jcodemunch"):
+                lines = [
+                    json.dumps({"lane": lane, "corpus": corpus, "vectorised": lane == "numpy"})
+                ]
+                for query_id, row_corpus, vector in lane_rows.get(corpus, []):
+                    lines.append(json.dumps({"query_id": query_id, "vector_sha256": vector}))
+                (replay / "raw" / f"{lane}-{corpus}.jsonl").write_text(
+                    "\n".join(lines) + "\n", encoding="utf-8"
+                )
+        return replay
+
+    def test_replay_reconciles_to_the_shipped_query_corpus(self) -> None:
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        source = root / "provider-text.jsonl"
+        source.write_text(
+            "\n".join(
+                json.dumps({"query_id": f"text-{n:05d}", "corpus_seed": "django", "vector_sha256": f"v{n}"})
+                for n in range(3)
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        rows = [(f"text-{n:05d}", "django", f"v{n}") for n in range(3)]
+        replay = self.make_replay(root, {"django": rows})
+        self.assertEqual([], verifier.reconcile_replay_to_source(source, replay))
+
+    def test_replay_with_a_substituted_query_fails(self) -> None:
+        """Comparing the two lanes to each other cannot catch this.
+
+        Both lanes agree perfectly; they simply replayed a query the shipped
+        corpus does not contain, and omitted one it does.
+        """
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        source = root / "provider-text.jsonl"
+        source.write_text(
+            "\n".join(
+                json.dumps({"query_id": f"text-{n:05d}", "corpus_seed": "django", "vector_sha256": f"v{n}"})
+                for n in range(3)
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        rows = [("text-00000", "django", "v0"), ("text-00001", "django", "v1"),
+                ("text-09999", "django", "v9999")]
+        replay = self.make_replay(root, {"django": rows})
+        errors = verifier.reconcile_replay_to_source(source, replay)
+        self.assertTrue(any("shipped query never replayed: text-00002" in e for e in errors), errors)
+        self.assertTrue(
+            any("replayed a query absent from the shipped corpus: text-09999" in e for e in errors),
+            errors,
+        )
+
+    def test_replay_with_a_swapped_vector_hash_fails(self) -> None:
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        source = root / "provider-text.jsonl"
+        source.write_text(
+            json.dumps({"query_id": "text-00000", "corpus_seed": "django", "vector_sha256": "v0"})
+            + "\n",
+            encoding="utf-8",
+        )
+        replay = self.make_replay(root, {"django": [("text-00000", "django", "tampered")]})
+        errors = verifier.reconcile_replay_to_source(source, replay)
+        self.assertTrue(any("shipped as" in e for e in errors), errors)
+
     def rewrite_manifest(self, root: Path) -> None:
         files = sorted(
             path

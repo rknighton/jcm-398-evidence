@@ -4,7 +4,7 @@
 
 The bounded follow-up specified in [FOLLOW-UP-5000.md](../../FOLLOW-UP-5000.md), executed. Every one of the 5,000 frozen provider-text queries was run through both shipped scoring lanes of JCodeMunch v1.108.228 against the same three frozen real-embedding corpora. The earlier adversarial packet fully replayed only the 33 queries a preliminary filter nominated.
 
-This is the comparison the maintainer agreed to in [issue 398 comment 5177953577](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577): a current release pinned, the four result dimensions reported separately, treated as a new production-lane comparison rather than a rerun.
+**This is supplemental, not the requested deliverable.** The comparison the maintainer agreed to in [issue 398 comment 5177953577](https://github.com/jgravelle/jcodemunch-mcp/issues/398#issuecomment-5177953577) is the fixed production-lane study in [../comparison-v2/RESEARCH-REPORT.md](../comparison-v2/RESEARCH-REPORT.md), which measures complete tool responses on 12 frozen ranking problems. This replay is broader in query count and narrower in scope: it compares the scoring lane across mechanically generated query vectors. It is offered as an additional stress on that conclusion, and it uses the same four reported dimensions so the two can be read together.
 
 ## Result
 
@@ -35,15 +35,17 @@ This is the comparison the maintainer agreed to in [issue 398 comment 5177953577
 
 ## Why the lanes disagree
 
-Every one of the 114 disagreements classifies, with no residue and no unexplained case:
+**What the shipped bytes establish.** `compare_lanes.py` classifies the score relationship of the **first differing pair** in each disagreeing query, from the top-100 score encodings, with full-depth scores where the pair is not visible in both lists:
 
-| Class | Count | Mechanism |
-| --- | ---: | --- |
-| Duplicate stored vectors ordered differently | 103 | the two swapped symbols hold **byte-identical stored embeddings**; the pure-Python lane scores them exactly equal and the `(-score, symbol_id)` key orders them canonically, the NumPy lane assigns them unequal scores |
-| NumPy float32 exact tie separated by float64 | 9 | genuinely distinct vectors that float32 rounding collapses |
-| Genuine score-order inversion | 2 | distinct vectors, strict inequality in both lanes, opposite directions |
+| First-pair class | Count |
+| --- | ---: |
+| Tied by the pure-Python lane, separated by the NumPy lane | 103 |
+| Tied by the NumPy lane, separated by float64 | 9 |
+| Strict inequality in both lanes, opposite directions | 2 |
 
-The dominant class has a cause worth naming, because it is not the float32-versus-float64 story the record currently tells.
+That is a first-pair result. 83 of the 114 disagreements change more than two top-100 positions, up to 97, so it locates where the lanes part company and does not characterise the whole permutation.
+
+**What is attested but not gated.** The rest of this section is derived from the three frozen corpus databases, which are outside the publication boundary. `mechanism-census.json` records it, `harness/mechanism_census.py` reproduces it given `JCM398_INDEX_ROOT`, and `verify_package.py` does not check it. No decision-facing claim in `../../REPORT.md` or the issue-comment draft rests on it. Read what follows as a hypothesis for the maintainer to accept or reject on his own measurement.
 
 For django query `text-00750`, `ProfileForm.Meta#class` and `LogEntry.Meta#class` hold byte-identical stored blobs, and after normalisation `numpy.array_equal` on their two matrix rows is `True`. Scored one row at a time, `matrix[i].dot(qv)` returns `0x1.56a7fc0p-1` for both. Scored the way the shipped path scores, `matrix.dot(qv)` returns `0x1.56a7fe0p-1` for row 34172 and `0x1.56a7fc0p-1` for row 2407.
 
@@ -57,9 +59,7 @@ Prevalence across all 5,000 top-100 lists:
 | Split into unequal scores by the NumPy lane | 97, or 0.28% |
 | Split by the pure-Python lane | 0 |
 
-The asymmetry is the finding. The `(-score, symbol_id)` key that shipped in v1.108.228 canonicalises duplicate-embedding clusters in the pure-Python lane without exception, and cannot fire in the NumPy lane whenever blocking gives byte-identical vectors unequal scores. The key is correct; the NumPy lane denies it the equality it needs.
-
-Two consequences follow. First, the NumPy lane is not row-order independent, so re-indexing a repository can change returned order with no change to any embedding, any query, or the NumPy-present state. That is a wider axis than installation state. Second, 103 of the 114 disagreements reorder items the embedding model scores as exactly equivalent, so for those neither ordering is better than the other.
+If that reading is right, the `(-score, symbol_id)` key is correct and is simply denied the equality it needs in one lane, and the NumPy lane would not be row-order independent, which is a wider axis than installation state. Neither of those is established here. What is measured is the census above and the single inspected example; no canonicalisation was implemented, so no coverage or cost figure follows, and the claim that these 103 reorder equivalent items rests on the first pair rather than the full permutation.
 
 ## Control
 
